@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="32" height="32" tilewidth="32" tileheight="32" infinite="0" nextlayerid="5" nextobjectid="14">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="64" height="64" tilewidth="64" tileheight="64" infinite="0" nextlayerid="5" nextobjectid="2">
  <tileset firstgid="1" source="tileset.tsx"/>
- <layer id="1" name="floor" width="32" height="32">
+ <layer id="3" name="floor" width="64" height="64">
   <data encoding="base64" compression="zlib">
-   eJztwQENAAAAwqD3T20PBxQAAADwbhAAAAE=
+   eJztw8EJAAAMA6GD7L9zx+hHwVVTVVVVVVVVVVVVVVVVVVVVXx/6ADAB
   </data>
  </layer>
- <layer id="3" name="walls" width="32" height="32">
+ <layer id="1" name="walls" width="64" height="64">
   <data encoding="base64" compression="zlib">
-   eJzNlNsOwzAIQ+n///ReJ8scO22lLVKViIsNFLhm5vrxN1/3GN0YnbNVud7Kt2EpX+LdbBM+5elyUDnFeFrjtnabjPCI2/FuuZzabLfG0JxkS33l7NS2wT+tG2Go7Uktnp6mX5yPvtOeuOtL/G1tVZbmZoy/41ds96a407wm+cbv4m13ymZD2MSVzsncbT4Un/Nx9qlnxugplvakXnD2J3mrn+NW/Z1/0Z6m/jQ3rnedTYunPhsfxZN6ZoxNwqKddNIz9M9VTnuFYnL39qY4n/Y1zSZhpj5pYml7h/y3PN7kTLOV6qDy0xhS/dOsvnncLCkn5dPMG+nTHNPsTyl3+C7OVPtmxyUc8k27ZZvjpHP8ju8fvg9NyQHg
+   eJzt10EKgCAURVHd/6YbBQ6EUiHpeQ44FLzfQVkKAADAmNqs07TdtbOSPTUmz2GkK3EOMy0pM1jpSJjB6vn1/5v+vft307+2N6F/5fuXYGYGCXffetuT+P976735TnsHAgAAAAAAAAAA37sA3n4APw==
   </data>
  </layer>
- <layer id="4" name="ceiling" width="32" height="32" opacity="0.5">
+ <layer id="2" name="ceiling" width="64" height="64" opacity="0.5">
   <data encoding="base64" compression="zlib">
-   eJztwQENAAAAwqD3T20PBxQAAADwbhAAAAE=
+   eJztwzENAAAMBKEb3r/myugCCaumqqqqqqqqqqqqqqqqqqqqvj44D0AB
   </data>
  </layer>
- <objectgroup id="2" name="objects">
-  <object id="4" name="player" class="spawn" x="225.433" y="322.1" rotation="90">
+ <objectgroup id="4" name="objects">
+  <object id="1" name="spawn" type="spawn" x="1396" y="1292">
    <ellipse/>
   </object>
  </objectgroup>

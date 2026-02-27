@@ -1,100 +1,100 @@
 {"frames": [
 
 {
-	"filename": "not_available",
-	"frame": {"x":1,"y":1,"w":32,"h":32},
+	"filename": "not_available.png",
+	"frame": {"x":0,"y":0,"w":32,"h":32},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":32},
 	"sourceSize": {"w":32,"h":32}
 },
 {
-	"filename": "sprites/ladder_down",
-	"frame": {"x":34,"y":1,"w":16,"h":16},
+	"filename": "sprites/ladder_down.png",
+	"frame": {"x":32,"y":0,"w":16,"h":16},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":16,"h":16},
 	"sourceSize": {"w":16,"h":16}
 },
 {
-	"filename": "sprites/ladder_up",
-	"frame": {"x":51,"y":1,"w":16,"h":16},
+	"filename": "sprites/ladder_up.png",
+	"frame": {"x":48,"y":0,"w":16,"h":16},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":16,"h":16},
 	"sourceSize": {"w":16,"h":16}
 },
 {
-	"filename": "sprites/test/001",
-	"frame": {"x":68,"y":1,"w":16,"h":16},
+	"filename": "sprites/test/001.png",
+	"frame": {"x":64,"y":0,"w":16,"h":16},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":16,"h":16},
 	"sourceSize": {"w":16,"h":16}
 },
 {
-	"filename": "sprites/test/002",
-	"frame": {"x":85,"y":1,"w":16,"h":16},
+	"filename": "sprites/test/002.png",
+	"frame": {"x":80,"y":0,"w":16,"h":16},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":16,"h":16},
 	"sourceSize": {"w":16,"h":16}
 },
 {
-	"filename": "sprites/test/003",
-	"frame": {"x":102,"y":1,"w":16,"h":16},
+	"filename": "sprites/test/003.png",
+	"frame": {"x":96,"y":0,"w":16,"h":16},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":16,"h":16},
 	"sourceSize": {"w":16,"h":16}
 },
 {
-	"filename": "sprites/test/004",
-	"frame": {"x":119,"y":1,"w":16,"h":16},
+	"filename": "sprites/test/004.png",
+	"frame": {"x":112,"y":0,"w":16,"h":16},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":16,"h":16},
 	"sourceSize": {"w":16,"h":16}
 },
 {
-	"filename": "tiles/diffuse-test",
-	"frame": {"x":136,"y":1,"w":32,"h":32},
+	"filename": "tiles/diffuse-test.png",
+	"frame": {"x":128,"y":0,"w":32,"h":32},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":32},
 	"sourceSize": {"w":32,"h":32}
 },
 {
-	"filename": "tiles/heightmap-test",
-	"frame": {"x":169,"y":1,"w":32,"h":32},
+	"filename": "tiles/heightmap-test.png",
+	"frame": {"x":160,"y":0,"w":32,"h":32},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":32},
 	"sourceSize": {"w":32,"h":32}
 },
 {
-	"filename": "tiles/heightmap-test_specular",
-	"frame": {"x":202,"y":1,"w":32,"h":32},
+	"filename": "tiles/heightmap-test_specular.png",
+	"frame": {"x":192,"y":0,"w":32,"h":32},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":32},
 	"sourceSize": {"w":32,"h":32}
 },
 {
-	"filename": "tiles/tileset",
-	"frame": {"x":235,"y":1,"w":256,"h":256},
+	"filename": "tiles/tileset.png",
+	"frame": {"x":0,"y":32,"w":512,"h":512},
 	"rotated": false,
 	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":256,"h":256},
-	"sourceSize": {"w":256,"h":256}
+	"spriteSourceSize": {"x":0,"y":0,"w":512,"h":512},
+	"sourceSize": {"w":512,"h":512}
 }],
 "meta": {
 	"app": "https://www.codeandweb.com/texturepacker",
 	"version": "1.0",
 	"image": "textures.png",
 	"format": "RGBA8888",
-	"size": {"w":492,"h":258},
+	"size": {"w":512,"h":544},
 	"scale": "1",
-	"smartupdate": "$TexturePacker:SmartUpdate:d3a88dd9e65d9e82c842090187038400:0b0d5f910738d7adfa1fcfcd6f3aae49:22da60613f953ca41f0071181764da7a$"
+	"smartupdate": "$TexturePacker:SmartUpdate:c0a78ed1dd8d4e3c22403cd23c2c40b0:e04018871de7542878383b40ecab7c16:22da60613f953ca41f0071181764da7a$"
 }
 }

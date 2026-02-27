@@ -21,8 +21,11 @@ export function initTextures() {
 
     const texturesConfig: PackedTexturesData = texturesConfigJson;
     texturesConfig.frames.forEach(({ frame, filename }) => {
-        TEXTURES.set(filename, new Texture(rawTextures.get(frame.x, frame.y, frame.w, frame.h)));
+        const name = filename.split(".")[0];
+        TEXTURES.set(name, new Texture(rawTextures.get(frame.x, frame.y, frame.w, frame.h)));
     });
+
+    console.log(TEXTURES);
 
     initTileTextures();
 }
