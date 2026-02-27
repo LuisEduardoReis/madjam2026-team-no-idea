@@ -66,3 +66,6 @@ public/bundle.js.map
 
 # Tiled
 *.tiled-session
+
+# Bundle
+public/bundle.js
