@@ -24,17 +24,6 @@ export class WorldScreen extends AbstractScreen {
         const worlds = Array.from(this.worlds.values());
         this.currentWorld = worlds.find(world => !!world.player);
         connectWorlds(worlds);
-
-        // TODO Remove test code
-        if (this.currentWorld) {
-            for(let i = 0; i < 100; i++) {
-                const x = randomRange(0, this.currentWorld.w);
-                const y = randomRange(0, this.currentWorld.h);
-                if (!this.currentWorld.getTile(x, y).isSolid()) {
-                    this.currentWorld.addEntity(new TestEntity({ x, y }));
-                }
-            }
-        }
     }
 
     update(delta: number) {

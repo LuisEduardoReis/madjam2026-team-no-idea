@@ -1,13 +1,13 @@
-import { World } from "@src/world/world";
-import { decodeBase64Zlib, TILED_FILES } from "@src/tiled/tiled";
-import type { WorldScreen } from "@src/screens/world-screen";
-import { Tile, TILE_TYPES, UNKNOWN_TILE_TYPE } from "@src/world/tiles/tiles";
+import {World} from "@src/world/world";
+import {decodeBase64Zlib, TILED_FILES} from "@src/tiled/tiled";
+import {Tile, TILE_TYPES, UNKNOWN_TILE_TYPE} from "@src/world/tiles/tiles";
 import p5 from "p5";
-import { Player } from "@src/world/entities/player";
-import { DEG_TO_RAD, Orientation, point } from "@src/util";
-import { Door } from "@src/world/entities/door";
-import { WorldConnector } from "@src/world/entities/world-connector";
-import { Ladder } from "@src/world/entities/ladder";
+import {Player} from "@src/world/entities/player";
+import {DEG_TO_RAD, Orientation, type Point, point} from "@src/util";
+import {Door} from "@src/world/entities/door";
+import {WorldConnector} from "@src/world/entities/world-connector";
+import {Ladder} from "@src/world/entities/ladder";
+import {Rabbit} from "@src/world/entities/rabbit";
 
 export function buildWorld(name: string): World {
 
@@ -70,13 +70,12 @@ function getTileTypeById(id: number) {
 
 function processObjects(world: World, objectGroup: p5.XML, mapXml: p5.XML) {
     const tileWidth = mapXml.getNum("tilewidth");
-    const tileHeight = mapXml.getNum("tileheight");
 
     objectGroup.getChildren("object").forEach(object => {
        const name = object.getString("name");
        const type = object.getString("class") || object.getString("type");
        const x= object.getNum("x") / tileWidth;
-       const y= object.getNum("y") / tileHeight;
+       const y= object.getNum("y") / tileWidth;
        const properties = new Map<string, string>();
        (object.getChild("properties")?.getChildren("property") ?? [])
             .forEach((property) => properties.set(property.getString("name"), property.getString("value")));
@@ -99,6 +98,10 @@ function processObjects(world: World, objectGroup: p5.XML, mapXml: p5.XML) {
                const targetName = properties.get("target") ?? "<unknown>";
                const direction = object.getNum("rotation", 0) * DEG_TO_RAD;
                world.addEntity(new Ladder({ x, y, up, name, targetName, direction }));
+               break;
+           }
+           case "rabbit-path": {
+               world.addEntity(new Rabbit({ path: parsePath(object, x, y, tileWidth) }));
                break;
            }
        }
@@ -129,5 +132,13 @@ export function connectWorlds(worlds: World[]) {
         connector.targetWorld = target.world?.name;
         connector.targetPosition = point(target.x, target.y);
         connector.targetDirection = target.direction;
+    });
+}
+
+function parsePath(object: p5.XML, x: number, y: number, tileWidth: number): Point[] {
+    const pointsData = object.getChild("polyline").getString("points");
+    return pointsData.split(" ").map(pointData => {
+        const numbers = pointData.split(",");
+        return point(x + Number(numbers[0]) / tileWidth, y + Number(numbers[1]) / tileWidth);
     });
 }

@@ -25,8 +25,6 @@ export function initTextures() {
         TEXTURES.set(name, new Texture(rawTextures.get(frame.x, frame.y, frame.w, frame.h)));
     });
 
-    console.log(TEXTURES);
-
     initTileTextures();
 }
 
