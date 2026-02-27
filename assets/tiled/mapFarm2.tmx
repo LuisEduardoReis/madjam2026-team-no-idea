@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="64" height="64" tilewidth="64" tileheight="64" infinite="0" nextlayerid="6" nextobjectid="11">
+ <tileset firstgid="1" source="tileset.tsx"/>
+ <layer id="3" name="floor" width="64" height="64">
+  <data encoding="base64" compression="zlib">
+   eJztw8EJAAAMA6GD7L9zx+hHwVVTVVVVVVVVVVVVVVVVVVVVXx/6ADAB
+  </data>
+ </layer>
+ <layer id="1" name="walls" width="64" height="64">
+  <data encoding="base64" compression="zlib">
+   eJzt1tEKwyAMQNFS+v/f3NdSbKMmahLvAWGMbfZS7TwOe6fBiEx7/fTHZtF/CcPzvqnZ29JnpP6veb366y+J2N/ybJfWb9T+VlIn/XP6Lc4sEfs9/Xes6vfCor91PWa6/28tTZp9fH28Xq33ntJfz3K9WsvU3zOHpr/2Weq93+r5HrH/iX6dHfuj7v/SnKPOxrv3l7yvxQL9a/b/DDXnjez90nu79/f+rub8l6F/5fc183jpnzVGzQ0AAAAAAAAAAAAAAJDdDRrOBmM=
+  </data>
+ </layer>
+ <layer id="2" name="ceiling" width="64" height="64" opacity="0.5">
+  <data encoding="base64" compression="zlib">
+   eJztwTEBAAAAwqD1T20MH6AAAAAAAAAAAAAAAAAAAACAtwFAAAAB
+  </data>
+ </layer>
+ <objectgroup id="4" name="objects">
+  <object id="10" type="bunny-path" x="320" y="768">
+   <polyline points="0,0 320,64 576,192 384,896 896,1024 1408,1024 1536,896 1728,640 1984,384 2368,192 2944,128 3072,448 3328,512 3328,896 3008,896 3008,1088 2240,1088 2240,704 1984,704 1600,512 1408,256 1280,0 1472,-192 1570.91,-277.091 1564.85,-646.788"/>
+  </object>
+ </objectgroup>
+</map>
