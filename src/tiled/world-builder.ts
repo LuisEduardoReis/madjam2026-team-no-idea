@@ -8,6 +8,7 @@ import {Door} from "@src/world/entities/door";
 import {WorldConnector} from "@src/world/entities/world-connector";
 import {Ladder} from "@src/world/entities/ladder";
 import {Rabbit} from "@src/world/entities/rabbit";
+import {EnemyWithPath} from "@src/world/entities/enemy-with-path";
 
 export function buildWorld(name: string): World {
 
@@ -104,6 +105,10 @@ function processObjects(world: World, objectGroup: p5.XML, mapXml: p5.XML) {
                world.addEntity(new Rabbit({ path: parsePath(object, x, y, tileWidth) }));
                break;
            }
+           case "bat": {
+               world.addEntity(new EnemyWithPath({ path: parsePath(object, x, y, tileWidth) }));
+               break;
+           }
        }
     });
 }
@@ -136,7 +141,7 @@ export function connectWorlds(worlds: World[]) {
 }
 
 function parsePath(object: p5.XML, x: number, y: number, tileWidth: number): Point[] {
-    const pointsData = object.getChild("polyline").getString("points");
+    const pointsData = object.getChild(0).getString("points");
     return pointsData.split(" ").map(pointData => {
         const numbers = pointData.split(",");
         return point(x + Number(numbers[0]) / tileWidth, y + Number(numbers[1]) / tileWidth);

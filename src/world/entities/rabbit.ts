@@ -4,7 +4,7 @@ import {SpriteState} from "@src/graphics/sprite";
 import {getSprite} from "@src/graphics/sprites";
 
 const MAX_SPEED = 8;
-const MAX_DISTANCE_TO_PLAYER = 6;
+const MAX_DISTANCE_TO_PLAYER = 4;
 
 export type RabbitProps = WorldEntityProps & {
     path: Point[];

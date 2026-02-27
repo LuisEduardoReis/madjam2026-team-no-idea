@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="64" height="64" tilewidth="64" tileheight="64" infinite="0" nextlayerid="5" nextobjectid="6">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="64" height="64" tilewidth="64" tileheight="64" infinite="0" nextlayerid="5" nextobjectid="10">
  <tileset firstgid="1" source="tileset.tsx"/>
- <layer id="3" name="floor" width="64" height="64">
+ <layer id="3" name="floor" width="64" height="64" visible="0">
   <data encoding="base64" compression="zlib">
    eJztw8EJAAAMA6GD7L9zx+hHwVVTVVVVVVVVVVVVVVVVVVVVXx/6ADAB
   </data>
@@ -11,7 +11,7 @@
    eJzt10EKgCAURVHd/6YbBQ6EUiHpeQ44FLzfQVkKAADAmNqs07TdtbOSPTUmz2GkK3EOMy0pM1jpSJjB6vn1/5v+vft307+2N6F/5fuXYGYGCXffetuT+P976735TnsHAgAAAAAAAAAA37sA3n4APw==
   </data>
  </layer>
- <layer id="2" name="ceiling" width="64" height="64" opacity="0.5">
+ <layer id="2" name="ceiling" width="64" height="64" visible="0" opacity="0.5">
   <data encoding="base64" compression="zlib">
    eJztwzENAAAMBKEb3r/myugCCaumqqqqqqqqqqqqqqqqqqqqvj44D0AB
   </data>
@@ -23,6 +23,8 @@
   <object id="4" name="rabbit-path" type="rabbit-path" x="1054" y="1372">
    <polyline points="0,0 176,-238 444,-240 706,54 320,228 156,98"/>
   </object>
-  <object id="5" x="1054" y="826" height="2"/>
+  <object id="9" name="bat" type="bat" x="1118" y="1103">
+   <polygon points="0,0 5,490 581,488 571,-7"/>
+  </object>
  </objectgroup>
 </map>
