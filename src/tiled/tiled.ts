@@ -1,10 +1,12 @@
 import p5 from "p5";
 import pako from "pako";
 
-import rawMap1 from "@assets/tiled/map1.tmx";
+import rawFarm from "@assets/tiled/mapFarm.tmx";
+import rawForest from "@assets/tiled/mapForest.tmx";
+import rawUnderground from "@assets/tiled/mapUnderground.tmx";
 import rawTileset from "@assets/tiled/tileset.tsx";
 
-export const MAP_FILENAMES = ["map1"];
+export const MAP_FILENAMES = ["mapFarm", "mapForest", "mapUnderground"];
 export const TILED_FILES = new Map<string, p5.XML>;
 
 function parseXml(rawMap1: string): p5.XML {
@@ -16,7 +18,9 @@ function parseXml(rawMap1: string): p5.XML {
 }
 
 export async function loadTiledFiles() {
-    TILED_FILES.set("map1", parseXml(rawMap1));
+    TILED_FILES.set("mapFarm", parseXml(rawFarm));
+    TILED_FILES.set("mapForest", parseXml(rawForest));
+    TILED_FILES.set("mapUnderground", parseXml(rawUnderground));
     TILED_FILES.set("tileset", parseXml(rawTileset));
 }
 

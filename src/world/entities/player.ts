@@ -12,7 +12,7 @@ export const PLAYER_CAMERA_BOBBING_SPEED = 15;
 export const PLAYER_CAMERA_BOBBING_AMOUNT = 0.02;
 
 export class Player extends WorldEntity {
-    public speed: number = 1.5;
+    public speed: number = 2.5;
     
     public currentInteractable?: Interactable;
     public hoverMessage?: string;

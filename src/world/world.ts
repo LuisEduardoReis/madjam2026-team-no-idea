@@ -40,7 +40,7 @@ export class World {
         this.entities = [];
 
         this.fogColor = new Color(0x000000);
-        this.fogDistance = 8;
+        this.fogDistance = 16;
     }
 
     getTile(x: number, y: number): Tile {
