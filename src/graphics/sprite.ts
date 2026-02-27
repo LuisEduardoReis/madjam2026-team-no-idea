@@ -28,7 +28,7 @@ export class SpriteState {
 
     setSprite(sprite: Sprite): SpriteState {
         this.sprite = sprite;
-        this.animationIndex = 0;
+        this.animationIndex = this.animationIndex % sprite.frames.length;
         return this;
     }
 

@@ -34,5 +34,8 @@ export function initSprites() {
     ]));
     SPRITES.set("bunny-back", new Sprite([
         getTexture("sprites/bunny/Bunny_002"),
+        getTexture("sprites/bunny/Bunny_002_01"),
+        getTexture("sprites/bunny/Bunny_002"),
+        getTexture("sprites/bunny/Bunny_002_02"),
     ]));
 }

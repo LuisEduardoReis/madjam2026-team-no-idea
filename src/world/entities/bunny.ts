@@ -28,6 +28,7 @@ export class Bunny extends WorldEntity {
         this.frontSprite = getSprite("bunny-front");
         this.backSprite = getSprite("bunny-back");
         this.spriteState = new SpriteState().setSprite(this.frontSprite);
+        this.spriteState.animationDelay = 1 / 20;
 
         this.path = props.path;
         this.pathIndex = 0;
@@ -39,6 +40,8 @@ export class Bunny extends WorldEntity {
     }
 
     update(delta: number) {
+        this.spriteState.update(delta);
+
         const player = this.world?.player;
         if (!player) return;
 
@@ -70,6 +73,4 @@ export class Bunny extends WorldEntity {
     draw() {
         this.spriteState.draw(this.world, this.x, this.y);
     }
-
-
 }
