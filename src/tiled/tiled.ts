@@ -6,7 +6,7 @@ import rawForest from "@assets/tiled/mapForest.tmx";
 import rawUnderground from "@assets/tiled/mapUnderground.tmx";
 import rawTileset from "@assets/tiled/tileset.tsx";
 
-export const MAP_FILENAMES = ["mapFarm", "mapForest", "mapUnderground"];
+export const MAP_FILENAMES: string[] = [];
 export const TILED_FILES = new Map<string, p5.XML>;
 
 function parseXml(rawMap1: string): p5.XML {
@@ -18,9 +18,11 @@ function parseXml(rawMap1: string): p5.XML {
 }
 
 export async function loadTiledFiles() {
-    TILED_FILES.set("mapFarm", parseXml(rawFarm));
-    TILED_FILES.set("mapForest", parseXml(rawForest));
-    TILED_FILES.set("mapUnderground", parseXml(rawUnderground));
+    [rawFarm, rawForest, rawUnderground].forEach((raw, index) => {
+        const name = `map${index}`;
+        TILED_FILES.set(name, parseXml(raw));
+        MAP_FILENAMES.push(name);
+    });
     TILED_FILES.set("tileset", parseXml(rawTileset));
 }
 
