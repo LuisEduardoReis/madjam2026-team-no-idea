@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="64" height="64" tilewidth="64" tileheight="64" infinite="0" nextlayerid="6" nextobjectid="8">
+<map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="64" height="64" tilewidth="64" tileheight="64" infinite="0" nextlayerid="6" nextobjectid="9">
  <tileset firstgid="1" source="tileset.tsx"/>
  <layer id="3" name="floor" width="64" height="64">
   <data encoding="base64" compression="zlib">
@@ -17,7 +17,7 @@
   </data>
  </layer>
  <objectgroup id="4" name="objects">
-  <object id="1" name="spawn" type="spawn" x="1888.58" y="555.375">
+  <object id="1" name="spawn" type="spawn" x="1472" y="1664">
    <ellipse/>
   </object>
   <object id="2" name="door-out-of-farm" type="level-door" x="1887" y="354">
@@ -27,8 +27,8 @@
    </properties>
    <ellipse/>
   </object>
-  <object id="7" name="bunny-path" type="bunny-path" x="2221.21" y="1281.82">
-   <polyline points="0,0 -336.364,-9.09091 -339.394,-621.212 -342.424,-1118.18"/>
+  <object id="8" type="bunny-path" x="1536.5" y="1664">
+   <polyline points="0,0 258.5,-3 377.5,-378 379.5,-962.667 -659.167,-962.667 -768.5,-768 -704.5,64 447.5,128 447.5,-192 1023.5,-192 1023.5,192 1791.5,192 1791.5,-704 447.5,-704 351.5,-1110 347.5,-1540"/>
   </object>
  </objectgroup>
 </map>
