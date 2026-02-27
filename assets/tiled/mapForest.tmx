@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="64" height="64" tilewidth="64" tileheight="64" infinite="0" nextlayerid="5" nextobjectid="2">
+ <tileset firstgid="1" source="tileset.tsx"/>
+ <layer id="3" name="floor" width="64" height="64">
+  <data encoding="base64" compression="zlib">
+   eJztw8EJAAAMA6GD7L9zx+hHwVVTVVVVVVVVVVVVVVVVVVVVXx/6ADAB
+  </data>
+ </layer>
+ <layer id="1" name="walls" width="64" height="64">
+  <data encoding="base64" compression="zlib">
+   eJzt1tsSgyAMRVGn///RfXUcJYckJF72mulDpQ0cRWDbcvyMz9uNMnryW/ez8j5H+/aM0XvPVsism5G/4/ln1lLGrbZVrC8Vcz3yTKvX1+z8UU9//t6x7K+tdKf9++v5z3w5f9X6b/Xfdc6t6NOTP3pWVf/Xsf8rbUo+T/vVeahKNL81V5T/K9dWmcl/NV/Oalrvz/G6VTPb7Pzft4++j2qrNTrXQE9+da6Maihji8rY25T14c75V9VT1j91DXl6/tm+u/Or55nRb6L5M95NS3QPns1QkWnGzNi6zyXdyH/POQwAAAAAAAAAAAAAAAAAeKc/s3gCWQ==
+  </data>
+ </layer>
+ <layer id="2" name="ceiling" width="64" height="64" opacity="0.5">
+  <data encoding="base64" compression="zlib">
+   eJztwTEBAAAAwqD1T20MH6AAAAAAAAAAAAAAAAAAAACAtwFAAAAB
+  </data>
+ </layer>
+ <objectgroup id="4" name="objects">
+  <object id="1" name="spawn" type="spawn" x="1344" y="1536">
+   <ellipse/>
+  </object>
+ </objectgroup>
+</map>
