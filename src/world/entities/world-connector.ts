@@ -6,14 +6,14 @@ import type { Point } from "@src/util";
 
 export type WorldConnectorProps = WorldEntityProps & {
     name: string;
-    targetName: string;
+    targetName?: string;
     direction?: number;
 }
 
 export class WorldConnector extends WorldEntity implements Interactable {
 
     public name: string;
-    public targetName: string;
+    public targetName?: string;
     public direction?: number;
 
     public targetWorld?: string;

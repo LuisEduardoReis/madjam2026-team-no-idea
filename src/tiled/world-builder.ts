@@ -88,11 +88,13 @@ function processObjects(world: World, objectGroup: p5.XML, mapXml: p5.XML) {
                world.player.dir = object.getNum("rotation") * DEG_TO_RAD;
                break;
            }
-           case "door": {
+           case "door":
+           case "closed-door": {
                const tile = world.getTile(x,y);
                tile.doorType = getTileTypeById(Number(properties.get("type") ?? "0"));
                tile.doorOrientation = world.getTile(x + 1, y).isSolid() ? Orientation.VERTICAL : Orientation.HORIZONTAL;
-               world.addEntity(new Door({ x: Math.floor(x) + 0.5, y: Math.floor(y) + 0.5, tile }));
+               const openable = type !== "closed-door";
+               world.addEntity(new Door({ x: Math.floor(x) + 0.5, y: Math.floor(y) + 0.5, tile, openable }));
                break;
            }
            case "level-door": {
@@ -104,6 +106,10 @@ function processObjects(world: World, objectGroup: p5.XML, mapXml: p5.XML) {
                world.addEntity(new LevelDoor({ x: Math.floor(x) + 0.5, y: Math.floor(y) + 0.5, name, targetName }));
                break;
            }
+           case "level-spawn": {
+               world.addEntity(new WorldConnector({ x: Math.floor(x) + 0.5, y: Math.floor(y) + 0.5, name }));
+               break;
+           }
            case "ladder": {
                const up = properties.get("up") === "true";
                const targetName = properties.get("target") ?? "<unknown>";
@@ -111,7 +117,7 @@ function processObjects(world: World, objectGroup: p5.XML, mapXml: p5.XML) {
                world.addEntity(new Ladder({ x, y, up, name, targetName, direction }));
                break;
            }
-           case "rabbit-path": {
+           case "bunny-path": {
                world.addEntity(new Bunny({ path: parsePath(object, x, y, tileWidth) }));
                break;
            }
@@ -137,6 +143,8 @@ export function connectWorlds(worlds: World[]) {
     });
 
     connectors.forEach(connector => {
+        if (!connector.targetName) return;
+
         const target = connectorsByName.get(connector.targetName);
 
         if (!target) {

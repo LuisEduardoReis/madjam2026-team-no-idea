@@ -23,6 +23,8 @@ export class Bunny extends WorldEntity {
     constructor(props: BunnyProps) {
         super(props);
 
+        this.collidesWithOthers = false;
+
         this.frontSprite = getSprite("bunny-front");
         this.backSprite = getSprite("bunny-back");
         this.spriteState = new SpriteState().setSprite(this.frontSprite);
@@ -53,7 +55,9 @@ export class Bunny extends WorldEntity {
             this.x += (target.x - this.x) / distToPathTarget * speed * delta;
             this.y += (target.y - this.y) / distToPathTarget * speed * delta;
         } else {
-            this.pathIndex = (this.pathIndex + 1) % this.path.length;
+            if (this.pathIndex < this.path.length - 1) {
+                this.pathIndex++;
+            }
         }
 
         if (speed > 0.25) {
