@@ -9,6 +9,7 @@ export const DOOR_OPEN_SPEED = 1 / 0.6;
 
 export type DoorProps = WorldEntityProps & {
     tile: Tile;
+    openable: boolean;
 }
 
 export class Door extends WorldEntity implements Interactable {
@@ -25,7 +26,7 @@ export class Door extends WorldEntity implements Interactable {
         this.radius = 0.6;
         this.collidesWithOthers = true;
         this.collidesWithLevel = false;
-        this.interactable = true;
+        this.interactable = props.openable;
 
         this.tile = props.tile;
         this.state = 1;

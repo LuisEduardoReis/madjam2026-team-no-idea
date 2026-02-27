@@ -7,8 +7,9 @@ import {DEG_TO_RAD, Orientation, type Point, point} from "@src/util";
 import {Door} from "@src/world/entities/door";
 import {WorldConnector} from "@src/world/entities/world-connector";
 import {Ladder} from "@src/world/entities/ladder";
-import {Rabbit} from "@src/world/entities/rabbit";
+import {Bunny} from "@src/world/entities/bunny";
 import {EnemyWithPath} from "@src/world/entities/enemy-with-path";
+import {LevelDoor} from "@src/world/entities/level-door";
 
 export function buildWorld(name: string): World {
 
@@ -87,11 +88,26 @@ function processObjects(world: World, objectGroup: p5.XML, mapXml: p5.XML) {
                world.player.dir = object.getNum("rotation") * DEG_TO_RAD;
                break;
            }
-           case "door": {
+           case "door":
+           case "closed-door": {
                const tile = world.getTile(x,y);
                tile.doorType = getTileTypeById(Number(properties.get("type") ?? "0"));
                tile.doorOrientation = world.getTile(x + 1, y).isSolid() ? Orientation.VERTICAL : Orientation.HORIZONTAL;
-               world.addEntity(new Door({ x: Math.floor(x) + 0.5, y: Math.floor(y) + 0.5, tile }));
+               const openable = type !== "closed-door";
+               world.addEntity(new Door({ x: Math.floor(x) + 0.5, y: Math.floor(y) + 0.5, tile, openable }));
+               break;
+           }
+           case "level-door": {
+               const tile = world.getTile(x,y);
+               const targetName = properties.get("target") ?? "<unknown>";
+               tile.doorType = getTileTypeById(Number(properties.get("type") ?? "0"));
+               tile.doorOrientation = world.getTile(x + 1, y).isSolid() ? Orientation.VERTICAL : Orientation.HORIZONTAL;
+               tile.doorState = 1;
+               world.addEntity(new LevelDoor({ x: Math.floor(x) + 0.5, y: Math.floor(y) + 0.5, name, targetName }));
+               break;
+           }
+           case "level-spawn": {
+               world.addEntity(new WorldConnector({ x: Math.floor(x) + 0.5, y: Math.floor(y) + 0.5, name }));
                break;
            }
            case "ladder": {
@@ -101,8 +117,8 @@ function processObjects(world: World, objectGroup: p5.XML, mapXml: p5.XML) {
                world.addEntity(new Ladder({ x, y, up, name, targetName, direction }));
                break;
            }
-           case "rabbit-path": {
-               world.addEntity(new Rabbit({ path: parsePath(object, x, y, tileWidth) }));
+           case "bunny-path": {
+               world.addEntity(new Bunny({ path: parsePath(object, x, y, tileWidth) }));
                break;
            }
            case "bat": {
@@ -127,6 +143,8 @@ export function connectWorlds(worlds: World[]) {
     });
 
     connectors.forEach(connector => {
+        if (!connector.targetName) return;
+
         const target = connectorsByName.get(connector.targetName);
 
         if (!target) {
