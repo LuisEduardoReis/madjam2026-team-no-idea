@@ -28,4 +28,11 @@ export function initSprites() {
         getTexture("sprites/test/003"),
         getTexture("sprites/test/004"),
     ]));
+
+    SPRITES.set("bunny-front", new Sprite([
+        getTexture("sprites/bunny/Bunny_001"),
+    ]));
+    SPRITES.set("bunny-back", new Sprite([
+        getTexture("sprites/bunny/Bunny_002"),
+    ]));
 }

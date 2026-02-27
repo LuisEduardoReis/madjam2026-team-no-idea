@@ -7,7 +7,7 @@ import {DEG_TO_RAD, Orientation, type Point, point} from "@src/util";
 import {Door} from "@src/world/entities/door";
 import {WorldConnector} from "@src/world/entities/world-connector";
 import {Ladder} from "@src/world/entities/ladder";
-import {Rabbit} from "@src/world/entities/rabbit";
+import {Bunny} from "@src/world/entities/bunny";
 import {EnemyWithPath} from "@src/world/entities/enemy-with-path";
 import {LevelDoor} from "@src/world/entities/level-door";
 
@@ -112,7 +112,7 @@ function processObjects(world: World, objectGroup: p5.XML, mapXml: p5.XML) {
                break;
            }
            case "rabbit-path": {
-               world.addEntity(new Rabbit({ path: parsePath(object, x, y, tileWidth) }));
+               world.addEntity(new Bunny({ path: parsePath(object, x, y, tileWidth) }));
                break;
            }
            case "bat": {
