@@ -1,0 +1,40 @@
+{
+  "name": "raycaster-engine",
+  "version": "1.0.0",
+  "description": "",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "node esbuild.config.js",
+    "dev": "node esbuild.config.dev.js",
+    "lint": "eslint src --fix",
+    "lint-staged": "lint-staged",
+    "textures:pack": "TexturePacker assets/textures --sheet public/assets/textures.png --data assets/textures-config.json --format json-array --extrude 0 --algorithm Basic --texture-format png --padding 1 --border-padding 1 --trim-mode None --png-opt-level 0 --disable-auto-alias --trim-sprite-names",
+    "textures:pack:watch": "nodemon --watch assets/textures --ext png --exec npm run textures:pack",
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "*.ts": [
+      "eslint --fix"
+    ]
+  },
+  "dependencies": {
+    "howler": "^2.2.4",
+    "p5": "^2.2.1",
+    "pako": "^2.1.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/howler": "^2.2.12",
+    "@types/pako": "^2.0.4",
+    "esbuild": "^0.27.3",
+    "globals": "^17.3.0",
+    "husky": "^9.1.7",
+    "jiti": "^2.6.1",
+    "lint-staged": "^16.2.7",
+    "nodemon": "^3.1.11",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.56.1"
+  },
+  "private": true
+}

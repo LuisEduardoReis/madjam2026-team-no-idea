@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "outDir": "public",
+    "noImplicitAny": true,
+    "module": "esnext",
+    "target": "es2020",
+    "moduleResolution": "bundler",
+    "verbatimModuleSyntax": true,
+    "sourceMap": true,
+    "strict": true,
+    "paths": {
+      "@src/*": [
+        "./src/*"
+      ],
+      "@assets/*": [
+        "./assets/*"
+      ]
+    }
+  },
+  "include": [
+    "src/**/*.ts",
+    "node_modules/p5/types/global.d.ts"
+  ],
+  "exclude": ["node_modules"]
+}
