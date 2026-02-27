@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="64" height="64" tilewidth="64" tileheight="64" infinite="0" nextlayerid="6" nextobjectid="2">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="64" height="64" tilewidth="64" tileheight="64" infinite="0" nextlayerid="6" nextobjectid="4">
  <tileset firstgid="1" source="tileset.tsx"/>
  <layer id="3" name="floor" width="64" height="64">
   <data encoding="base64" compression="zlib">
@@ -17,8 +17,17 @@
   </data>
  </layer>
  <objectgroup id="4" name="objects">
-  <object id="1" name="spawn" type="spawn" x="1466.5" y="1734.75">
+  <object id="1" name="spawn" type="spawn" x="1888.58" y="555.375">
    <ellipse/>
+  </object>
+  <object id="2" name="door-out-of-farm" type="level-door" x="1887" y="354">
+   <properties>
+    <property name="target" value="forest-entrance"/>
+   </properties>
+   <ellipse/>
+  </object>
+  <object id="3" name="rabbit-path" type="rabbit-path" x="1878.79" y="972.727">
+   <polygon points="0,0 603.03,9.09091 621.212,324.242 318.182,503.03 -115.152,533.333 -103.03,142.424"/>
   </object>
  </objectgroup>
 </map>

@@ -1,20 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="64" height="64" tilewidth="64" tileheight="64" infinite="0" nextlayerid="5" nextobjectid="2">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="64" height="64" tilewidth="64" tileheight="64" infinite="0" nextlayerid="5" nextobjectid="4">
  <tileset firstgid="1" source="tileset.tsx"/>
- <layer id="3" name="floor" width="64" height="64">
+ <layer id="3" name="floor" width="64" height="64" visible="0">
   <data encoding="base64" compression="zlib">
    eJztw8EJAAAMA6GD7L9zx+hHwVVTVVVVVVVVVVVVVVVVVVVVXx/6ADAB
   </data>
  </layer>
  <layer id="1" name="walls" width="64" height="64">
   <data encoding="base64" compression="zlib">
-   eJzt1tsSgyAMRVGn///RfXUcJYckJF72mulDpQ0cRWDbcvyMz9uNMnryW/ez8j5H+/aM0XvPVsism5G/4/ln1lLGrbZVrC8Vcz3yTKvX1+z8UU9//t6x7K+tdKf9++v5z3w5f9X6b/Xfdc6t6NOTP3pWVf/Xsf8rbUo+T/vVeahKNL81V5T/K9dWmcl/NV/Oalrvz/G6VTPb7Pzft4++j2qrNTrXQE9+da6Maihji8rY25T14c75V9VT1j91DXl6/tm+u/Or55nRb6L5M95NS3QPns1QkWnGzNi6zyXdyH/POQwAAAAAAAAAAAAAAAAAeKc/s3gCWQ==
+   eJzt1tEOgyAMhWGz93/o3RKj9NCWgvp/yS4GW+EogseR42d83q6X0ZPfup6V1zk6tmeO3ms2Q2bdjPwr7n9mLWXeal/F/lKx1iP3tHp/zc4f9fT7751L2zbTTuf31/Nf+XL+qv3fGn/Ve27FmJ780XdV9X8rzn+lT8nn6b97H6oSzW+tFeX/StssI/nv1stVTev5ObdbNbONrv+2v/e9V1utsXIP9ORX10qvhjK3qIyzTdkfds4/q56y/6l7yNPzj469Or/6PtP7TTR/xrNpiZ7BoxkqMo0YmVvbvlOGKuTfcw0DAAAAAAAAAAAAAAAAAN7pD5W2AmU=
   </data>
  </layer>
- <layer id="2" name="ceiling" width="64" height="64" opacity="0.5">
+ <layer id="2" name="ceiling" width="64" height="64" visible="0" opacity="0.5">
   <data encoding="base64" compression="zlib">
    eJztwTEBAAAAwqD1T20MH6AAAAAAAAAAAAAAAAAAAACAtwFAAAAB
   </data>
  </layer>
- <objectgroup id="4" name="objects"/>
+ <objectgroup id="4" name="objects">
+  <object id="2" name="static-door" type="static-door" x="1310.18" y="1502">
+   <ellipse/>
+  </object>
+  <object id="3" name="forest-spawn" type="level-spawn" x="1311" y="1437">
+   <point/>
+  </object>
+ </objectgroup>
 </map>

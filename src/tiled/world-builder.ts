@@ -9,6 +9,7 @@ import {WorldConnector} from "@src/world/entities/world-connector";
 import {Ladder} from "@src/world/entities/ladder";
 import {Rabbit} from "@src/world/entities/rabbit";
 import {EnemyWithPath} from "@src/world/entities/enemy-with-path";
+import {LevelDoor} from "@src/world/entities/level-door";
 
 export function buildWorld(name: string): World {
 
@@ -92,6 +93,15 @@ function processObjects(world: World, objectGroup: p5.XML, mapXml: p5.XML) {
                tile.doorType = getTileTypeById(Number(properties.get("type") ?? "0"));
                tile.doorOrientation = world.getTile(x + 1, y).isSolid() ? Orientation.VERTICAL : Orientation.HORIZONTAL;
                world.addEntity(new Door({ x: Math.floor(x) + 0.5, y: Math.floor(y) + 0.5, tile }));
+               break;
+           }
+           case "level-door": {
+               const tile = world.getTile(x,y);
+               const targetName = properties.get("target") ?? "<unknown>";
+               tile.doorType = getTileTypeById(Number(properties.get("type") ?? "0"));
+               tile.doorOrientation = world.getTile(x + 1, y).isSolid() ? Orientation.VERTICAL : Orientation.HORIZONTAL;
+               tile.doorState = 1;
+               world.addEntity(new LevelDoor({ x: Math.floor(x) + 0.5, y: Math.floor(y) + 0.5, name, targetName }));
                break;
            }
            case "ladder": {
