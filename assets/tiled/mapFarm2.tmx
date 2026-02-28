@@ -8,7 +8,7 @@
  </layer>
  <layer id="1" name="walls" width="64" height="64">
   <data encoding="base64" compression="zlib">
-   eJztmttuwyAMQHmN9tT2qdon9P//b0Iqmuf5BrbJMvlIqM0aiG8Yw9JaURRFURTFN0dAuzJQ/k/QZvpf2RZY/4/35wvd9zCOFdmywc+Z9b/FJjP34nuy7ZFp4xnbWMiww8xYK7kB80Tf8bWFSBtYx+m5AOYGjafQ7u/GXVONk91rB9gfxyu+5vyP75P0WG0dnI+H/B4bZM3/W4vVX5p7Z+lPyTRiIUN/bu55YgD3g7Es2VzLBzv9T+lhZfSjxpdqIa5Pa3nz36rLDFB/7EtrvqPI0l96tld/Lr6kZ0bXOCsMGTz6d6gYj0CzLfz9ZejD4dU/A0vdxM292dyTpb81xrn7NF9yuVfKPZTNzvA/zs3w2rNP0MjyP+dDKTff2+8aXpJTw1p3Q1ZroMM4/up6NbNn4rDUfp76xyKjR3/JtpZ6h4v1qP2fZe331GtU/tbG1WTevf/PqFelcSV5s85/sJ9gXKzoD/MYlVel/lLMRzLGw3VYaz/zQpb/uX1i1PquwZ19j2uP/y1I+kes7xra2feYEyv6W9ZVTn/4bErWKKxzalV/bV2V9KdkzcCyB4z2/8PQX5IzEssZQJfpBtoZ698O/XG8wjoFQuUo6TyU46/ob90HdKg9qLTP1+JK0h/aL/OsYmVsi//H3717oM4u/WfO9CwxE7EH7mT+f3x1POxb6QwR/oZtsnKOmlULWxlzXst5lG7S+R43bvb7ETvfX9H8v6v+x2AbeM73Pe+17Kr/Kbzv5Gj3rsTwztiU4OyxOi9xH7zeZ831KA706RknO79lcCVZi6IoiqIoiqIoiv/PF6gYRe8=
+   eJztmttugzAMhrmtdlV2hfYIff/325BqzfvlYxKzdfInoUIbgk9xnJRta5qmaZqm+ea24HhluPwf7Mjc/8q2QP3fnp8PaPce7GvlUQ0+J+v/iE0ybbFNtT0qbZyxTYQKO2T6GskNyAHneG21J1baINrPmQt4bvA45d6/jvvzk84Pdn0I17vQXrIByT5rB34/xitea/7HdkfBcYL5mOSfsUHV+Oe+W3FYY++39Jdkolio0F8bezMxgPfxWLZs7uWDK/0v6RGF7pP6t2oh7Z5tqxv/UV0ycP3Rl9F8J0FyU/7n8wB9z7/j+f/ODtTfevas/lp8Wc+0ftP8lvk+4nuSYUb/EynGV+DZlv/+CNyjMat/BZG6SRt72dxTpX+0jtfaeb7Ucq+VeySbVfpfy8XW9cw6waPK/5IPcS7S6nle01tyekTrbs5oDXQL9s91y8zZkTXToZwTkdpvpv6JyJjRfwfZLdtiTEljTIv1Veu/yNyfqWd36EPK39TvSL139fo/G/f3xPOz+lfu/6CfeFyM1Ow8j0XyqrfeqdgDpP6wDtu2n3khozfGv4U2rlbN7x7a3jddj/g/E/+W/ivmdw9v7/uhyBfRPzKvavrTszVZVxEdUyPzX2RetfSXZK0gsgYcqX+8edW615NzJd4eAI9r3JfIzl/IX9Mf45XXKRzJv9Z+qMZf0T+6DjiR1qDWOt/ql+cMqf7l9qvcqxjpO+J/+t7Kg4dyvkLGKNb/QBaRmFmxBj6p/H98tD/0rbWHyH9Dm4z8V1xVC0ehMe/lPEk3a39P67f6/Ygr31/x/H9V/Y+gDWbeYZh5r+Wq+l9i9p0cr+1IDF8ZmxaaPUbHJd6D833VWF/FDT5n+qnObxW8kqxN0zRN0zRN0zTN/+cT8HJGlQ==
   </data>
  </layer>
  <layer id="2" name="ceiling" width="64" height="64" opacity="0.5">
@@ -18,7 +18,7 @@
  </layer>
  <objectgroup id="4" name="objects">
   <object id="11" type="bunny-path" x="1502" y="2920">
-   <polyline points="0,0 -670,-168 -670,-1448 98,-1448 98,-2088 1570,-2088 2018,-1640 1570,-1320 738,-1320 738,-232 1186,-232 1535,-196 1863,-196"/>
+   <polyline points="0,0 -670,-168 -670,-1448 98,-1448 98,-2138.67 1530,-2116.67 2018,-1640 1570,-1320 738,-1320 738,-232 1186,-232 1535,-196 1863,-196"/>
   </object>
   <object id="12" name="closed-door" type="closed-door" x="1505.33" y="3072">
    <properties>
