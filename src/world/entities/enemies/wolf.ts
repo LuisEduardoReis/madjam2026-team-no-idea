@@ -14,4 +14,10 @@ export class Wolf extends ChasingEnemy {
         this.spriteState.animationDelay = 0.125;
         this.spriteState.setSprite(getSprite("wolf"));
     }
+
+    kill() {
+        super.kill();
+
+        this.spriteState.setSprite(getSprite("wolf-dead"));
+    }
 }

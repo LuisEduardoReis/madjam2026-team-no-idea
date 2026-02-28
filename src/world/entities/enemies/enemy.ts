@@ -41,4 +41,9 @@ export class Enemy extends WorldEntity {
             other.dealDamage(this.attackDamage);
         }
     }
+
+    kill() {
+        this.dead = true;
+        this.deathTimer = this.deathDelay;
+    }
 }

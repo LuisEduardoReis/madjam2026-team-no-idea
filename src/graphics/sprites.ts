@@ -49,4 +49,7 @@ export function initSprites() {
         getTexture("sprites/wolf/wolf_000"),
         getTexture("sprites/wolf/wolf_001"),
     ]));
+    SPRITES.set("wolf-dead", new Sprite([
+        getTexture("sprites/wolf/wolf_002"),
+    ]));
 }
