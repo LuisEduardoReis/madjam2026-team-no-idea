@@ -10,4 +10,10 @@ export class LevelDoor extends WorldConnector implements Interactable {
         this.immovable = true;
         this.collidesWithOthers = true;
     }
+
+    update(delta: number) {
+        super.update(delta);
+
+        this.interactable = this.world?.bunny?.hasExitedLevel() ?? false;
+    }
 }

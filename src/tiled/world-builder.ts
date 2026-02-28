@@ -147,7 +147,9 @@ function processObjects(world: World, objectGroup: p5.XML, mapXml: p5.XML) {
                break;
            }
            case "bunny-path": {
-               world.addEntity(new Bunny({ path: parsePath(object, x, y, tileWidth) }));
+               const bunny = new Bunny({ path: parsePath(object, x, y, tileWidth) });
+               world.bunny = bunny;
+               world.addEntity(bunny);
                break;
            }
            case "bat": {

@@ -73,4 +73,8 @@ export class Bunny extends WorldEntity {
     draw() {
         this.spriteState.draw(this.world, this.x, this.y);
     }
+
+    hasExitedLevel() {
+        return this.pathIndex >= this.path.length - 1;
+    }
 }

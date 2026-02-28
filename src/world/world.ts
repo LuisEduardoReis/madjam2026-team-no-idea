@@ -5,6 +5,7 @@ import type { Player } from "@src/world/entities/player";
 import { Color } from "@src/types";
 import {getTexture} from "@src/graphics/textures";
 import type {Texture} from "@src/graphics/texture";
+import type {Bunny} from "@src/world/entities/bunny";
 
 export type WorldProps = {
     w: number;
@@ -28,6 +29,8 @@ export class World {
     public fogDistance: number;
 
     public skyTexture: Texture;
+
+    public bunny: Bunny | undefined;
 
     constructor(props: WorldProps) {
         this.w = props.w ?? 20;
