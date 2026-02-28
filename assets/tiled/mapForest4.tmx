@@ -8,7 +8,7 @@
  </layer>
  <layer id="1" name="walls" width="64" height="64">
   <data encoding="base64" compression="zlib">
-   eJztmMtuAyEMRdlW+f//rWaBiqgf18Y2EM2VZpM2g4/xM63h+iEe7nPkuU2PzZ/h8XLf6ofO39p//o/zucEHM2drf7aPLFaNPjhZGr9XN/BTMd6aj/+2+J/r1MiK8Eu8J3M/4mpaF5f3t/KOmmMdFcV8ozx17Ru4u1b4kXefPgtF8yMz0s38VB/nmLXvn+AD61xH1XnrXHgS/yMLx3h/3nn4xFmQm/0orewB4ztO4u+i5r9oSTv1Cargp3Lu2/mpHjjvWLsVHf/ajnAKv7eXcUL2olP40bqPiOPmzt3Jb+l5mlBuLf4r+wHKrtljuW9uTt6xJ2js6N6G2GqNs4rfF7Q6j+yuSO/25le2D7z8lH3aGd7akpkLEfxovq8oKwastY+7e62/RfXUaB8g98Odida8yDk6Iw+8MYrMK9H847nVecDZEf1e5NzoWdEzA6L8aAxY9o4TfICez/mAm/es/t/lA4v/ubmX6q07+UdbNVus50uz5OwbRBX7gWSPdS7TmL39J5NfywXPrrvCzJ2dKSkPpDxeiW1ElfwWH1B3nDEDZfNT96fZk8HKnVXBXsljeTJ2wa6sfO3SeJAnSyN7xjkS725VxHtVzbbKuwNblBlXK5LYI2OUi/2d0up8tK1I3auU5e4p21Zmneq+Rsly9xw/N+taNfshW5qt6N3Pf0dmZSleqnyg1XstFrleJvmVixfu/7IU0eslfoqLynHNT1mK6PXSLCPdK1IrT+fXcjSiDp4c/8gca/Ex1wezRP1WgQq1cX7/zp2Ws4/yg8VW9P2791pJHjt3z+2vXr169cqmX3ISJIc=
+   eJztmM1uxDAIhH2t9v3ft8rBquXyM2Cw8Soj5dJNE38Yw5DWcP0QF/d35LpNz5o/w+XlvjUOnb+1//wf53VDDGbO1v7WPrJYNcagsjR+r27gp3K8NR//bfk/16mRFeGXeCtzP+JqWhd37m/lHTXnOiqK+UZ56to3cHet8CPPru6FovkRj3QzP9XHOWbt/yvEwOrrqDpv9YWV+B9ZOMb98/rhil6Q836UVuaA8RmV+Lso/xctaaauoB381Jn7dn6qB84z1mlF5782I1Th9/YyTshcVIUfrfuIOG7uvSf5LT1PE8qt5f/OfhDV7y37zfnkE3OCxj6vhbsXWas1z3Z8X0C+aXFen1qn9p5q31hW+TPZxzVknQWEn/Jq4+/oeV9RVg6gtU/Le62/RfXU6Bgg+8PVfrTmRfrojHPgzVHEr2TMEVkxsOaphT86B6K9oscDovxoDljmjgoxQN/PxYDze9b4n4qBJf6c76X8/kn+ca0Wb2R9LsftOX+Z84Fl5tGkMXv7z+n5SPIkGu9KX9jB35p8DqRzvJLbiHbyW2JA7XGGB8rm52Y+aT0ZrNy7drDv5LFcGbNgV9Z57dJ4kCtLI3vGeyTe09qR77tqtlXeGdiizLxakcQeWde53D8pqc5TfX1VSN3bKW3vtVloxevs7muUpJpHeTrpnlXPMMchW5bZRtr7eb8Qryzly64YIPO9lNNcL/PkC3dfliJ6vcRPcVFnXItTliLqueRlLPVSenaWVvm1MxpRByvnP+JjLTHm+mCWVr7LoGuUvoVU6f3aNxttrejzT8+1kjzrPO3bX7169eqVTb8UWiT2
   </data>
  </layer>
  <layer id="2" name="ceiling" width="64" height="64" visible="0" opacity="0.5">
@@ -23,7 +23,7 @@
   <object id="8" name="closed-door" type="closed-door" x="861" y="325">
    <ellipse/>
   </object>
-  <object id="9" name="forest4-spawn" type="level-spawn" x="858" y="419">
+  <object id="9" name="forest4-spawn" type="level-spawn" x="858" y="419" rotation="-90">
    <point/>
   </object>
   <object id="10" name="door-out-of-forest4" type="level-door" x="2459" y="1477">

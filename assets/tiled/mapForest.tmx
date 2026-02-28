@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="64" height="64" tilewidth="64" tileheight="64" infinite="0" nextlayerid="5" nextobjectid="8">
+<map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="64" height="64" tilewidth="64" tileheight="64" infinite="0" nextlayerid="5" nextobjectid="9">
  <tileset firstgid="1" source="tileset.tsx"/>
  <layer id="3" name="floor" width="64" height="64">
   <data encoding="base64" compression="zlib">
@@ -23,15 +23,15 @@
   <object id="5" type="bunny-path" x="1313.33" y="1284">
    <polyline points="0,0 -417.333,-4 -417.333,-644 30.6667,-644 350.667,-644 350.667,-1028 -161.333,-1028 -161.333,-708 1054.67,-708 1054.67,60 734.667,60 734.667,-772 1374.67,-772 1373.33,-1134.67 1921.67,-1130"/>
   </object>
-  <object id="6" name="forest-spawn" type="level-spawn" x="1313.5" y="1429.5" rotation="90">
-   <ellipse/>
-  </object>
   <object id="7" name="door-out-of-forest" type="level-door" x="2964.67" y="153.333">
    <properties>
     <property name="target" value="forest2-spawn"/>
     <property name="type" type="int" value="0"/>
    </properties>
    <ellipse/>
+  </object>
+  <object id="8" name="forest-spawn" type="level-spawn" x="1312.5" y="1437" rotation="90">
+   <point/>
   </object>
  </objectgroup>
 </map>

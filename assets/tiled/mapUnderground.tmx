@@ -23,7 +23,7 @@
   <object id="3" name="closed-door" type="closed-door" x="2273.33" y="2878.67">
    <ellipse/>
   </object>
-  <object id="4" name="underground-spawn" type="level-spawn" x="2270.67" y="2804">
+  <object id="4" name="underground-spawn" type="level-spawn" x="2270.67" y="2804" rotation="90">
    <point/>
   </object>
   <object id="5" name="door-out-of-underground" type="level-door" x="3738" y="829">
