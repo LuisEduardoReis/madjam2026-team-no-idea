@@ -13,6 +13,8 @@ export class Spider extends ChasingEnemy {
         this.spriteState.z = 0.2;
         this.spriteState.animationDelay = 0.125;
         this.spriteState.setSprite(getSprite("spider"));
+
+        this.speed = 1.5;
     }
 
     kill() {
