@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="64" height="64" tilewidth="64" tileheight="64" infinite="0" nextlayerid="6" nextobjectid="18">
+<map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="64" height="64" tilewidth="64" tileheight="64" infinite="0" nextlayerid="6" nextobjectid="18">
  <tileset firstgid="1" source="tileset.tsx"/>
  <layer id="3" name="floor" width="64" height="64">
   <data encoding="base64" compression="zlib">
@@ -8,7 +8,7 @@
  </layer>
  <layer id="1" name="walls" width="64" height="64">
   <data encoding="base64" compression="zlib">
-   eJzt19EKwyAMRuEy+v7PvNtR7KLJXzXp+UAYY5seVos9Dr2PYGQWXT/9uSn6T2PsvG969rb1Gav/bt5d/etvydg/cm+3rt+s/aOsTvrn9CvOLNn7V6M/3u+9Hiv0X432e/fxefN6Ne9/Sn8/5fWqVqnfM0ekv/deunu/6tkwY/8v+mPe2J91/7fm9PYr1lW5v+W6FgX61+z/GXrOG9X7rffe3u/93cj5r0L/yu9H5tmlf9Z4am4AAAAAAAAAAAAAAIDqvnKwBls=
+   eJzt18EKwyAMgOEedqnv/8C79FCKLppkatL/A6GMbfZnWtxx+DsdRmTW+6c/No/+Ioyd903P3pbeI/W35t3Vr/6aiP0jz3Zp/UbtHyV10j+n3+PMEr1/Nfrt/dr1mKH/abRfu49L43o17W9Kfz/P9eotU79mDkt/77N0936v/4YR++/ot3ljf9T9/7nGnbbf474y99eUxrUF/Wv2/ww9543s/dJrb+/Xfq/l/Jehf+XnLfPs0j9r/GtuAAAAAAAAAAAAAACA7L7nlhMS
   </data>
  </layer>
  <layer id="2" name="ceiling" width="64" height="64" opacity="0.5">
@@ -22,7 +22,7 @@
   </object>
   <object id="2" name="door-out-of-farm" type="level-door" x="1887" y="354">
    <properties>
-    <property name="target" value="forest-spawn"/>
+    <property name="target" value="farm2-spawn"/>
     <property name="type" value="3"/>
    </properties>
    <ellipse/>

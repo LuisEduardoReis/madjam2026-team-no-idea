@@ -3,12 +3,12 @@
  <tileset firstgid="1" source="tileset.tsx"/>
  <layer id="3" name="floor" width="64" height="64">
   <data encoding="base64" compression="zlib">
-   eJztw8EJAAAMA6GD7L9zx+hHwVVTVVVVVVVVVVVVVVVVVVVVXx/6ADAB
+   eJztwzENAAAMBKEb37/iyugCCaumqqqqqqqqqqqqqqqqqqqqvj4wHoAB
   </data>
  </layer>
  <layer id="1" name="walls" width="64" height="64">
   <data encoding="base64" compression="zlib">
-   eJztl1EKhDAMRJfe/9CLHwuLtHUmDRrLeyBINbGTJqn9fADAoXWu3ZlpdWPxxripc73SdX72hji4c7zKk1X/dxOZWzvdK3mxUwyiNV41Bhn93umPlYnEwbWpHoMDd0/I6KFPEvnvWamZivojNiM7dV+oQnZOKrlUSf9Btv7RfeuMVyArB3p+WudZNf0Hak27ef0W/Qfqf/xu+q/OwcrYv5/euxX1K/mcpV+xv5PoHh6t/9k7TxBZczcmTu+4G3UNozUy+kbGmTOD1b1O9TMbq6jf9eHkfaVayNLfG1P74NP61e/3amLlbPO09h8jXdE8VXVV0D7D1e/08yprP2OWD2otOPZvwjkjZPSKaji9UPGzA7M+qvZYAAAAAAAAAAAAAAAAAACAM1/KeQIt
+   eJztl8EKhDAMRPfa///hxcPCIm2dSYPG8h4IUk3spElqPx8AcGida3dmWt1YvDFu6lyvdJ2fvSEO7hyv8mTV/91E5tZO90pe7BSDaI1XjUFGv3f6Y2UicXBtqsfgwN0TMnrok0T+e1ZqpqL+iM3ITt0XqpCdk0ouVdJ/kK1/dN864xXIyoGen9Z5Vk3/gVrTbl6/Rf+B+h+/m/6rc7Ay9u+n925F/Uo+Z+lX7O8kuodH63/2zhNE1tyNidM77kZdw2iNjL6RcebMYHWvU/3Mxirqd304eV+pFrL098bUPvi0fvX7vZpYOds8rf3HSFc0T1VdFbTPcPU7/bzK2s+Y5YNaC479m3DOCBm9ohpOL1T87MCsj6o9FgAAAAAAAAAAAAAAAAAA4MwXL0YJxw==
   </data>
  </layer>
  <layer id="2" name="ceiling" width="64" height="64" visible="0" opacity="0.5">
