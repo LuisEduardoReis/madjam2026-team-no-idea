@@ -3,7 +3,7 @@ import type {WorldEntityProps} from "@src/world/entities/world-entity";
 import {getSprite} from "@src/graphics/sprites";
 
 
-export class Wolf extends ChasingEnemy {
+export class Croc extends ChasingEnemy {
 
     constructor(props: WorldEntityProps) {
         super(props);
@@ -12,12 +12,12 @@ export class Wolf extends ChasingEnemy {
         this.spriteState.h = 0.75;
         this.spriteState.z = 0.75 / 2;
         this.spriteState.animationDelay = 0.125;
-        this.spriteState.setSprite(getSprite("wolf"));
+        this.spriteState.setSprite(getSprite("croc"));
     }
 
     kill() {
         super.kill();
 
-        this.spriteState.setSprite(getSprite("wolf-dead"));
+        this.spriteState.setSprite(getSprite("croc-dead"));
     }
 }
