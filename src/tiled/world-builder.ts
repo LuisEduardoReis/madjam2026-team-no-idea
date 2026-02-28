@@ -14,6 +14,7 @@ import {ChasingEnemy} from "@src/world/entities/enemies/chasing-enemy";
 import {Tree} from "@src/world/entities/decoration/tree";
 import type {WorldScreen} from "@src/screens/world-screen";
 import {Wolf} from "@src/world/entities/enemies/wolf";
+import {Croc} from "@src/world/entities/enemies/croc";
 
 export function buildWorld(name: string): World {
 
@@ -157,8 +158,14 @@ function processObjects(world: World, objectGroup: p5.XML, mapXml: p5.XML) {
                world.addEntity(new EnemyWithPath({ path: parsePath(object, x, y, tileWidth) }));
                break;
            }
-           case "hare": {
+           case "hare":
+           case "wolf": {
                world.addEntity(new Wolf({ x, y }));
+               break;
+           }
+           case "croc": {
+               world.addEntity(new Croc({ x, y }));
+               break;
            }
        }
     });
