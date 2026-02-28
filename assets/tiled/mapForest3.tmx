@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="64" height="64" tilewidth="64" tileheight="64" infinite="0" nextlayerid="5" nextobjectid="10">
+<map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="64" height="64" tilewidth="64" tileheight="64" infinite="0" nextlayerid="5" nextobjectid="45">
  <tileset firstgid="1" source="tileset.tsx"/>
  <layer id="3" name="floor" width="64" height="64">
   <data encoding="base64" compression="zlib">
@@ -8,7 +8,7 @@
  </layer>
  <layer id="1" name="walls" width="64" height="64">
   <data encoding="base64" compression="zlib">
-   eJztmMtuAzEIRdlW/f//rbqwNLF4XMBgpuqRvEnGzlzAPEL0zz99fDHrjUQ0/D73/VhvtAPnP0vD+u5bWNNt8Hw/rwZuz5N9/zQ43TuaDTTtyP6b7No1uFhAtO/7J9kA1f5Euh+evdP0d7LH0U1u6Ceap997B7JMuwOddpiWAxYddphYAzgidQHhDdoXWm6UaqBlM2kumGgLLQY0HWgvqPXYE3jq4dBsEKmrU3ID50sJJA483IyDSE9PVGuDLrJ1z7JB5LzqGMj6aUeywdR7UFHjtRk5claH/goiszF3xtv8j4D2TB36T8RA9j8Qq8+q1u+NA6v3RWIfzZMddVCq+96+11P/0Rjo7AO0Pn69l+dOorFt6e/uhYh4W6z38byLlmMk/TdjgCOi/+QdIOGzLnbfaPq9vd+EOmDB5TXrGbQmSnVAem4CSL5H4lWbF7hnq+chDUSvV7dUR5Fc0YGlM9I7W/0D2jNV4s1hFpa/Ld/v51TZIHOXJTz9ouX7Lv1ZzU+8vbLnnNOg2j25wOt/7fcqtRN96teWp/Zl9XfmfTROpfeQdGTyXoffT8LdIavWT6h5J5FiAO31931/QT9RvFd8k36klnlAZs4pnO4dFm/QX6WdaG4MnJwRLKbYoGJGQLmlP1K3OU7Ozl1ImqO60XlHO6tDf1bzQur9MudV6j95r6M9n3VmVL9nvjmRzyS/Z87L6kfm24re7aTvs/o72fVnzsne/W7/E32+d+Z3TsxBnrt/+h5E9e93qJoKO2TrZ/f8WxEPnv1cv3QDzQ7ROJY+39ek//w8+SKyrPMn4+mpbun8AfQ3KFI=
+   eJztWEluBDEI5Brl///NyZLHMkuBwTiaknxJ2nQXazFEX3xRgx/mvAiUw3judzqv+YGLn8Rh/t8vc7r7wMuBuzNjvd8NOw4ruHzWuEv3O2DlIGGXCxbu6/1OPrByn8HVB3K3G/9KrHl0Ezf4E/Xjj9ZAFN1qoNIP3XrAQIUfOs6AHTxzwYIXuA9IvZGbgZrPJB3VzSdSDlj14A6S3zr5YOazgxZLtHa69IZdLDlY8gDBzTzwaHqiXB9UITr3NB947GXnQDROKzgfdK2DjBkv7cgeWxX8M+DZjXc2Xou/BVbNVMH/RA5EfwPRdFY2fzQPNO1ryX1rn6yYg9zcR3UvMv+tOVCpAyQdP74LqUlrbmv8q7UQ0d4X43uQb5F6DMefy4Gb+wDK/2QNIO/NwBob6TtQ7fcK//Voz1hnIjcHuOc6wNLvLbNU2hd2z97uARpflDc3Ry29ogIaT4921vSDVTNlAu1hGrR4a7Ff7WT5IFLLHBC9qMW+in+U8wxUKyN2TsPKHekFaPyl92VyJ/rkLx1k9kX5V/Z9a55y38HxiPS9irifxK6GtFnfYeadBJcDVq2/3vsP/In8WvEl/pZZhsCyc3bBae0w8AL/LO5EfXPg5I6goYsPMnYEK27x98ztHU7uzlXgOHt5W/cdyVYF/yjnAU77Rexl8j9Z117Np9n08kf2mxP9jIt7xF6Uv2W/zdBuJ2Mf5V+JlX/ETrT2q+NP9Pndkfec2IOQ2j9dB17+aw1lI8MP0flZvf9m5ANyf6eXbkDygzePub+vp9Nvfki/8BzNfmcgmuoWzz9Wfii1
   </data>
  </layer>
  <layer id="2" name="ceiling" width="64" height="64" visible="0" opacity="0.5">
@@ -23,7 +23,7 @@
   <object id="7" name="closed-door" type="closed-door" x="1184" y="1896">
    <ellipse/>
   </object>
-  <object id="8" name="forest3-spawn" type="level-spawn" x="1184" y="1813.33">
+  <object id="8" name="forest3-spawn" type="level-spawn" x="1184" y="1813.33" rotation="-180">
    <point/>
   </object>
   <object id="9" name="door-out-of-forest3" type="level-door" x="726.667" y="3613.33">
@@ -31,6 +31,111 @@
     <property name="target" value="forest4-spawn"/>
     <property name="type" type="int" value="0"/>
    </properties>
+   <ellipse/>
+  </object>
+  <object id="10" type="hare" x="1066.67" y="1565.33">
+   <ellipse/>
+  </object>
+  <object id="11" type="hare" x="886.667" y="1638.67">
+   <ellipse/>
+  </object>
+  <object id="12" type="hare" x="804" y="1486.67">
+   <ellipse/>
+  </object>
+  <object id="13" type="hare" x="1004" y="1313.33">
+   <ellipse/>
+  </object>
+  <object id="14" type="hare" x="1344" y="1392">
+   <ellipse/>
+  </object>
+  <object id="15" type="hare" x="1212" y="908">
+   <ellipse/>
+  </object>
+  <object id="16" type="hare" x="812" y="708">
+   <ellipse/>
+  </object>
+  <object id="17" type="hare" x="972" y="486">
+   <ellipse/>
+  </object>
+  <object id="18" type="hare" x="1428" y="636">
+   <ellipse/>
+  </object>
+  <object id="19" type="hare" x="1698" y="834">
+   <ellipse/>
+  </object>
+  <object id="20" type="hare" x="1952" y="470">
+   <ellipse/>
+  </object>
+  <object id="21" type="hare" x="2050" y="762">
+   <ellipse/>
+  </object>
+  <object id="22" type="hare" x="2178" y="994">
+   <ellipse/>
+  </object>
+  <object id="23" type="hare" x="2222" y="1238">
+   <ellipse/>
+  </object>
+  <object id="24" type="hare" x="2598" y="1188">
+   <ellipse/>
+  </object>
+  <object id="25" type="hare" x="2548" y="1388">
+   <ellipse/>
+  </object>
+  <object id="26" type="hare" x="3114" y="2274">
+   <ellipse/>
+  </object>
+  <object id="27" type="hare" x="2708" y="2794">
+   <ellipse/>
+  </object>
+  <object id="28" type="hare" x="2678" y="2956">
+   <ellipse/>
+  </object>
+  <object id="29" type="hare" x="2516" y="3008">
+   <ellipse/>
+  </object>
+  <object id="30" type="hare" x="2260" y="3104">
+   <ellipse/>
+  </object>
+  <object id="31" type="hare" x="2850" y="3190">
+   <ellipse/>
+  </object>
+  <object id="32" type="hare" x="2860" y="3446">
+   <ellipse/>
+  </object>
+  <object id="33" type="hare" x="2622" y="3754">
+   <ellipse/>
+  </object>
+  <object id="34" type="hare" x="2546" y="3500">
+   <ellipse/>
+  </object>
+  <object id="35" type="hare" x="2082" y="3060">
+   <ellipse/>
+  </object>
+  <object id="36" type="hare" x="1982" y="2740">
+   <ellipse/>
+  </object>
+  <object id="37" type="hare" x="1924" y="2586">
+   <ellipse/>
+  </object>
+  <object id="38" type="hare" x="1946" y="3252">
+   <ellipse/>
+  </object>
+  <object id="39" type="hare" x="1716" y="3326">
+   <ellipse/>
+  </object>
+  <object id="40" type="hare" x="1626" y="3560">
+   <ellipse/>
+  </object>
+  <object id="41" type="hare" x="1856" y="3806">
+   <ellipse/>
+  </object>
+  <object id="42" type="hare" x="1370" y="3512">
+   <ellipse/>
+  </object>
+  <object id="43" type="hare" x="1274" y="3806">
+   <ellipse/>
+  </object>
+  <object id="44" type="hare" x="1028" y="3534">
    <ellipse/>
   </object>
  </objectgroup>

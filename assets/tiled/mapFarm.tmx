@@ -8,7 +8,7 @@
  </layer>
  <layer id="1" name="walls" width="64" height="64">
   <data encoding="base64" compression="zlib">
-   eJzt18EKwyAMgOEedqnv/8C79FCKLppkatL/A6GMbfZnWtxx+DsdRmTW+6c/No/+Ioyd903P3pbeI/W35t3Vr/6aiP0jz3Zp/UbtHyV10j+n3+PMEr1/Nfrt/dr1mKH/abRfu49L43o17W9Kfz/P9eotU79mDkt/77N0936v/4YR++/ot3ljf9T9/7nGnbbf474y99eUxrUF/Wv2/ww9543s/dJrb+/Xfq/l/Jehf+XnLfPs0j9r/GtuAAAAAAAAAAAAAACA7L7nlhMS
+   eJzt19EKwyAMRuHeru//wLsdxS6a/FWTng+EMbbpYbXY49D7CEZm0fXTn5ui/zTGzvumZ29bn7H67+bd1b/+loz9I/d26/rN2j/K6qR/Tr/izJK9fzX64/3e67FC/9Vov3cfnzevV/P+p/T3U16vapX6PXNE+nvvpbv3q54NM/b/oj/mjf1Z939rTm+/Yl2V+1uua1Ggf83+n6HnvFG933rv7f3e342c/yr0r/x+ZJ5d+meNp+YGAAAAAAAAAAAAAACo7gux2BM2
   </data>
  </layer>
  <layer id="2" name="ceiling" width="64" height="64" opacity="0.5">

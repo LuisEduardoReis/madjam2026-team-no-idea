@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="64" height="64" tilewidth="64" tileheight="64" infinite="0" nextlayerid="5" nextobjectid="10">
+<map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="64" height="64" tilewidth="64" tileheight="64" infinite="0" nextlayerid="5" nextobjectid="33">
  <tileset firstgid="1" source="tileset.tsx"/>
  <layer id="3" name="floor" width="64" height="64">
   <data encoding="base64" compression="zlib">
@@ -23,7 +23,7 @@
   <object id="7" name="closed-door" type="closed-door" x="1184" y="1895">
    <ellipse/>
   </object>
-  <object id="8" name="forest2-spawn" type="level-spawn" x="1181" y="1815">
+  <object id="8" name="forest2-spawn" type="level-spawn" x="1181" y="1815" rotation="-180">
    <point/>
   </object>
   <object id="9" name="door-out-of-forest2" type="level-door" x="1787" y="2014">
@@ -31,6 +31,72 @@
     <property name="target" value="forest3-spawn"/>
     <property name="type" type="int" value="0"/>
    </properties>
+   <ellipse/>
+  </object>
+  <object id="10" type="hare" x="1080" y="1680">
+   <ellipse/>
+  </object>
+  <object id="11" type="hare" x="956" y="1747">
+   <ellipse/>
+  </object>
+  <object id="12" type="hare" x="881" y="1649">
+   <ellipse/>
+  </object>
+  <object id="13" type="hare" x="753" y="1621">
+   <ellipse/>
+  </object>
+  <object id="15" type="hare" x="770" y="1459">
+   <ellipse/>
+  </object>
+  <object id="16" type="hare" x="880" y="1447">
+   <ellipse/>
+  </object>
+  <object id="17" type="hare" x="1022.67" y="1168">
+   <ellipse/>
+  </object>
+  <object id="18" type="hare" x="1260" y="1036">
+   <ellipse/>
+  </object>
+  <object id="19" type="hare" x="978.667" y="982.667">
+   <ellipse/>
+  </object>
+  <object id="20" type="hare" x="1264" y="756">
+   <ellipse/>
+  </object>
+  <object id="21" type="hare" x="1078" y="510">
+   <ellipse/>
+  </object>
+  <object id="22" type="hare" x="754" y="444">
+   <ellipse/>
+  </object>
+  <object id="23" type="hare" x="1462" y="778">
+   <ellipse/>
+  </object>
+  <object id="24" type="hare" x="1516" y="950">
+   <ellipse/>
+  </object>
+  <object id="25" type="hare" x="2046" y="736">
+   <ellipse/>
+  </object>
+  <object id="26" type="hare" x="1940" y="476">
+   <ellipse/>
+  </object>
+  <object id="27" type="hare" x="1736" y="1018">
+   <ellipse/>
+  </object>
+  <object id="28" type="hare" x="2390" y="818">
+   <ellipse/>
+  </object>
+  <object id="29" type="hare" x="2405.33" y="1390.67">
+   <ellipse/>
+  </object>
+  <object id="30" type="hare" x="2310.67" y="1730.67">
+   <ellipse/>
+  </object>
+  <object id="31" type="hare" x="2165.33" y="1856">
+   <ellipse/>
+  </object>
+  <object id="32" type="hare" x="2074.67" y="2072">
    <ellipse/>
   </object>
  </objectgroup>
