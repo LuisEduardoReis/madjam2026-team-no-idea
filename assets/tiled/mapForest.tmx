@@ -3,12 +3,12 @@
  <tileset firstgid="1" source="tileset.tsx"/>
  <layer id="3" name="floor" width="64" height="64">
   <data encoding="base64" compression="zlib">
-   eJztwzENAAAMBKEb37/iyugCCaumqqqqqqqqqqqqqqqqqqqqvj4wHoAB
+   eJztljkSxDAIBB069P9f63CrtiwYdABBB524ZMFwifu6rhuWeRx23tdNm+fXjO8VOk/7skN/Vf531lHk7P/5TvWvnFXvUvuqwzyw8vAIZzL8yLLr5ee031n6K+pOsZGpP8NOV7+q9VuztFL/V0/M7ktRLZk5Ud7j0Uyc8V2JW8X7l6lftZ9dByOtin4rj8rusKNvKvNv+T+KiVfzHfVHZpwVN0Vv9g709U3Ni1XrkZ7P1h+ZM9E+6Kw/Mpusf72+sWZitf7VuM2825EZmqnf2kvUGlndDyy7J/Srtmb7woslAAAAAAAAAAAAAAAAAAAAAAAAAAD8eAGmqYg5
   </data>
  </layer>
  <layer id="1" name="walls" width="64" height="64">
   <data encoding="base64" compression="zlib">
-   eJzt18GOwzAIRVG2Vf5/30/tqlKFDIYYnES9R8pmJrV5KY5dkXWv4FU93uo8lbUckytT32w8NfdbXaUi2b6XRdcenfNErW35K1Tkv+r7r2D073Q96TF2r/9Mv8/uia4lL//ofdDF+35GjsA9lbrzi+TzR96JZ+mxd+XPvO87XZn/jv45/473n0h+va+el6J2ZBeJ78d6Tc72d0/kuenzRBevbi9/ZhzNeobWeWBnH+j5M/m971H/Ldo3d82v+3JWv/VM9BxWDZ2y/T/qy0z+3//p53lV/sh53KvL6//ImVqM+7ryj36PZXj7wFPyr+zX1hr21rr3WRl8VqQ//xmjfTvTS6PesWramT96pov2viW6h3bu/95cXq7R3jcbM5rJO1NWy8yle9SqxxtzR6ZOT60bAAAAAAAAAAAAAAAAAICn+QC6IRnz
+   eJztl0EOAjEIRdka77/3qK5MDIFfOkM7Tnwv6ULtAJ/CUM3O8yiubntn/XTG8hysmfhG9pzvl1utVLR9VoaPverzQKzL9HfQof+q8+8gqd9hP3kbu/t/pt5He6q9pPRH74NVqPOJeBb2dLJav5nWPzqfjKO58bZ36Z9533cx6p/P5136f5F/0a9q4Ur9UU8cvS/N5niHdrP6PPY9OZrvikre/H1iFSpupX/GjifLYTZvdtaBWXzWFf3qHP131bq5Qr/3repfPf+9P8uJ95HFsJLZ+o/qckb/928+n1fpr9zHVVyq/it3akv2rdIf/R+rUJkDd9GfnVeFrIdVr6tnLXjWbL3+I0Rze6aWotrJYtqpX91LKvOrmtPqDF05/5UvpSuafSObVU3qTtnNjC9fo1k8yuYOTSu5a9wAAAAAAAAAAAAAAAAAAAAAAAAAd+MNjRcaSw==
   </data>
  </layer>
  <layer id="2" name="ceiling" width="64" height="64" visible="0" opacity="0.5">
@@ -36,16 +36,10 @@
   <object id="8" name="forest-spawn" type="level-spawn" x="1312.5" y="1437" rotation="90">
    <point/>
   </object>
-  <object id="9" type="hare" x="1314" y="1223">
-   <ellipse/>
-  </object>
   <object id="10" type="hare" x="1086" y="1216">
    <ellipse/>
   </object>
   <object id="11" type="croc" x="782" y="1303">
-   <ellipse/>
-  </object>
-  <object id="12" type="hare" x="859" y="1144">
    <ellipse/>
   </object>
   <object id="13" type="croc" x="942" y="1063">

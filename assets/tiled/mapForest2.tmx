@@ -3,15 +3,15 @@
  <tileset firstgid="1" source="tileset.tsx"/>
  <layer id="3" name="floor" width="64" height="64">
   <data encoding="base64" compression="zlib">
-   eJztwzENAAAMBKEb37/iyugCCaumqqqqqqqqqqqqqqqqqqqqvj4wHoAB
+   eJztl0sOwzAIBbPMMvc/bbeVFczHToB2FiNVrpO+Bxjc8ziOEwBMXALZut70rcVk5V1VsWrVfH1/3yUOXo1anXSrh4iuuxxb66IaEW2RnHaIgaTP0/estVOR6FmNzIdsr7s0/spZiNx7Vnp7Rf8766TbTJBmd/Rdllqq5n+XnvE9l/A7lfzvjMGd//HOVNG/FoNZXUufx7Xq/mf6Z3Vteb6D/9n/GMuaZ28V/9E+veK/yvyznndPnVj9Z3vXcjjz5819df9afVp8e3LvvWtn5V/SKN1prLnX5mW2/50xtKxl+l+Zx5FeYH2+Wg3cnQlv/6zmfeYr2qe6zcAnYrlrX3ek+qk0AzP8j3uydWbHJ1vHU/ne1VMBAAAAAAAAAAAAAAAAAOB/+QBQjYiJ
   </data>
  </layer>
  <layer id="1" name="walls" width="64" height="64">
   <data encoding="base64" compression="zlib">
-   eJztmM0OgzAMg3udeP/7HnXbAamK4tYpCMzkT+ppaYfz0wRaM4bjNVn/Sq9xA4v1xRP9FnVHkC+yc+JZyn6IcWdAPojae1tVP2TPzIBqgskfVf1Vdi2xNkb2avp/rMS/NU4z2qNUB9mdtQq7X9UHR/xQ2aecByt34tFaUADNPjOO1I2i/ioj7U/qCav6EWwuqek/ywdxPtrCb1uwu5vVWRCR6Y9zcW+nAOODal5nOaCuH90F2dzP1rWy/sp7DIopsu3/Y3TmXbBzX6b9qH6F/lep9+r77q4L+UphBp7FcKSbyZXWsK+ys6+mop/RXYl9XKr6mRkf5coo9nEmUtNfIct5Vnu//2rOmPmy/J3NEbP9V1H9BpjVRCX26Lw7+wB69491P6rx1e8nd2tvjdPD2n3Xu6JdoQeOmPjina14BuohKj1whV0/Y8v0UIU6qFCJ/wyFO7AKU/+V9STtCPJ+HN6xxhhjjDHGGGOMMcYYY4wxxhhjcj7JVR3x
+   eJztmMuqwzAMRLUt+f99P7X3LgJm0NiSC8mkzAFDS2W3I+uVRhhT47VYv8qo8SCr6osn+g11I8wX2Tl4lrIf8N4rMB+g9tFW1Q/Zb67AcqISP6r6u5xaMDdm9mr6/9m5/4iaZrZHKQ+ympVR0Vn1h6oPKn5gdPYpx8FOTfw2FxRgs8+K3Xg596rp77KqGU/pCUz/jk/OfZVYUtO/qxfB+eiAzw6wu5vdWZCR6ce5eLRToOKDWVzj66ynROjrn9WCWVyjLT4fqervPMewO2W243fMzryLzvyb/bfxjX6F/tfJ9+7z7qmL+UphBl7d4Ux3JVYiuK+ys68G69II6q/o7tw9rrv1I6sZLptpWI1g+sf3avo7ZDFf1T7uv5psNuuSxe9qjljtv4ruf4BZTnTunp13Zx9gz/6Y97Mc7/RGfK/QA1erave33pV7j+D+VGLhi3e28AzWQ1R64A6n/ortrIeONor3z+jc/wqFGtilkv+d9STtjGJ9nNZYY4wxxhhjjDHGGGOMMcYYY4wxOR/ihB4+
   </data>
  </layer>
- <layer id="2" name="ceiling" width="64" height="64" visible="0" opacity="0.5">
+ <layer id="2" name="ceiling" width="64" height="64" opacity="0.5">
   <data encoding="base64" compression="zlib">
    eJztwTEBAAAAwqD1T20MH6AAAAAAAAAAAAAAAAAAAACAtwFAAAAB
   </data>
@@ -36,19 +36,10 @@
    </properties>
    <ellipse/>
   </object>
-  <object id="10" type="hare" x="1080" y="1680">
-   <ellipse/>
-  </object>
-  <object id="11" type="croc" x="956" y="1747">
-   <ellipse/>
-  </object>
   <object id="12" type="hare" x="881" y="1649">
    <ellipse/>
   </object>
   <object id="13" type="hare" x="753" y="1621">
-   <ellipse/>
-  </object>
-  <object id="15" type="hare" x="770" y="1459">
    <ellipse/>
   </object>
   <object id="16" type="croc" x="880" y="1447">
