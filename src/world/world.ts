@@ -3,6 +3,8 @@ import type { WorldScreen } from "@src/screens/world-screen";
 import type { WorldEntity } from "@src/world/entities/world-entity";
 import type { Player } from "@src/world/entities/player";
 import { Color } from "@src/types";
+import {getTexture} from "@src/graphics/textures";
+import type {Texture} from "@src/graphics/texture";
 
 export type WorldProps = {
     w: number;
@@ -25,6 +27,8 @@ export class World {
     public fogColor: Color;
     public fogDistance: number;
 
+    public skyTexture: Texture;
+
     constructor(props: WorldProps) {
         this.w = props.w ?? 20;
         this.h = props.h ?? 20;
@@ -41,6 +45,8 @@ export class World {
 
         this.fogColor = new Color(0x000000);
         this.fogDistance = 16;
+
+        this.skyTexture = getTexture("sky");
     }
 
     getTile(x: number, y: number): Tile {

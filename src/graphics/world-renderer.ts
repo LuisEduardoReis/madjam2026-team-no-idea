@@ -25,6 +25,7 @@ export function drawWorld(world: World) {
     const planeY = dirX * planeWidth/2 * ASPECT;
     const fogDistance = world.fogDistance;
     const invFogDistance = 1 / fogDistance;
+    const invPgHeight = 1 / pgWidth;
 
     for(let i = 0; i < pgWidth * pgHeight; i++) {
         zBuffer[i] = fogDistance;
@@ -44,7 +45,7 @@ export function drawWorld(world: World) {
         const invWallHeight = 1 / wallHeight;
         const wallStartY = Math.floor(cameraHeight - wallHeight * 0.5);
         const wallEndY = Math.floor(cameraHeight + wallHeight * 0.5) + 1;
-        //const skyU = 1 - (Math.atan2(rayDirX, rayDirY) + Math.PI) / (2 * Math.PI);
+        const skyU = 1 - (Math.atan2(rayDirX,rayDirY) + Math.PI) / (2*Math.PI);
 
         // Ceiling
         for (let y = 0; y < wallStartY; y++) {
@@ -62,8 +63,13 @@ export function drawWorld(world: World) {
             const texture = tile.ceilingType?.texture;
             if (texture) {
                 transferPixel(pgPixels, pgWidth, x, y, pos_u, pos_v, texture, ceilDist * invFogDistance, world.fogColor);
-            } else {
-                drawPixel(pgPixels, pgWidth, x, y, world.fogColor);
+            } else if (world.skyTexture) {
+                const skyV = y * invPgHeight * 4;
+                if (skyV <= 1) {
+                    transferPixel(pgPixels, pgWidth, x,y, skyU, skyV, world.skyTexture, 0, world.fogColor);
+                } else {
+                    drawPixel(pgPixels, pgWidth, x, y, world.fogColor);
+                }
             }
         }
 
