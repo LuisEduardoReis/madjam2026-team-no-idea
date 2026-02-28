@@ -7,7 +7,7 @@ export class Enemy extends WorldEntity {
 
     public attackTimer = 0;
     public attackDelay = 0.5;
-    public attackDamage = 25;
+    public attackDamage = 10;
 
     public dead: boolean = false;
     public deathTimer = 0;
