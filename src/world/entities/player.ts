@@ -4,6 +4,7 @@ import { SETTINGS } from "@src/settings";
 import {
     angleDifference,
     between,
+    DEG_TO_RAD,
     hitScanEntities,
     point,
     pointAngle,
@@ -151,20 +152,27 @@ export class Player extends WorldEntity {
 
     private gunUpdate(delta: number) {
         if (KEY_PRESSED.get(SETTINGS.CONTROLS[ControlKey.FIRE])) {
-            const dirX = Math.cos(this.dir);
-            const dirY = -Math.sin(this.dir);
-            const raycast = castRay(this.world, point(this.x, this.y), point(dirX, dirY));
-            const hitscan = hitScanEntities(this.world?.entities, this.x, this.y, raycast.hit.x, raycast.hit.y);
+            const spread = 5 * DEG_TO_RAD;
+            let hit = false;
+            [0, -spread, spread].forEach(dirOffset => {
+                if (hit) return;
 
-            if (hitscan && hitscan.entity instanceof Enemy) {
-                const enemy = hitscan.entity;
-                const knockback = 10;
+                const dirX = Math.cos(this.dir + dirOffset);
+                const dirY = -Math.sin(this.dir + dirOffset);
+                const raycast = castRay(this.world, point(this.x, this.y), point(dirX, dirY));
+                const hitscan = hitScanEntities(this.world?.entities, this.x, this.y, raycast.hit.x, raycast.hit.y);
 
-                enemy.ex = dirX * knockback;
-                enemy.ey = dirY * knockback;
+                if (hitscan && hitscan.entity instanceof Enemy) {
+                    hit = true;
+                    const enemy = hitscan.entity;
+                    const knockback = 10;
 
-                bloodSplatter(this.world, enemy.x, enemy.y, enemy.z);
-            }
+                    enemy.ex = dirX * knockback;
+                    enemy.ey = dirY * knockback;
+
+                    bloodSplatter(this.world, enemy.x, enemy.y, enemy.z);
+                }
+            });
         }
     }
 }

@@ -3,6 +3,8 @@ import {WorldEntity, type WorldEntityProps} from "@src/world/entities/world-enti
 
 export class Enemy extends WorldEntity {
 
+
+
     constructor(props: WorldEntityProps) {
         super(props);
     }
