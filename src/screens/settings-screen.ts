@@ -25,6 +25,7 @@ export class SettingsScreen extends MenuScreen {
         this.createBackButton();
         this.createResolutionRadio(x,200);
         this.createViewBobbingCheckbox(x + 500, 325);
+        this.createMusicCheckbox(x + 500, 400);
         this.createTurnSensitivitySlider(x + 500, 500);
     }
 
@@ -73,6 +74,20 @@ export class SettingsScreen extends MenuScreen {
             SETTINGS.VIEW_BOBBING = !SETTINGS.VIEW_BOBBING;
             saveSettings();
             console.log(`View bobbing ${SETTINGS.VIEW_BOBBING ? 'on' : 'off'}`);
+        };
+    }
+
+    createMusicCheckbox(x: number, y: number) {
+        const musicCheckbox = this.addItem(new MenuCheckbox({ x: x, y: y, w: 50, h: 50 }));
+        const musicLabel = this.addItem(new MenuLabel({ x: x + 75, y: y + 5, text: "Music", w: 300, h:50 }));
+        musicLabel.link = musicCheckbox;
+        musicCheckbox.onShow = () => {
+            musicCheckbox.on = SETTINGS.MUSIC;
+        };
+        musicCheckbox.onClickFunction = () => {
+            SETTINGS.MUSIC = !SETTINGS.MUSIC;
+            saveSettings();
+            console.log(`Music ${SETTINGS.MUSIC ? 'on' : 'off'}`);
         };
     }
 
