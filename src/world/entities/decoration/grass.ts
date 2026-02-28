@@ -2,6 +2,7 @@ import {WorldEntity, type WorldEntityProps} from "@src/world/entities/world-enti
 import {getTexture} from "@src/graphics/textures";
 import {drawSprite} from "@src/graphics/sprites-renderer";
 import type {Texture} from "@src/graphics/texture";
+import {randomRange} from "@src/util";
 
 
 export class Grass extends WorldEntity {
@@ -10,6 +11,9 @@ export class Grass extends WorldEntity {
 
     constructor(props: WorldEntityProps) {
         super(props);
+
+        this.x += randomRange(-0.25, 0.25);
+        this.y += randomRange(-0.25, 0.25);
 
         this.collidesWithOthers = false;
         this.collidesWithLevel = false;
