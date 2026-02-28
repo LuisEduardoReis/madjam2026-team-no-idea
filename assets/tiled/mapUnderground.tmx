@@ -8,7 +8,7 @@
  </layer>
  <layer id="1" name="walls" width="64" height="64">
   <data encoding="base64" compression="zlib">
-   eJztlksOwyAMBbPN/S9cdRchIH7Y2I55I6FWLb8BA74uQgghhJAa3IJSmTc/+temF+snxf+Tu/k8iRP3X+JZ3d+izlep6I/kMhH+u3OtWR89/9m533H/rcxPMg9JPSQGdsU96i9pN2or8dWcDQRkf3p12++9nE0ynnS/PeMebT9ai7b+2+/auxFhl/+svub+yuiPOFXzl/Rv+bZ6v/vaPMCiT+tcZJVI/ygyrH20fzSReyDJ71bLjvlYc6I/Ms+q/kjdk/2l/aH+1uuGkMU/Cu16W+xdhnf3j6d/hlyrxdp/5pbF+Ym3f7YY0MxH+wZm8H9C//V2J8b/qI9K91/r5LFOnkjPqIU/OrYH0jus9UfKbOyvoHkjV/6rguZ9JIQQQgghhBBCTuEHxbAPiw==
+   eJztltEOxCAIBPva///hy701Ri0rCBR3kuaaC1pHUbkuQgghhJAa3IKnMm9+9K9NL9dPyv8nd/N7Eieuv8Szur9FzFep6I/UMhH+u2utWR89/9m+33H+rYxPMg5JHJIDu/Ie9Ze0G7WV+Gr2BgKyPr3Y9r1Xs0m+J11vz7xH24/moo1/+197NiLs8p/Fa86vjP6IUzV/Sf+Wd6v3va+tAyz6tK5FVon0jyLD3Ef7RxO5BpL6bvXZMR5rTvRHxlnVH4k92V/aH+pvPW8IWfyj0M63xdpluHf/ePpnqLVarP1nblmcn3j7Z8sBzXi0d2AG/yf0X293Yv6P+qh0/rVOHvPkiXSPWvij3/ZAeoZJ4tAzMIM/wmqtYNnf19Dcj4QQQgghhBBCyCn8ADqcD4I=
   </data>
  </layer>
  <layer id="2" name="ceiling" width="64" height="64" opacity="0.5">
@@ -22,7 +22,7 @@
   </object>
   <object id="3" name="closed-door" type="closed-door" x="2273.33" y="2878.67">
    <properties>
-    <property name="type" type="int" value="11"/>
+    <property name="type" type="int" value="12"/>
    </properties>
    <ellipse/>
   </object>
