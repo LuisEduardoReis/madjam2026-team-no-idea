@@ -31,7 +31,7 @@ export class ChasingEnemy extends Enemy {
 
         const distToPlayer = pointDistance(this.x, this.y, player.x, player.y);
 
-        if (distToPlayer > 0 && distToPlayer < 10) {
+        if (!this.dead && distToPlayer > 0 && distToPlayer < 10) {
             this.x += (player.x - this.x) / distToPlayer * this.speed * delta;
             this.y += (player.y - this.y) / distToPlayer * this.speed * delta;
         }
