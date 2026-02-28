@@ -36,9 +36,6 @@
    </properties>
    <ellipse/>
   </object>
-  <object id="6" type="croc" x="2342" y="2632">
-   <ellipse/>
-  </object>
   <object id="7" type="croc" x="1988" y="2644">
    <ellipse/>
   </object>
@@ -54,19 +51,10 @@
   <object id="11" type="spider" x="1770" y="2060">
    <ellipse/>
   </object>
-  <object id="12" type="spider" x="2122" y="2308">
-   <ellipse/>
-  </object>
-  <object id="13" type="croc" x="2242" y="2392">
-   <ellipse/>
-  </object>
   <object id="14" type="spider" x="2052" y="2524">
    <ellipse/>
   </object>
   <object id="15" type="croc" x="1976" y="1954">
-   <ellipse/>
-  </object>
-  <object id="16" type="spider" x="1892" y="1644">
    <ellipse/>
   </object>
   <object id="17" type="croc" x="2162" y="1670">
