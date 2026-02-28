@@ -8,7 +8,7 @@
  </layer>
  <layer id="1" name="walls" width="64" height="64">
   <data encoding="base64" compression="zlib">
-   eJzt19EKwyAMRuEy+v7PvNtR7KLJXzXp+UAYY5seVos9Dr2PYGQWXT/9uSn6T2PsvG969rb1Gav/bt5d/etvydg/cm+3rt+s/aOsTvrn9CvOLNn7V6M/3u+9Hiv0X432e/fxefN6Ne9/Sn8/5fWqVqnfM0ekv/deunu/6tkwY/8v+mPe2J91/7fm9PYr1lW5v+W6FgX61+z/GXrOG9X7rffe3u/93cj5r0L/yu9H5tmlf9Z4am4AAAAAAAAAAAAAAIDqvnKwBls=
+   eJzt2NEKwjAMQNEie/P//9fXMTqTJlmbdPdAYYjaXWzntLV4n4BRmff86a8tov8QRuZ9o9nb0nOk/rt5s/rX31Oxf+TaLq3fqv1fxWinY6mzYv+ILP0R9yzV+zVrV7u+LTL0rxTRb70f6H3+s3n7r0b7rfv4uDlezbof6Nf3R67XaN5+zbV9Vr9lDk+/9rs9e3/Ub8OK/Wf0+7yxv+r+781p7a94/Y/st7ieSwT61+z/GTT/5e7eLz329n7r+3ru/3boX/l6zzxZ+meNp+YGAAAAAAAAAAAAAADY3Q9mNAit
   </data>
  </layer>
  <layer id="2" name="ceiling" width="64" height="64" opacity="0.5">
