@@ -77,7 +77,7 @@ const sketchBuilder = (s: p5) => {
 
         g.PIXELS.updatePixels();
         g.MAIN.image(g.PIXELS, g.PIXELS_CAMERA_OFFSET.x,g.PIXELS_CAMERA_OFFSET.y, g.MAIN.width, g.MAIN.height);
-        g.MAIN.image(g.OVERLAY, 0,0, g.MAIN.width, g.MAIN.height);
+        g.MAIN.image(g.OVERLAY, g.PIXELS_CAMERA_OFFSET.x,g.PIXELS_CAMERA_OFFSET.y, g.MAIN.width, g.MAIN.height);
 
         s.image(g.MAIN, 0,0, s.width, s.height);
 

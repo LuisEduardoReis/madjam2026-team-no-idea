@@ -71,7 +71,7 @@ export class Bunny extends WorldEntity {
     }
 
     draw() {
-        this.spriteState.draw(this.world, this.x, this.y);
+        this.spriteState.drawWorld(this.world, this.x, this.y);
     }
 
     hasExitedLevel() {
