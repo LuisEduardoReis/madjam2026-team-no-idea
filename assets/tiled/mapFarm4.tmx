@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="64" height="64" tilewidth="64" tileheight="64" infinite="0" nextlayerid="6" nextobjectid="52">
+<map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="64" height="64" tilewidth="64" tileheight="64" infinite="0" nextlayerid="6" nextobjectid="58">
  <tileset firstgid="1" source="tileset.tsx"/>
  <layer id="3" name="floor" width="64" height="64">
   <data encoding="base64" compression="zlib">
@@ -8,7 +8,7 @@
  </layer>
  <layer id="1" name="walls" width="64" height="64">
   <data encoding="base64" compression="zlib">
-   eJztmEsOwyAMRLOl9z9wlVUjBMGYGWwXj4TaRWLPM58A15VKpVKpVDyVR/Ou0miImM/YnlX7W61D6z3Pdej50npGx2Nq5GfWrySepxpIvMz4RcdjS+rFok47ZMnvoQYofuQ6uUszffD23Mp30rIGqPm6whCBv9dPiP6Lwq99F+WBIS0/ct6uzp1eQ+Wt4yH7i7VuSGowy49eq1fPVyt8FnMOWUfp+LY4h2rn42wO7XMs9l33Pdo9Nsvb7j2c5jzOGoNW64gHWfnwwB9hz8ZU8v9+R42Z30pSvij8H0HTiL3XQCkaPzo2k5+1LkTg7wnFP4oj4ZK2FY+s70IEfqZO5x/lSP7kT34dZwR+xvq30x87fvLv599x/n3mehOD3+rM3/IxEprf6s6zlsYHit+DTr53vpX8Z+TsKfltcnqpgcYH4rsdkX/mrn70XLQxoPE7qkMUfkRfleq/p/6/xe4ni339rFoePftlqlS/pyn5zx37/6YvHUYTRA==
+   eJztmuuKAyEMhfvX9v3ft5QyIGLMxRMTZ/xg2C5r9Zyoqab7eh0Oh8PhsB+lerJTOg+iz7rvzLT6ZuPQe1/mOFC6rJrR/XnC6dHqlfSXKQYjLR9Bm1F/H+L1Lv617axxioSar1E7TRuqzyz7ADX/yDy5Cs0cjNppfLR5IDIG3NjSnEX9jcp/Gg2eXGOP9v3VTnqm4fqiNEQws/ZRunf0b9m3Huu/d2+RatN4L83vUiT7ygqXj1CfV5q4avb+7P1qxl/EnkPer6XrO+Ieat2P2jGs7by8r6r3aM8siDoMdy9YuZ+k95W6vdcajMojHuxybou+M/3Y4cyGIPOdJZI2p86cQ2fGl6Ld25LxkWdMy/hI3oKHoxdj77NGb1zLXCP89/A+Z1ppY+Tp3ysvIGPr5Z8C5Z/rR+JL+sxo9Ppc2MG/J1zd9e7+uTE8/GtrPN6s9s+x+nvObP6l2lCg/VPvRWtD4JH/raw8/7b9UzkJ5d96f3rS/NeastRCPfxH3fl7OjjQ/qNqni0jHbO5gBs3A3eqO1vw1ELVU+7mf5d6f4+z/v9Qc4iu915jZomBRQfic3tH/5pafa9dpv/Xq5HOl1YvF6+s/ts9j5ir0rzONP8/vOcp4lyvpacxs15PSvPzaRz/z137d+MLSGkU5g==
   </data>
  </layer>
  <layer id="2" name="ceiling" width="64" height="64" opacity="0.5">
@@ -136,6 +136,24 @@
    <ellipse/>
   </object>
   <object id="51" type="hare" x="2148.48" y="1657.58">
+   <ellipse/>
+  </object>
+  <object id="52" type="hare" x="3008" y="1240">
+   <ellipse/>
+  </object>
+  <object id="53" type="hare" x="3064" y="906">
+   <ellipse/>
+  </object>
+  <object id="54" type="hare" x="3228" y="600">
+   <ellipse/>
+  </object>
+  <object id="55" type="hare" x="3354" y="924">
+   <ellipse/>
+  </object>
+  <object id="56" type="hare" x="3518" y="1162">
+   <ellipse/>
+  </object>
+  <object id="57" type="hare" x="3228" y="1174">
    <ellipse/>
   </object>
  </objectgroup>

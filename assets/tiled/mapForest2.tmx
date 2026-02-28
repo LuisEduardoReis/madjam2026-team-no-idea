@@ -26,7 +26,7 @@
   <object id="8" name="forest2-spawn" type="level-spawn" x="1181" y="1815" rotation="-180">
    <point/>
   </object>
-  <object id="9" name="door-out-of-forest2" type="level-door" x="1787" y="2014">
+  <object id="9" name="door-out-of-forest2" type="level-door" x="1792" y="2014.5">
    <properties>
     <property name="target" value="forest3-spawn"/>
     <property name="type" type="int" value="0"/>

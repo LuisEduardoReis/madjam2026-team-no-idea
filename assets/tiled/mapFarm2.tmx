@@ -8,7 +8,7 @@
  </layer>
  <layer id="1" name="walls" width="64" height="64">
   <data encoding="base64" compression="zlib">
-   eJztmsEKwyAQBXNN//+Di4dSCEkr7j53V2cg5BLFeRrRxOMAAAAA+HI6XJWxtr96Fp5t9hhLM7PM3mfqPDK7X1HkUMn/g2cGKv+X8/XUdo+5W8EM/4Y1g+r+DfzHPVbwb+zu3xhxwX8d8J9TJiv4zymTFaW/Yr72ZHQNVN3fuieO9res92bu/zL5R+z/s/hHff/J4K/4BljN3xv8+1jZv6feVf1768V/b38VWfyjMsjgr67bC/x1/4Oz/we/I2otHIX6fET2MVDtPIj3uZZZfWM9k/Pv2ZEssozNpzxG+/dXGeW77sV5uVvqUc9vCrz8q1KprwAAAAAAAHbgDck3FNY=
+   eJztmsEOAiEMRL2q//+/hoPRNCJsO9Nts/MS4kEhnZZCQW43IYQQQogPd0DrTNT+7r6wNj+DYyEbm+oxY/ujsnYLww+d9L9B+uDoOLtrwwPcZrYj1m4GGfoHUR901z+4iv5Z7kXmQFT/zKbM+A9Y+r21ULb+gccH330idZ+lo/7uSH9OHw+r3Pr1/dF8rKyfgfXP1fRbmPoZ6zUSbw2UoR+xr65qv2j9s7KRFf9IvZd5/quk/4zzfxX9Z93/VNDPuAPcPf+coR+xv6/YvfuuEn803eY/mt2c8ur37qszWxkw9XvH9drpQfo/IO+Adqii3zu29ddR/1XQzx57gJhXnfUjYP4/jsyBLLJrYTSe+z3me4BqbyEy6n8L+myNfNeSFZvom5zVbz2+qDI3Z/7wxvdfH2auo7ibz8g47PWNAUp/VzrFSgghhBBCCCGuwAuxexXe
   </data>
  </layer>
  <layer id="2" name="ceiling" width="64" height="64" opacity="0.5">
