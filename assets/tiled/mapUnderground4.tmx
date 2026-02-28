@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="64" height="64" tilewidth="64" tileheight="64" infinite="0" nextlayerid="5" nextobjectid="47">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="64" height="64" tilewidth="64" tileheight="64" infinite="0" nextlayerid="5" nextobjectid="47">
  <tileset firstgid="1" source="tileset.tsx"/>
  <layer id="3" name="floor" width="64" height="64">
   <data encoding="base64" compression="zlib">
@@ -18,6 +18,9 @@
  </layer>
  <objectgroup id="4" name="objects">
   <object id="3" type="bunny-path" x="1152" y="2432">
+   <properties>
+    <property name="endgame" type="bool" value="true"/>
+   </properties>
    <polyline points="0,0 0,-320 -256,-640 -256,-1024 448,-1024 896,-1344 1408,-960 1344,-512 1344,-128 832,192 832,512 640,768 192,1152 -256,1182.67 -702.667,1182.67"/>
   </object>
   <object id="5" name="closed-door" type="closed-door" x="1188" y="2561">

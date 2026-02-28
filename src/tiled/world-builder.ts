@@ -156,7 +156,10 @@ function processObjects(world: World, objectGroup: p5.XML, mapXml: p5.XML) {
                break;
            }
            case "bunny-path": {
-               const bunny = new Bunny({ path: parsePath(object, x, y, tileWidth) });
+               const bunny = new Bunny({
+                   path: parsePath(object, x, y, tileWidth),
+                   endgame: properties.get("endgame") === "true"
+               });
                world.bunny = bunny;
                world.addEntity(bunny);
                break;
@@ -211,7 +214,8 @@ export function connectWorlds(screen: WorldScreen, worlds: World[]) {
 }
 
 function parsePath(object: p5.XML, x: number, y: number, tileWidth: number): Point[] {
-    const pointsData = object.getChild(0).getString("points");
+    const polyObject = object.getChild("polyline") ?? object.getChild("polygon");
+    const pointsData = polyObject.getString("points");
     return pointsData.split(" ").map(pointData => {
         const numbers = pointData.split(",");
         return point(x + Number(numbers[0]) / tileWidth, y + Number(numbers[1]) / tileWidth);

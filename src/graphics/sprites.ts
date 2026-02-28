@@ -38,6 +38,9 @@ export function initSprites() {
         getTexture("sprites/bunny/Bunny_002"),
         getTexture("sprites/bunny/Bunny_002_02"),
     ]));
+    SPRITES.set("bunny-endgame", new Sprite([
+        getTexture("sprites/bunny/Bunny_004"),
+    ]));
     SPRITES.set("gun-reload", new Sprite([
         getTexture("sprites/gun/shotgun_002"),
         getTexture("sprites/gun/shotgun_003"),

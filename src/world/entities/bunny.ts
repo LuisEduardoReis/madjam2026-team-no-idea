@@ -2,17 +2,22 @@ import {WorldEntity, type WorldEntityProps} from "@src/world/entities/world-enti
 import {clamp, map, type Point, pointDistance} from "@src/util";
 import {Sprite, SpriteState} from "@src/graphics/sprite";
 import {getSprite} from "@src/graphics/sprites";
+import type {Interactable} from "@src/world/entities/interactable";
+import {ControlKey, getKeyName} from "@src/input/controls";
+import {SETTINGS} from "@src/settings";
 
 const MAX_SPEED = 8;
 const MAX_DISTANCE_TO_PLAYER = 4;
 
 export type BunnyProps = WorldEntityProps & {
     path: Point[];
+    endgame?: boolean;
 };
 
-export class Bunny extends WorldEntity {
+export class Bunny extends WorldEntity implements Interactable {
     public frontSprite: Sprite;
     public backSprite: Sprite;
+    public endgameSprite: Sprite;
     public spriteState: SpriteState;
 
     public speed: number = 1;
@@ -20,18 +25,24 @@ export class Bunny extends WorldEntity {
     public path: Point[];
     public pathIndex: number;
 
+    public endgame: boolean;
+
     constructor(props: BunnyProps) {
         super(props);
 
+        this.collidesWithLevel = false;
         this.collidesWithOthers = false;
 
         this.frontSprite = getSprite("bunny-front");
         this.backSprite = getSprite("bunny-back");
+        this.endgameSprite = getSprite("bunny-endgame");
         this.spriteState = new SpriteState().setSprite(this.frontSprite);
         this.spriteState.animationDelay = 1 / 20;
 
         this.path = props.path;
         this.pathIndex = 0;
+
+        this.endgame = props.endgame ?? false;
 
         this.x = this.path[0].x;
         this.y = this.path[0].y;
@@ -45,28 +56,38 @@ export class Bunny extends WorldEntity {
         const player = this.world?.player;
         if (!player) return;
 
-        const target = this.path[this.pathIndex];
+        let speed = 0;
+        if (this.pathIndex < this.path.length) {
+            const target = this.path[this.pathIndex];
 
-        const distToPlayer = pointDistance(this.x, this.y, player.x, player.y);
-        const distToPathTarget = pointDistance(this.x, this.y, target.x, target.y);
+            const distToPlayer = pointDistance(this.x, this.y, player.x, player.y);
+            const distToPathTarget = pointDistance(this.x, this.y, target.x, target.y);
 
-        let speed = map(distToPlayer, 0, MAX_DISTANCE_TO_PLAYER, MAX_SPEED, 0);
-        speed = clamp(speed, 0, MAX_SPEED);
-        if (speed < 0.25) speed = 0;
+            speed = map(distToPlayer, 0, MAX_DISTANCE_TO_PLAYER, MAX_SPEED, 0);
+            speed = clamp(speed, 0, MAX_SPEED);
+            if (speed < 0.25) speed = 0;
 
-        if (distToPathTarget > this.radius) {
-            this.x += (target.x - this.x) / distToPathTarget * speed * delta;
-            this.y += (target.y - this.y) / distToPathTarget * speed * delta;
-        } else {
-            if (this.pathIndex < this.path.length - 1) {
+            if (distToPathTarget > this.radius) {
+                this.x += (target.x - this.x) / distToPathTarget * speed * delta;
+                this.y += (target.y - this.y) / distToPathTarget * speed * delta;
+            } else {
                 this.pathIndex++;
             }
         }
 
-        if (speed > 0.25) {
+        if (this.hasExitedLevel()) {
+            this.spriteState.setSprite(this.endgameSprite);
+        } else if (speed > 0.25) {
             this.spriteState.setSprite(this.backSprite);
         } else {
             this.spriteState.setSprite(this.frontSprite);
+        }
+
+        if (this.hasExitedLevel() && this.endgame) {
+            this.immovable = true;
+            this.collidesWithOthers = true;
+            this.interactable = true;
+            this.radius = 0.9;
         }
     }
 
@@ -75,6 +96,14 @@ export class Bunny extends WorldEntity {
     }
 
     hasExitedLevel() {
-        return this.pathIndex >= this.path.length - 1;
+        return this.pathIndex >= this.path.length;
+    }
+
+    getHoverMessage(): string {
+        const key = getKeyName(SETTINGS.CONTROLS[ControlKey.INTERACT]);
+        return `Press '${key}' to capture the rabbit`;
+    }
+    interact(): void {
+        console.log("You win");
     }
 }
