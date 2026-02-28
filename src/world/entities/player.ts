@@ -21,6 +21,8 @@ import type {Texture} from "@src/graphics/texture";
 import {castRay} from "@src/graphics/raycaster";
 import {Enemy} from "@src/world/entities/enemies/enemy";
 import {bloodSplatter} from "@src/world/entities/particles/effects";
+import {SpriteState} from "@src/graphics/sprite";
+import {getSprite} from "@src/graphics/sprites";
 
 export const PLAYER_CAMERA_BOBBING_SPEED = 15;
 export const PLAYER_CAMERA_BOBBING_AMOUNT = 0.02;
@@ -38,6 +40,12 @@ export class Player extends WorldEntity {
     public viewBobbingPhase: number = 0;
 
     public gunTexture: Texture;
+    public gunFireTexture: Texture;
+    public gunReloadSpriteState: SpriteState;
+    public gunShootTimer: number = 0;
+    public gunShootDelay: number = 0.25;
+    public gunReloadTimer: number = 0;
+    public gunReloadDelay: number = 0.75;
 
     public maxHealth = 100;
     public health = this.maxHealth;
@@ -49,7 +57,11 @@ export class Player extends WorldEntity {
 
         this.radius = 0.35;
 
-        this.gunTexture = getTexture("gun");
+        this.gunTexture = getTexture("sprites/gun/shotgun_000");
+        this.gunFireTexture = getTexture("sprites/gun/shotgun_001");
+        const gunReloadSprite = getSprite("gun-reload");
+        this.gunReloadSpriteState = new SpriteState().setSprite(gunReloadSprite);
+        this.gunReloadSpriteState.animationDelay = this.gunReloadDelay / gunReloadSprite.frames.length;
     }
 
     update(delta: number) {
@@ -66,27 +78,38 @@ export class Player extends WorldEntity {
     draw() {
         const og = getGraphics().OVERLAY;
 
+        // Gun
+        const gw = og.width / 4;
+        const gx = og.width * 0.5 - gw/2 + Math.sin(this.viewBobbingPhase / 2) * gw/8;
+        const gy = og.height - gw*0.9 + Math.sin(this.viewBobbingPhase) * gw/16;
+        if (this.gunShootTimer > 0) {
+            const knockback = this.gunShootTimer / this.gunShootDelay;
+            og.image(this.gunFireTexture.raw, gx, gy + knockback*gw*0.3, gw,gw);
+        } else if (this.gunReloadTimer > 0) {
+            this.gunReloadSpriteState.drawOverlay(gx,gy, gw,gw);
+        } else {
+            og.image(this.gunTexture.raw, gx, gy, gw,gw);
+        }
+
+        // Hurt overlay
         if (this.hurtTimer > 0) {
             const alpha = map(this.hurtTimer, 0, this.hurtDelay, 0, 0.75);
             og.fill(128, 0, 0, 255*alpha);
             og.rect(0, 0, og.width, og.height);
         }
 
+        // Healthbar
+        const hbw = og.width / 6 * (this.health / this.maxHealth);
+        const hbh = og.height / 24;
+        og.fill(192, 0,0);
+        og.rect(10, og.height - hbh - 10, hbw, hbh);
+
+        // Interactable message
         if (this.currentInteractable) {
             setupOverlayFont(og);
             og.text(this.currentInteractable.getHoverMessage(), og.width * 0.5, og.height * 0.2);
             og.noStroke();
         }
-
-        const gw = og.width / 8;
-        const gx = og.width * 0.5 - gw/2 + Math.sin(this.viewBobbingPhase / 2) * gw/3;
-        const gy = og.height - gw*0.75 + Math.sin(this.viewBobbingPhase) * gw/6;
-        og.image(this.gunTexture.raw, gx, gy, gw,gw);
-
-        const hbw = og.width / 6 * (this.health / this.maxHealth);
-        const hbh = og.height / 24;
-        og.fill(192, 0,0);
-        og.rect(10, og.height - hbh - 10, hbw, hbh);
     }
 
     private movementUpdate(delta: number) {
@@ -169,7 +192,15 @@ export class Player extends WorldEntity {
     }
 
     private gunUpdate(delta: number) {
-        if (KEY_PRESSED.get(SETTINGS.CONTROLS[ControlKey.FIRE])) {
+        this.gunShootTimer = stepTo(this.gunShootTimer, 0, delta);
+        this.gunReloadTimer = stepTo(this.gunReloadTimer, 0, delta);
+        this.gunReloadSpriteState.update(delta);
+
+        if (KEY_PRESSED.get(SETTINGS.CONTROLS[ControlKey.FIRE]) && this.gunShootTimer == 0 && this.gunReloadTimer == 0) {
+            this.gunShootTimer = this.gunShootDelay;
+            this.gunReloadTimer = this.gunReloadDelay;
+            this.gunReloadSpriteState.resetAnimation();
+
             const spread = 5 * DEG_TO_RAD;
             let hit = false;
             [0, -spread, spread].forEach(dirOffset => {

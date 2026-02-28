@@ -2,6 +2,7 @@ import type { Texture } from "@src/graphics/texture";
 import { stepTo } from "@src/util";
 import { drawSprite } from "@src/graphics/sprites-renderer";
 import type { World } from "@src/world/world";
+import {getGraphics} from "@src/graphics/graphics";
 
 
 export class Sprite {
@@ -42,11 +43,25 @@ export class SpriteState {
         }
     }
 
-    draw(world: World | undefined, x: number, y: number) {
+    drawWorld(world: World | undefined, x: number, y: number) {
         if (world && this.sprite) {
             const frame = this.sprite.frames[this.animationIndex];
 
             drawSprite(world, frame, x,y, this.z, this.w, this.h);
         }
+    }
+
+    drawOverlay(x: number, y: number, w: number, h: number) {
+        if (this.sprite) {
+            const og = getGraphics().OVERLAY;
+            const frame = this.sprite.frames[this.animationIndex];
+
+            og.image(frame.raw, x,y,w,h);
+        }
+    }
+
+    resetAnimation() {
+        this.animationIndex = 0;
+        this.animationTimer = 0;
     }
 }
