@@ -12,9 +12,9 @@ export function getFont(): p5.Font {
     return FONT;
 }
 
-export function setupOverlayFont(og: p5.Graphics) {
-    og.fill(255);
-    og.stroke(0);
+export function setupOverlayFont(og: p5.Graphics, size: number = 40, alpha: number = 1) {
+    og.fill(255, 255*alpha);
+    og.stroke(0, 255*alpha);
     og.strokeWeight(5);
-    og.textSize(40);
+    og.textSize(size);
 }

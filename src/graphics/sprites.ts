@@ -45,4 +45,8 @@ export function initSprites() {
         getTexture("sprites/gun/shotgun_005"),
         getTexture("sprites/gun/shotgun_006"),
     ]));
+    SPRITES.set("wolf", new Sprite([
+        getTexture("sprites/wolf/wolf_000"),
+        getTexture("sprites/wolf/wolf_001"),
+    ]));
 }
