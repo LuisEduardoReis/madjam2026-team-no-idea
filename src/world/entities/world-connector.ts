@@ -8,6 +8,7 @@ export type WorldConnectorProps = WorldEntityProps & {
     name: string;
     targetName?: string;
     direction?: number;
+    interactable?: boolean;
 }
 
 export class WorldConnector extends WorldEntity implements Interactable {
@@ -23,7 +24,7 @@ export class WorldConnector extends WorldEntity implements Interactable {
     constructor(props: WorldConnectorProps) {
         super(props);
 
-        this.interactable = true;
+        this.interactable = props.interactable ?? true;
         this.radius = 0.6;
         this.solid = false;
         this.collidesWithLevel = false;

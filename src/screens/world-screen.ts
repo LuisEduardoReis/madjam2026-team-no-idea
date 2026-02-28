@@ -10,7 +10,8 @@ import { drawEntities } from "@src/graphics/sprites-renderer";
 import { MAP_FILENAMES } from "@src/tiled/tiled";
 import {p} from "@src/index";
 import {WorldConnector} from "@src/world/entities/world-connector";
-import {pauseSound, playSound} from "@src/audio/audio";
+import {pauseSound, playSound, SOUNDS} from "@src/audio/audio";
+import {SETTINGS} from "@src/settings";
 
 
 export class WorldScreen extends AbstractScreen {
@@ -38,11 +39,14 @@ export class WorldScreen extends AbstractScreen {
     }
 
     show() {
-        playSound("theme");
+        if (SETTINGS.MUSIC) {
+            SOUNDS.get("theme")?.instance.stop();
+            SOUNDS.get("theme")?.play(1);
+        }
     }
 
     hide() {
-        pauseSound("theme");
+        if (SETTINGS.MUSIC) SOUNDS.get("theme")?.instance.fade(1, 0, 500);
     }
 
     update(delta: number) {

@@ -8,7 +8,7 @@
  </layer>
  <layer id="1" name="walls" width="64" height="64">
   <data encoding="base64" compression="zlib">
-   eJztmMuqwzAMRLUt+f//vXQRMEJjj5ySTC5zwJvEdjt6WHIijOH4LMZ/ZdR4gMHa4o12y7ozyBbVPnkvZTtkvzMgG2Tt41xVO1T/mQHlBBM/qvq7nFpybszmq+n/suP/CE4zWqOUB9WZtQu7XtUGV+zQWaccBztn4tVcUAD1Piuu5I2i/i4z7W+qCbv6EWwsqen/lQ1yf3Skd0ea9zS7vSCi0p/74nGeAowNunFdxYC6fnQWVH0/m9fK+jv3GORTNHf8jdmeT8H2fZX2q/oV6l8n37v33VMXspVCD7zy4Uw3EysR2FbV3nfT0c/o7vg+D1X9TI+PYmXm+9wTqenvUMU8q31cfze/6Pmq+F31Eav1d9H9BljlRMf3aL8n6wC6++e8n+X47veTp7VHcFoiOO3MWXmC7KlEpX98ztQI9F6lBs7IOrN+BqaGKuRBRRXj53PW/ysUzsAuTP53xpu0I5i6MBvGGGOMMcYYY4wxxhhjjDHGGGMwfwNGFQ4=
+   eJztmM2KwzAMhHVd8v73fdSlh4ARGnvklGSyzAe+tLba0Y+lJMIYjp/F+q+MGg+wWF+80W9Zdwb5orKTbSn7IcedAfkgax/3qvqh+s8MqCaY/FHV3+XUkmtjtl9N/4ed+EdwmtEZpTqo7qxd2POqPrjih8455TzYuROv1oICaPZZcaVuFPV3mWl/U0/Y1Y9gc0lN/7d8kOejI313pH1PszsLIir9eS4e9ynA+KCb11UOqOtHd0E197N1ray/8xyDYor2jr8xs/kU7NxXab+qX6H/deq9+7x76kK+UpiBVzGc6WZyJQL7qrJ9Nx39jO5O7PNS1c/M+ChXZrHPM5Ga/g5VzrPax/N3842Zr8rf1RyxOn8X3XeAVU10Yo/sPdkH0LN/rvtZje++P3laewSnJYLW/tvRrtADZ1T6z88/WquVbaAeotIDZ+TayPoZG0wPVaiDiirHh8+p+K9QuAO7MPXfWW/SjmD6wmwZY4wxxhhjjDHGGGOMMcYYY4zB/AHEUR5Q
   </data>
  </layer>
  <layer id="2" name="ceiling" width="64" height="64" visible="0" opacity="0.5">
@@ -26,7 +26,7 @@
   <object id="8" name="forest2-spawn" type="level-spawn" x="1181" y="1815" rotation="-180">
    <point/>
   </object>
-  <object id="9" name="door-out-of-forest2" type="level-door" x="1787" y="2014">
+  <object id="9" name="door-out-of-forest2" type="level-door" x="1792" y="2014.5">
    <properties>
     <property name="target" value="forest3-spawn"/>
     <property name="type" type="int" value="0"/>

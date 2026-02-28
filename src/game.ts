@@ -99,6 +99,9 @@ export class Game {
         updateSounds(delta);
         this.updateFadesAndTransitions(delta);
 
+        const po = getGraphics().PIXELS_CAMERA_OFFSET;
+        po.x = 0; po.y = 0;
+
         if (this.currentScreen && !this.isTransitioningScreens()) this.currentScreen.update(delta);
     }
 
