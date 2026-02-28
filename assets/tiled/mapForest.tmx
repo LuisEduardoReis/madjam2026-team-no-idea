@@ -18,6 +18,9 @@
  </layer>
  <objectgroup id="4" name="objects">
   <object id="2" name="closed-door" type="closed-door" x="1310.18" y="1502">
+   <properties>
+    <property name="type" type="int" value="11"/>
+   </properties>
    <ellipse/>
   </object>
   <object id="5" type="bunny-path" x="1313.33" y="1284">
@@ -26,7 +29,7 @@
   <object id="7" name="door-out-of-forest" type="level-door" x="2964.67" y="153.333">
    <properties>
     <property name="target" value="forest2-spawn"/>
-    <property name="type" type="int" value="0"/>
+    <property name="type" type="int" value="11"/>
    </properties>
    <ellipse/>
   </object>

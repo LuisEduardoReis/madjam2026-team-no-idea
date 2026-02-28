@@ -23,7 +23,7 @@
   <object id="2" name="door-out-of-farm" type="level-door" x="1887" y="354">
    <properties>
     <property name="target" value="farm2-spawn"/>
-    <property name="type" value="3"/>
+    <property name="type" value="11"/>
    </properties>
    <ellipse/>
   </object>
