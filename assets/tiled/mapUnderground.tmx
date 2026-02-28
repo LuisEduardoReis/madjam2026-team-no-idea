@@ -36,10 +36,10 @@
    </properties>
    <ellipse/>
   </object>
-  <object id="6" type="hare" x="2342" y="2632">
+  <object id="6" type="croc" x="2342" y="2632">
    <ellipse/>
   </object>
-  <object id="7" type="hare" x="1988" y="2644">
+  <object id="7" type="croc" x="1988" y="2644">
    <ellipse/>
   </object>
   <object id="8" type="hare" x="1892" y="2836">
@@ -57,19 +57,19 @@
   <object id="12" type="hare" x="2122" y="2308">
    <ellipse/>
   </object>
-  <object id="13" type="hare" x="2242" y="2392">
+  <object id="13" type="croc" x="2242" y="2392">
    <ellipse/>
   </object>
   <object id="14" type="hare" x="2052" y="2524">
    <ellipse/>
   </object>
-  <object id="15" type="hare" x="1976" y="1954">
+  <object id="15" type="croc" x="1976" y="1954">
    <ellipse/>
   </object>
   <object id="16" type="hare" x="1892" y="1644">
    <ellipse/>
   </object>
-  <object id="17" type="hare" x="2162" y="1670">
+  <object id="17" type="croc" x="2162" y="1670">
    <ellipse/>
   </object>
   <object id="18" type="hare" x="2494" y="1728">
@@ -81,7 +81,7 @@
   <object id="20" type="hare" x="3372.73" y="2024.24">
    <ellipse/>
   </object>
-  <object id="21" type="hare" x="3651.52" y="2033.33">
+  <object id="21" type="croc" x="3651.52" y="2033.33">
    <ellipse/>
   </object>
   <object id="22" type="hare" x="3357.58" y="2239.39">
@@ -90,19 +90,19 @@
   <object id="23" type="hare" x="2975.76" y="2381.82">
    <ellipse/>
   </object>
-  <object id="24" type="hare" x="3312.12" y="2963.64">
+  <object id="24" type="croc" x="3312.12" y="2963.64">
    <ellipse/>
   </object>
-  <object id="25" type="hare" x="3027.27" y="2775.76">
+  <object id="25" type="croc" x="3027.27" y="2775.76">
    <ellipse/>
   </object>
-  <object id="26" type="hare" x="3600" y="1042.42">
+  <object id="26" type="croc" x="3600" y="1042.42">
    <ellipse/>
   </object>
-  <object id="27" type="hare" x="3836.36" y="1006.06">
+  <object id="27" type="croc" x="3836.36" y="1006.06">
    <ellipse/>
   </object>
-  <object id="28" type="hare" x="3778.79" y="1360.61">
+  <object id="28" type="croc" x="3778.79" y="1360.61">
    <ellipse/>
   </object>
  </objectgroup>
