@@ -12,6 +12,7 @@ import {EnemyWithPath} from "@src/world/entities/enemies/enemy-with-path";
 import {LevelDoor} from "@src/world/entities/level-door";
 import {ChasingEnemy} from "@src/world/entities/enemies/chasing-enemy";
 import {Tree} from "@src/world/entities/decoration/tree";
+import type {WorldScreen} from "@src/screens/world-screen";
 
 export function buildWorld(name: string): World {
 
@@ -158,23 +159,22 @@ function processObjects(world: World, objectGroup: p5.XML, mapXml: p5.XML) {
     });
 }
 
-export function connectWorlds(worlds: World[]) {
+export function connectWorlds(screen: WorldScreen, worlds: World[]) {
     const connectors: WorldConnector[] = [];
-    const connectorsByName = new Map<string, WorldConnector>();
 
     worlds.forEach(world => {
         world.entities
             .filter(t => t instanceof WorldConnector)
             .forEach(connector => {
                 connectors.push(connector);
-                connectorsByName.set(connector.name, connector);
+                screen.connectorsByName.set(connector.name, connector);
             });
     });
 
     connectors.forEach(connector => {
         if (!connector.targetName) return;
 
-        const target = connectorsByName.get(connector.targetName);
+        const target = screen.connectorsByName.get(connector.targetName);
 
         if (!target) {
             console.warn(`Connector "${connector.name} has invalid target "${connector.targetName}"`);
