@@ -138,7 +138,7 @@
 },
 {
 	"filename": "sprites/gun/shotgun_003.png",
-	"frame": {"x":0,"y":124,"w":64,"h":64},
+	"frame": {"x":960,"y":60,"w":64,"h":64},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":64},
@@ -146,7 +146,7 @@
 },
 {
 	"filename": "sprites/gun/shotgun_004.png",
-	"frame": {"x":64,"y":124,"w":64,"h":64},
+	"frame": {"x":0,"y":124,"w":64,"h":64},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":64},
@@ -154,7 +154,7 @@
 },
 {
 	"filename": "sprites/gun/shotgun_005.png",
-	"frame": {"x":128,"y":124,"w":64,"h":64},
+	"frame": {"x":64,"y":124,"w":64,"h":64},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":64},
@@ -162,7 +162,7 @@
 },
 {
 	"filename": "sprites/gun/shotgun_006.png",
-	"frame": {"x":192,"y":124,"w":64,"h":64},
+	"frame": {"x":128,"y":124,"w":64,"h":64},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":64},
@@ -183,6 +183,22 @@
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":16,"h":16},
 	"sourceSize": {"w":16,"h":16}
+},
+{
+	"filename": "sprites/spider/spider_000.png",
+	"frame": {"x":192,"y":124,"w":64,"h":64},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":64},
+	"sourceSize": {"w":64,"h":64}
+},
+{
+	"filename": "sprites/spider/spider_001.png",
+	"frame": {"x":256,"y":124,"w":64,"h":64},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":64},
+	"sourceSize": {"w":64,"h":64}
 },
 {
 	"filename": "sprites/test/001.png",
@@ -218,14 +234,6 @@
 },
 {
 	"filename": "sprites/wolf/wolf_000.png",
-	"frame": {"x":256,"y":124,"w":64,"h":64},
-	"rotated": false,
-	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":64},
-	"sourceSize": {"w":64,"h":64}
-},
-{
-	"filename": "sprites/wolf/wolf_001.png",
 	"frame": {"x":320,"y":124,"w":64,"h":64},
 	"rotated": false,
 	"trimmed": false,
@@ -233,8 +241,16 @@
 	"sourceSize": {"w":64,"h":64}
 },
 {
-	"filename": "sprites/wolf/wolf_002.png",
+	"filename": "sprites/wolf/wolf_001.png",
 	"frame": {"x":384,"y":124,"w":64,"h":64},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":64},
+	"sourceSize": {"w":64,"h":64}
+},
+{
+	"filename": "sprites/wolf/wolf_002.png",
+	"frame": {"x":448,"y":124,"w":64,"h":64},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":64,"h":64},
@@ -266,7 +282,7 @@
 },
 {
 	"filename": "tiles/tileset.png",
-	"frame": {"x":448,"y":124,"w":512,"h":512},
+	"frame": {"x":512,"y":124,"w":512,"h":512},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":512,"h":512},
@@ -277,8 +293,8 @@
 	"version": "1.0",
 	"image": "textures.png",
 	"format": "RGBA8888",
-	"size": {"w":978,"h":636},
+	"size": {"w":1024,"h":636},
 	"scale": "1",
-	"smartupdate": "$TexturePacker:SmartUpdate:83c1b8a4a9b93dfa14f2fe712cecebc4:bd1b90b76b145369a2612d36d71217d6:22da60613f953ca41f0071181764da7a$"
+	"smartupdate": "$TexturePacker:SmartUpdate:0ba1f810683f19df98e2c80a6f2420f5:fbc59bca0a1e8f258d33c5ce8ce2705f:22da60613f953ca41f0071181764da7a$"
 }
 }
