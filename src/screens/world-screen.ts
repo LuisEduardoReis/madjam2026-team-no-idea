@@ -32,7 +32,7 @@ export class WorldScreen extends AbstractScreen {
         const debugSpawn = p.getURLParams().debugSpawn as string;
         const debugSpawnConnector = this.connectorsByName.get(debugSpawn);
         if (debugSpawnConnector) {
-            this.changeWorld(debugSpawnConnector?.world?.name ?? "", point(debugSpawnConnector.x, debugSpawnConnector.y));
+            this.changeWorld(debugSpawnConnector?.world?.name ?? "", point(debugSpawnConnector.x, debugSpawnConnector.y), debugSpawnConnector.direction);
         }
     }
 
