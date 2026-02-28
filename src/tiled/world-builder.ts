@@ -112,7 +112,7 @@ function processObjects(world: World, objectGroup: p5.XML, mapXml: p5.XML) {
        switch (type) {
            case "spawn": {
                world.player = world.addEntity(new Player({ x, y }));
-               world.player.dir = object.getNum("rotation") * DEG_TO_RAD;
+               world.player.dir = (object.getNum("rotation", 0) + 1) * DEG_TO_RAD;
                break;
            }
            case "door":
@@ -135,14 +135,14 @@ function processObjects(world: World, objectGroup: p5.XML, mapXml: p5.XML) {
            }
            case "level-spawn": {
                const spawn = new WorldConnector({ x: Math.floor(x) + 0.5, y: Math.floor(y) + 0.5, name, interactable: false });
-               spawn.direction = object.getNum("rotation") * DEG_TO_RAD;
+               spawn.direction = (object.getNum("rotation", 0) + 1) * DEG_TO_RAD;
                world.addEntity(spawn);
                break;
            }
            case "ladder": {
                const up = properties.get("up") === "true";
                const targetName = properties.get("target") ?? "<unknown>";
-               const direction = object.getNum("rotation", 0) * DEG_TO_RAD;
+               const direction = (object.getNum("rotation", 0) + 1) * DEG_TO_RAD;
                world.addEntity(new Ladder({ x, y, up, name, targetName, direction }));
                break;
            }
