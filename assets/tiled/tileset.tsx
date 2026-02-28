@@ -11,4 +11,14 @@
    <property name="tile-entity" value="cenas"/>
   </properties>
  </tile>
+ <tile id="18">
+  <properties>
+   <property name="tile-entity" value="grass"/>
+  </properties>
+ </tile>
+ <tile id="26">
+  <properties>
+   <property name="tile-entity" value="saw-grass"/>
+  </properties>
+ </tile>
 </tileset>

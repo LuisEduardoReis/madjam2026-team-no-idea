@@ -1,0 +1,23 @@
+import {WorldEntity, type WorldEntityProps} from "@src/world/entities/world-entity";
+import {getTexture} from "@src/graphics/textures";
+import {drawSprite} from "@src/graphics/sprites-renderer";
+import type {Texture} from "@src/graphics/texture";
+
+
+export class SawGrass extends WorldEntity {
+
+    public texture: Texture;
+
+    constructor(props: WorldEntityProps) {
+        super(props);
+
+        this.collidesWithOthers = false;
+        this.collidesWithLevel = false;
+
+        this.texture = getTexture("sprites/grass/grass_000");
+    }
+
+    draw() {
+        drawSprite(this.world, this.texture, this.x,this.y, 0.5, 1,1);
+    }
+}
