@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="64" height="64" tilewidth="64" tileheight="64" infinite="0" nextlayerid="5" nextobjectid="50">
+<map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="64" height="64" tilewidth="64" tileheight="64" infinite="0" nextlayerid="5" nextobjectid="50">
  <tileset firstgid="1" source="tileset.tsx"/>
  <layer id="3" name="floor" width="64" height="64" visible="0">
   <data encoding="base64" compression="zlib">
@@ -21,6 +21,9 @@
    <polyline points="0,0 -290,-218 30,-538 -226,-986 -226,-1178 -34,-1178 158,-986 478,-986 734,-1242 1054,-1050 798,-794 1118,-538 1374,-474 1694,-154 1822,358 1630,1062 1886,1638 1566,2022 1438,1510 1246,1190 862,1126 798,1062 670,1446 670,1958 350,2086 94,1830 -162,1894 -224,1862 -900,1854"/>
   </object>
   <object id="7" name="closed-door" type="closed-door" x="1184" y="1896">
+   <properties>
+    <property name="type" type="int" value="11"/>
+   </properties>
    <ellipse/>
   </object>
   <object id="8" name="forest3-spawn" type="level-spawn" x="1184" y="1813.33" rotation="-180">
@@ -29,7 +32,7 @@
   <object id="9" name="door-out-of-forest3" type="level-door" x="726.667" y="3613.33">
    <properties>
     <property name="target" value="forest4-spawn"/>
-    <property name="type" type="int" value="0"/>
+    <property name="type" type="int" value="11"/>
    </properties>
    <ellipse/>
   </object>

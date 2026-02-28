@@ -21,6 +21,9 @@
    <polyline points="0,0 -634,-36 -634,-740 -1018,-804 -1082,-1252 -1466,-676 -1466,-228 -2170,-548 -2298,-164 -2170,348 -2362,988 -2156.91,1336.12 -2138.73,1660.36"/>
   </object>
   <object id="14" name="farm4-spawn" type="level-spawn" x="3114.67" y="2274.67" rotation="180">
+   <properties>
+    <property name="type" type="int" value="11"/>
+   </properties>
    <point/>
   </object>
   <object id="15" name="closed-door" type="closed-door" x="3201.33" y="2272">
@@ -29,7 +32,7 @@
   <object id="16" name="door-out-of-farm4" type="level-door" x="924" y="3841">
    <properties>
     <property name="target" value="forest-spawn"/>
-    <property name="type" type="int" value="3"/>
+    <property name="type" type="int" value="11"/>
    </properties>
    <ellipse/>
   </object>

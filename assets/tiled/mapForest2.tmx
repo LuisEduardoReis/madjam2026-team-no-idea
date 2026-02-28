@@ -21,6 +21,9 @@
    <polyline points="0,0 -320,0 -320,-320 -256,-320 -256,-384 -192,-384 -128,-448 64,-640 -128,-1152 -320,-1280 -320,-1344 0,-1344 192,-1024 384,-1024 384,-1088 448,-1088 512,-1152 574,-1182 892,-1184 896,-1152 704,-896 448,-704 256,-704 256,-960 256,-1088 548,-1118 542,-1206 960,-1152 1152,-832 1216,-256 896,192 896,320 772,288 432,282"/>
   </object>
   <object id="7" name="closed-door" type="closed-door" x="1184" y="1895">
+   <properties>
+    <property name="type" type="int" value="11"/>
+   </properties>
    <ellipse/>
   </object>
   <object id="8" name="forest2-spawn" type="level-spawn" x="1181" y="1815" rotation="-180">
@@ -29,7 +32,7 @@
   <object id="9" name="door-out-of-forest2" type="level-door" x="1792" y="2014.5">
    <properties>
     <property name="target" value="forest3-spawn"/>
-    <property name="type" type="int" value="0"/>
+    <property name="type" type="int" value="11"/>
    </properties>
    <ellipse/>
   </object>

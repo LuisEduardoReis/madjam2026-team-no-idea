@@ -21,6 +21,9 @@
    <polyline points="0,0 -153,-343 -217,-471 -217,-919 295,-919 487,-983 935,-1047 1319,-1047 1319,-983 1959,-983 1959,-471 1831,-151 1511,169 1383,297 1191,425 1447,617 1511,1001 1255,1129 1255,1321 1511,1513 1573,1629 1575,1833 1441,1923 1239,1935 1063,2025 743,1897 551,1769 167,1769 167,1385 -89,1385 -89,1257 -281,1257 -281,745 -89,489 -89,361 -217,361 -282.333,262.333 -769,261"/>
   </object>
   <object id="3" name="closed-door" type="closed-door" x="1021.33" y="1444">
+   <properties>
+    <property name="type" type="int" value="11"/>
+   </properties>
    <ellipse/>
   </object>
   <object id="4" name="underground2-spawn" type="level-spawn" x="929.333" y="1437.33" rotation="180">
@@ -29,7 +32,7 @@
   <object id="5" name="door-out-of-underground2" type="level-door" x="446" y="1696">
    <properties>
     <property name="target" value="underground3-spawn"/>
-    <property name="type" type="int" value="0"/>
+    <property name="type" type="int" value="11"/>
    </properties>
    <ellipse/>
   </object>
