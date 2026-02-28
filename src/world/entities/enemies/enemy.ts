@@ -33,7 +33,7 @@ export class Enemy extends WorldEntity {
     collideWith(other: WorldEntity) {
         super.collideWith(other);
 
-        if (other instanceof Player && this.attackTimer == 0) {
+        if (!this.dead && other instanceof Player && this.attackTimer == 0) {
             this.attackTimer = this.attackDelay;
             const dist = pointDistance(this.x, this.y, other.x, other.y);
             other.ex += (other.x - this.x) / dist * 2;

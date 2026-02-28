@@ -214,7 +214,7 @@ export class Player extends WorldEntity {
                 if (hitscan && hitscan.entity instanceof Enemy) {
                     hit = true;
                     const enemy = hitscan.entity;
-                    const knockback = 10;
+                    const knockback = 7;
 
                     enemy.ex = dirX * knockback;
                     enemy.ey = dirY * knockback;

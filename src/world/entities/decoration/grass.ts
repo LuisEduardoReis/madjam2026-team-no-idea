@@ -1,27 +1,23 @@
 import {WorldEntity, type WorldEntityProps} from "@src/world/entities/world-entity";
-import type {Sprite} from "@src/graphics/sprite";
 import {getTexture} from "@src/graphics/textures";
-import p5 from "p5";
 import {drawSprite} from "@src/graphics/sprites-renderer";
 import type {Texture} from "@src/graphics/texture";
 
 
-export class Tree extends WorldEntity {
+export class Grass extends WorldEntity {
 
     public texture: Texture;
 
     constructor(props: WorldEntityProps) {
         super(props);
 
-        this.collidesWithOthers = true;
+        this.collidesWithOthers = false;
         this.collidesWithLevel = false;
-        this.immovable = true;
-        this.radius = 0.6;
 
-        this.texture = getTexture("sprites/environment/tree");
+        this.texture = getTexture("sprites/grass/grass_001");
     }
 
     draw() {
-        drawSprite(this.world, this.texture, this.x,this.y, 0.6, 1.2,1.2);
+        drawSprite(this.world, this.texture, this.x,this.y, 0.5, 1,1);
     }
 }

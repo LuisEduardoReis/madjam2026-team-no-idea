@@ -15,6 +15,8 @@ import {Tree} from "@src/world/entities/decoration/tree";
 import type {WorldScreen} from "@src/screens/world-screen";
 import {Wolf} from "@src/world/entities/enemies/wolf";
 import {Croc} from "@src/world/entities/enemies/croc";
+import {Grass} from "@src/world/entities/decoration/grass";
+import {SawGrass} from "@src/world/entities/decoration/saw-grass";
 
 export function buildWorld(name: string): World {
 
@@ -78,6 +80,12 @@ function loadTiles(world: World, layersByName: Map<string, p5.XML>, mapTilesetXm
 
         if (tileEntityId === "tree") {
             world.addEntity(new Tree({ x: x + 0.5, y: y + 0.5 }));
+        }
+        if (tileEntityId === "grass") {
+            world.addEntity(new Grass({ x: x + 0.5, y: y + 0.5 }));
+        }
+        if (tileEntityId === "saw-grass") {
+            world.addEntity(new SawGrass({ x: x + 0.5, y: y + 0.5 }));
         }
 
         world.tiles[i] = new Tile({
