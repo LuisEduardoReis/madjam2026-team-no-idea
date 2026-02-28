@@ -22,6 +22,6 @@ export class Rock1 extends WorldEntity {
     }
 
     draw() {
-        drawSprite(this.world, this.texture, this.x,this.y, 0.5, 1,1);
+        drawSprite(this.world, this.texture, this.x,this.y, 0.3, 0.6,0.6);
     }
 }
