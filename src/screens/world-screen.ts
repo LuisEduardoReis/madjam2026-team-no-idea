@@ -10,6 +10,7 @@ import { drawEntities } from "@src/graphics/sprites-renderer";
 import { MAP_FILENAMES } from "@src/tiled/tiled";
 import {p} from "@src/index";
 import {WorldConnector} from "@src/world/entities/world-connector";
+import {pauseSound, playSound} from "@src/audio/audio";
 
 
 export class WorldScreen extends AbstractScreen {
@@ -34,6 +35,14 @@ export class WorldScreen extends AbstractScreen {
         if (debugSpawnConnector) {
             this.changeWorld(debugSpawnConnector?.world?.name ?? "", point(debugSpawnConnector.x, debugSpawnConnector.y), debugSpawnConnector.direction);
         }
+    }
+
+    show() {
+        playSound("theme");
+    }
+
+    hide() {
+        pauseSound("theme");
     }
 
     update(delta: number) {
