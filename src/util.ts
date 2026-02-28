@@ -102,7 +102,10 @@ export function interpolateColor(a: number, b: number, x: number) {
     return (cr << 16) + (cg << 8) + cb;
 }
 
-export function map(v: number, a1: number, b1: number, a2: number, b2: number): number {
+export function map(v: number, a1: number, b1: number, a2: number, b2: number, clampValues: boolean = false): number {
+    if (clampValues && v < a1) return a2;
+    if (clampValues && v > b1) return b2;
+
     const x = (v - a1) / (b1 - a1);
     return interpolate(a2,b2, x);
 }

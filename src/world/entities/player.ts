@@ -50,8 +50,12 @@ export class Player extends WorldEntity {
 
     public maxHealth = 100;
     public health = this.maxHealth;
+    public healthRegenSpeed = this.maxHealth / 30;
     public hurtTimer = 0;
     public hurtDelay = 0.5;
+
+    public dead = false;
+    public deathTimer = 0;
 
     public arrowTexture: Texture;
 
@@ -72,12 +76,19 @@ export class Player extends WorldEntity {
     update(delta: number) {
         super.update(delta);
 
-        this.movementUpdate(delta);
         this.cameraMovement(delta);
-        this.gunUpdate(delta);
-        this.interactablesUpdate();
 
         this.hurtTimer = stepTo(this.hurtTimer, 0, delta);
+        if (!this.dead) {
+            if (this.health <= 0) this.die();
+            this.health = stepTo(this.health, this.maxHealth, this.healthRegenSpeed * delta);
+
+            this.movementUpdate(delta);
+            this.gunUpdate(delta);
+            this.interactablesUpdate();
+        } else {
+            this.deathTimer += delta;
+        }
     }
 
     draw() {
@@ -86,7 +97,7 @@ export class Player extends WorldEntity {
         // Gun
         const gw = og.width / 4;
         const gx = og.width * 0.5 - gw/2 + Math.sin(this.viewBobbingPhase / 2) * gw/8;
-        const gy = og.height - gw*0.9 + Math.sin(this.viewBobbingPhase) * gw/16;
+        const gy = og.height - gw*0.9 + Math.sin(this.viewBobbingPhase)*gw/16 + 2*this.deathTimer*gw;
         if (this.gunShootTimer > 0) {
             const knockback = this.gunShootTimer / this.gunShootDelay;
             og.image(this.gunFireTexture.raw, gx, gy + knockback*gw*0.3, gw,gw);
@@ -135,6 +146,16 @@ export class Player extends WorldEntity {
                 og.image(this.arrowTexture.raw, -aw/2, -aw/2, aw,aw);
                 og.pop();
             }
+        }
+
+        // Death screen
+        if (this.dead) {
+            og.fill(192, 0,0, 128);
+            og.rect(0, 0, og.width, og.height);
+
+            setupOverlayFont(og, 80, map(this.deathTimer, 2,4, 0,1, true));
+            og.textAlign("center");
+            og.text("You died", og.width/2, og.height/3);
         }
     }
 
@@ -192,6 +213,10 @@ export class Player extends WorldEntity {
 
         if (SETTINGS.VIEW_BOBBING) {
             this.cameraHeight += PLAYER_CAMERA_BOBBING_AMOUNT * Math.sin(this.viewBobbingPhase);
+        }
+
+        if (this.dead) {
+            this.cameraHeight = map(this.deathTimer, 0,0.5, 0.5, 0.1, true);
         }
     }
 
@@ -253,8 +278,15 @@ export class Player extends WorldEntity {
     }
 
     dealDamage(damage: number) {
-        this.hurtTimer = this.hurtDelay;
-        this.cameraShake = this.hurtDelay;
-        this.health = stepTo(this.health, 0, damage);
+        if (!this.dead) {
+            this.hurtTimer = this.hurtDelay;
+            this.cameraShake = this.hurtDelay;
+            this.health = stepTo(this.health, 0, damage);
+        }
+    }
+
+    die() {
+        this.dead = true;
+        this.immovable = true;
     }
 }

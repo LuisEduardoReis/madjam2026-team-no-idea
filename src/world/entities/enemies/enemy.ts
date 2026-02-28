@@ -6,7 +6,7 @@ import {Player} from "@src/world/entities/player";
 export class Enemy extends WorldEntity {
 
     public attackTimer = 0;
-    public attackDelay = 0.5;
+    public attackDelay = 1;
     public attackDamage = 10;
 
     public dead: boolean = false;
@@ -37,9 +37,12 @@ export class Enemy extends WorldEntity {
 
         if (!this.dead && other instanceof Player && this.attackTimer == 0) {
             this.attackTimer = this.attackDelay;
+            const knockback = 2;
             const dist = pointDistance(this.x, this.y, other.x, other.y);
-            other.ex += (other.x - this.x) / dist * 2;
-            other.ey += (other.y - this.y) / dist * 2;
+            if (!other.dead) {
+                other.ex += (other.x - this.x) / dist * knockback;
+                other.ey += (other.y - this.y) / dist * knockback;
+            }
             other.dealDamage(this.attackDamage);
         }
     }
