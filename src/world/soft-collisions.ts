@@ -4,7 +4,7 @@ import { pointDistance } from "@src/util";
 
 export function doSoftCollisions(world: World) {
     world.entities.forEach((e) => {
-       if (!e.collidesWithOthers) {
+       if (!e.collidesWithOthers || e.immovable) {
            return;
        }
 
@@ -19,11 +19,11 @@ export function doSoftCollisions(world: World) {
            if (overlap >= 0) {
                 e.collideWith(o);
 
-               if (e.solid && o.solid && !e.immovable && dist != 0) {
+               if (e.solid && o.solid && dist != 0) {
                    const vx = (e.x - o.x) / dist;
                    const vy = (e.y - o.y) / dist;
-                   e.x += vx * overlap * 0.25;
-                   e.y += vy * overlap * 0.25;
+                   e.x += vx * overlap * 0.5;
+                   e.y += vy * overlap * 0.5;
                }
            }
        });
