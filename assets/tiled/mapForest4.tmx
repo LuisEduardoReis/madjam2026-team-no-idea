@@ -8,7 +8,7 @@
  </layer>
  <layer id="1" name="walls" width="64" height="64">
   <data encoding="base64" compression="zlib">
-   eJztmEkOwyAMRbvN/S9cZREJWQz+nkl4UtWWgu1vCJj+fgeEq3mN2rmvHbk67xItu+aA6tZq2C0H2nmntnbS38YriX33PeAin1fxv0EvGv/OeinS9f0Gvqz9RqL/TXjo36keROJBzoFVnyog8fT6Sea1kv4HdO4081hR/0PE+q2s/8Y7vi/r7z1D1fLhEU9PK/2PoQqW8czmuKJ+q1i454mlTy0WcaB3SCu/Giz/45HUQZn6uee9VU3Quwtk3RFmvkYxIjakfaPywNmbaBttR/SgeOdAop87vu2j0eCZA/SZlurX4pUDzn1+5D9i7r1sUbsrn5xnAbUtwbMu9xiTsWYjbFqfd6jv7HUgqfGy/CN4rOtV3URrLK5NLzg50NQy2j1VEwOCVb1v4c+ivwS0PkRta+r8yDuS1n9v7VvkLwLpc+B9n61wR25/t55fTUy7+uLwRu2zNRS1pkbxeNquura8dVckYs+qSnYtlQlyP/Hwk01k/VJt31vNfft9Nl6iqcI5wKntuTma2ePGEpkDzt1uVd/32pC1MrIRAbemR8ej+Rr59kTrgzPPkrb2N0+09lfjOecpkj9rMvRb2bYgYp+WnoURaPxxx6zusVXqICTO7FgPh8PhcED5A+QwD+4=
+   eJztmMtuAyEMRdlW+f//rWaBiqgf18Y2EM2VZpM2g4/xM63h+iEe7nPkuU2PzZ/h8XLf6ofO39p//o/zucEHM2drf7aPLFaNPjhZGr9XN/BTMd6aj/+2+J/r1MiK8Eu8J3M/4mpaF5f3t/KOmmMdFcV8ozx17Ru4u1b4kXefPgtF8yMz0s38VB/nmLXvn+AD61xH1XnrXHgS/yMLx3h/3nn4xFmQm/0orewB4ztO4u+i5r9oSTv1Cargp3Lu2/mpHjjvWLsVHf/ajnAKv7eXcUL2olP40bqPiOPmzt3Jb+l5mlBuLf4r+wHKrtljuW9uTt6xJ2js6N6G2GqNs4rfF7Q6j+yuSO/25le2D7z8lH3aGd7akpkLEfxovq8oKwastY+7e62/RfXUaB8g98Odida8yDk6Iw+8MYrMK9H847nVecDZEf1e5NzoWdEzA6L8aAxY9o4TfICez/mAm/es/t/lA4v/ubmX6q07+UdbNVus50uz5OwbRBX7gWSPdS7TmL39J5NfywXPrrvCzJ2dKSkPpDxeiW1ElfwWH1B3nDEDZfNT96fZk8HKnVXBXsljeTJ2wa6sfO3SeJAnSyN7xjkS725VxHtVzbbKuwNblBlXK5LYI2OUi/2d0up8tK1I3auU5e4p21Zmneq+Rsly9xw/N+taNfshW5qt6N3Pf0dmZSleqnyg1XstFrleJvmVixfu/7IU0eslfoqLynHNT1mK6PXSLCPdK1IrT+fXcjSiDp4c/8gca/Ex1wezRP1WgQq1cX7/zp2Ws4/yg8VW9P2791pJHjt3z+2vXr169cqmX3ISJIc=
   </data>
  </layer>
  <layer id="2" name="ceiling" width="64" height="64" visible="0" opacity="0.5">
@@ -18,7 +18,7 @@
  </layer>
  <objectgroup id="4" name="objects">
   <object id="7" type="bunny-path" x="862" y="530">
-   <polyline points="0,0 -222,174 226,-18 34,430 34,686 738,494 738,686 290,878 -222,942 -222,1390 226,1838 418,2286 930,2286 1314,2030 2082,1966 2082,1390 1570,1390 1598.61,1091.21 1589.52,642.727"/>
+   <polyline points="0,0 -222,174 240,24 34,430 34,686 738,494 738,686 290,878 -222,942 -222,1390 226,1838 418,2286 930,2286 1314,2030 2082,1966 2082,1390 1570,1390 1598.61,1091.21 1589.52,642.727"/>
   </object>
   <object id="8" name="closed-door" type="closed-door" x="861" y="325">
    <ellipse/>
