@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="64" height="64" tilewidth="64" tileheight="64" infinite="0" nextlayerid="6" nextobjectid="35">
+<map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="64" height="64" tilewidth="64" tileheight="64" infinite="0" nextlayerid="6" nextobjectid="50">
  <tileset firstgid="1" source="tileset.tsx"/>
  <layer id="3" name="floor" width="64" height="64">
   <data encoding="base64" compression="zlib">
@@ -88,6 +88,51 @@
    <ellipse/>
   </object>
   <object id="34" type="hare" x="2715.15" y="2851.52">
+   <ellipse/>
+  </object>
+  <object id="35" type="hare" x="1198" y="1080">
+   <ellipse/>
+  </object>
+  <object id="36" type="hare" x="1038" y="978">
+   <ellipse/>
+  </object>
+  <object id="37" type="hare" x="1406" y="984">
+   <ellipse/>
+  </object>
+  <object id="38" type="hare" x="1164" y="1256">
+   <ellipse/>
+  </object>
+  <object id="39" type="hare" x="796.97" y="1151.52">
+   <ellipse/>
+  </object>
+  <object id="40" type="hare" x="687.879" y="860.606">
+   <ellipse/>
+  </object>
+  <object id="41" type="hare" x="987.879" y="742.424">
+   <ellipse/>
+  </object>
+  <object id="42" type="hare" x="875.758" y="906.061">
+   <ellipse/>
+  </object>
+  <object id="43" type="hare" x="1281.82" y="806.061">
+   <ellipse/>
+  </object>
+  <object id="44" type="hare" x="2366.67" y="1500">
+   <ellipse/>
+  </object>
+  <object id="45" type="hare" x="2375.76" y="1703.03">
+   <ellipse/>
+  </object>
+  <object id="46" type="hare" x="2981.82" y="2375.76">
+   <ellipse/>
+  </object>
+  <object id="47" type="hare" x="3006.06" y="2166.67">
+   <ellipse/>
+  </object>
+  <object id="48" type="hare" x="2360.61" y="2621.21">
+   <ellipse/>
+  </object>
+  <object id="49" type="hare" x="2327.27" y="2169.7">
    <ellipse/>
   </object>
  </objectgroup>
