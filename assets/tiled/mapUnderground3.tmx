@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="64" height="64" tilewidth="64" tileheight="64" infinite="0" nextlayerid="5" nextobjectid="3">
+<map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="64" height="64" tilewidth="64" tileheight="64" infinite="0" nextlayerid="5" nextobjectid="6">
  <tileset firstgid="1" source="tileset.tsx"/>
  <layer id="3" name="floor" width="64" height="64">
   <data encoding="base64" compression="zlib">
@@ -19,6 +19,19 @@
  <objectgroup id="4" name="objects">
   <object id="2" type="bunny-path" x="3328" y="1920">
    <polyline points="0,0 -576,-64 -640,256 -640,640 -1088,576 -1408,192 -1728,0 -2048,-64 -2048,-576 -1600,-576 -1472,-768 -1024,-1088 -640,-1344 -1344,-1344 -1472,-1152 -1728,-1024 -1984,-1280 -2432,-1344 -2752,-1280 -3008,-1312 -3170.67,-1316 -3174,-1556"/>
+  </object>
+  <object id="3" name="closed-door" type="closed-door" x="3519.33" y="1956.67" width="0.666667">
+   <ellipse/>
+  </object>
+  <object id="4" name="underground3-spawn" type="level-spawn" x="3391.33" y="1952">
+   <point/>
+  </object>
+  <object id="5" name="door-out-of-underground3" type="level-door" x="154.667" y="510.667">
+   <properties>
+    <property name="target" value="underground4-spawn"/>
+    <property name="type" type="int" value="0"/>
+   </properties>
+   <ellipse/>
   </object>
  </objectgroup>
 </map>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="64" height="64" tilewidth="64" tileheight="64" infinite="0" nextlayerid="5" nextobjectid="4">
+<map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="64" height="64" tilewidth="64" tileheight="64" infinite="0" nextlayerid="5" nextobjectid="7">
  <tileset firstgid="1" source="tileset.tsx"/>
  <layer id="3" name="floor" width="64" height="64">
   <data encoding="base64" compression="zlib">
@@ -8,7 +8,7 @@
  </layer>
  <layer id="1" name="walls" width="64" height="64">
   <data encoding="base64" compression="zlib">
-   eJztmMmOxDAIRPs6///Dc2ppNHLMUhRLxJP60IljKLyBP59lWZZlWZZlWZYlgh/lbwoWvy3ausfhpFny2aqn43yQfLo99+roEAPLWJzaoP5Xx8Bi27ouWH5EgqzdaJ8rYuDRwfKzcg5U70NfpqwDFlVjwVjL3r3iLfpPz7T5ZDaRNtF8eco5gPSDzA8mEfmcp1217i+oH4j+DlSNf4RtlIg5OHn9R9YyUi0t7f8VcWDmQB472TFg1jVILpgVgy5n0H+y54B2vJh3ASdbVdz26qf/GT5koT2rmTGYoP/2nOFDFpZcnTUHuum3tGf4kMlpr5PaS315zo4OMUDub56+7Xwv5MVT33W8F/LirW+lvXUKyP3GdP2smm+C/tsep/3e864aTa2k+V5q0wXreajJCTQ2K0HuMKQ+0X6YoDl9VK2YrT+qlkH2w2hfKuwhuUC0L9n2kFwg2penvr31mNaG5fnf9+wxz+jfqp8xBk8wx9+SF7DmnhfUly46UDxj8xbtJ27r5c26l2U6v4y9C24=
+   eJztmMkOwzAIRHvt//9wT5GqyLGBYVginlRVdRPD4A38+QzDMAzDMAzDMAwefIWfLmj81mirHoeV5pPPWj0V58PJp127VUeFGGjGYvUM6n92DDS2teuC5YcnyNr19jkjBhYdLD8z50D2PnTRZR2wyBoLxlq27hVv0b9qk+aT0XjaRPPlLucA0g8yP5h45HOW57J1X6B+IPorkDX+HrZRPOZg5/XvWcucaunT/p8RB2YOZLETHQNmXYPkglExqHIG3YmeA9LxYt4FrGxlsdurn35H+BCF9KxmxqCD/l07w4co7mscOdsRH7L53r5PzzFsZ+KhX3O+aPqNAL2/eXq38r2QFUt9V/FeyIq1vj3trV1A7je662fVfB307/Y46fuW/7KR1EqS90/PVEFzfkvveyQ2M0HuME59ov0wQXN6r1oxWr9XLYPsh96+ZNhDcgFvX6LtIbmAty9PfVvrMakNTfv//+wxj+hfq58xBk8wx1+TF7DmnhXUlyo6UCxj8xbtK3br5c26h6E7P7kJC24=
   </data>
  </layer>
  <layer id="2" name="ceiling" width="64" height="64" opacity="0.5">
@@ -19,6 +19,12 @@
  <objectgroup id="4" name="objects">
   <object id="3" type="bunny-path" x="1152" y="2432">
    <polyline points="0,0 0,-320 -256,-640 -256,-1024 448,-1024 896,-1344 1408,-960 1344,-512 1344,-128 832,192 832,512 640,768 192,1152 -256,1182.67 -702.667,1182.67"/>
+  </object>
+  <object id="5" name="closed-door" type="closed-door" x="1188" y="2561">
+   <ellipse/>
+  </object>
+  <object id="6" name="underground4-spawn" type="level-spawn" x="1183" y="2473">
+   <point/>
   </object>
  </objectgroup>
 </map>

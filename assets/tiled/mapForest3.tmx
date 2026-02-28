@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="64" height="64" tilewidth="64" tileheight="64" infinite="0" nextlayerid="5" nextobjectid="7">
+<map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="64" height="64" tilewidth="64" tileheight="64" infinite="0" nextlayerid="5" nextobjectid="10">
  <tileset firstgid="1" source="tileset.tsx"/>
  <layer id="3" name="floor" width="64" height="64">
   <data encoding="base64" compression="zlib">
@@ -8,7 +8,7 @@
  </layer>
  <layer id="1" name="walls" width="64" height="64">
   <data encoding="base64" compression="zlib">
-   eJztWNuuwzAI62v//4eP9lApJ2oaLgbMVkuTpjaF2CQEchwvXrzIxDn8OsPCYxzfVYd53hIOT2M6aLCLFYIfqwaa+c/jNLFlXAfa+ZyHf1+zaFAZDwYNKufAwv+X4/9BxRnNmgcztGDkPiNqjh24X5DUO6ufxSYjPLWgVjtGeGt+rS8GHbRxWY2z8qnSIaKm9WiQCYTmT+sAZSsCSD9oDaIRofNskzkPRNlHnW1d+e98Ss//DP6ovOe5A0LmDQu0Oqxi54lrJf/RH7KG19RGmnWRgZUWqLqWdQ3s/KPO8k78PeeZtj9g1MAKSS6xPmOFtneUPmPWwLI/tGc+E39vTrhsrOw++awAqp6fbd29232bCVQPI9VPwj9DA2SstT6RNrVA8R7tIcYi9591Dqu5aPsci++sfb/iJuU6v9eeh5Z3bLD0C9/C/YJmDUj2fTfcrQHJs52dLniq7bz9ATvQ52cnDSLm24V/VKw6rAGGuiwbGfXo7K8aiJ7f+j1L/4/6HnVnEgnkfQfCbnYfhLaDuEuJRlT/n32fsvre2t9a/d39t9rK0I+ZvxcV8T+n/xY/mXk/SgMr/4pzH70WvPVSFVA6WNZ7NfcZ0Ws4KgdFQ5pTs3Lui//4A0sxEKs=
+   eJztWMsOwzAI67X//8PTDpO6KGl4GDBqLU2a2gRiQxPIcbx48SIT5+XXGRYe1/FddRjXLeFwN6aDBrtYIfixaqBZ/zhOE1vGPNCu5zz83zWLBpXxYNCgcg0s/J8c/y8qzmjWfTBDC0buI6LW2IH7D5J6Z/Wz2GSEpxbUascIb82v9cWggzYuq3FWPlU6RNS0Hg0ygdD8Lg9QtiKA9IPWIBoROo82mfeBKPuos60r/51P6fmfwR+173nugJD7hgVaHVax88S1kv/VH7KG19RGmrzIwCyOyH2cNQdm8PBfzXsKf21/wKiB9SyX7CXWZ6zQ9o7SZ8waWOo97ZnPxF96zu9srOze+awAqp4fbc3e7eZmAtXDSPWT8M/QABlrrU+kTS1QvK/2EGOR3591Dau1aPsci++s737FTcp1fK89Dy3v2DDr4bRztPPZoMkByXffDbMckDzb2emCu9rO2x+wA31+dtIgYr1d+EfFqkMOMNRl2cioR0d/1UD0/Nb5LP0/aj7qziQSyPsOhN3sPghtB3GXEo2o/j/7PmU139rfWv3N/lttVevn8cew9or4n8N/i5/MuEVpYOVfce6jc8FbL1UBpYMl36u5j4jO4ag9KBrSPTVrz33xjw8rsBCr
   </data>
  </layer>
  <layer id="2" name="ceiling" width="64" height="64" visible="0" opacity="0.5">
@@ -19,6 +19,19 @@
  <objectgroup id="4" name="objects">
   <object id="6" type="bunny-path" x="1186" y="1754">
    <polyline points="0,0 -290,-218 30,-538 -226,-986 -226,-1178 -34,-1178 158,-986 478,-986 734,-1242 1054,-1050 798,-794 1118,-538 1374,-474 1694,-154 1822,358 1630,1062 1886,1638 1566,2022 1438,1510 1246,1190 862,1126 798,1062 670,1446 670,1958 350,2086 94,1830 -162,1894 -224,1862 -900,1854"/>
+  </object>
+  <object id="7" name="closed-door" type="closed-door" x="1184" y="1896">
+   <ellipse/>
+  </object>
+  <object id="8" name="forest3-spawn" type="level-spawn" x="1184" y="1813.33">
+   <point/>
+  </object>
+  <object id="9" name="door-out-of-forest3" type="level-door" x="726.667" y="3613.33">
+   <properties>
+    <property name="target" value="forest4-spawn"/>
+    <property name="type" type="int" value="0"/>
+   </properties>
+   <ellipse/>
   </object>
  </objectgroup>
 </map>
