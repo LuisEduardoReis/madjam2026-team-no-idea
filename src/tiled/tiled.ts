@@ -2,8 +2,17 @@ import p5 from "p5";
 import pako from "pako";
 
 import rawFarm from "@assets/tiled/mapFarm.tmx";
+import rawFarm2 from "@assets/tiled/mapFarm2.tmx";
+import rawFarm3 from "@assets/tiled/mapFarm3.tmx";
+import rawFarm4 from "@assets/tiled/mapFarm4.tmx";
 import rawForest from "@assets/tiled/mapForest.tmx";
+import rawForest2 from "@assets/tiled/mapForest2.tmx";
+import rawForest3 from "@assets/tiled/mapForest3.tmx";
+import rawForest4 from "@assets/tiled/mapForest4.tmx";
 import rawUnderground from "@assets/tiled/mapUnderground.tmx";
+import rawUnderground2 from "@assets/tiled/mapUnderground2.tmx";
+import rawUnderground3 from "@assets/tiled/mapUnderground3.tmx";
+import rawUnderground4 from "@assets/tiled/mapUnderground4.tmx";
 import rawTileset from "@assets/tiled/tileset.tsx";
 
 export const MAP_FILENAMES: string[] = [];
@@ -18,7 +27,20 @@ function parseXml(rawMap1: string): p5.XML {
 }
 
 export async function loadTiledFiles() {
-    [rawFarm, rawForest, rawUnderground].forEach((raw, index) => {
+    [
+        rawFarm,
+        rawFarm2,
+        rawFarm3,
+        rawFarm4,
+        rawForest,
+        rawForest2,
+        rawForest3,
+        rawForest4,
+        rawUnderground,
+        rawUnderground2,
+        rawUnderground3,
+        rawUnderground4,
+    ].forEach((raw, index) => {
         const name = `map${index}`;
         TILED_FILES.set(name, parseXml(raw));
         MAP_FILENAMES.push(name);
