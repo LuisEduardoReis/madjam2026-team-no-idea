@@ -13,7 +13,7 @@
  </layer>
  <layer id="2" name="ceiling" width="64" height="64" opacity="0.5">
   <data encoding="base64" compression="zlib">
-   eJztwzENAAAMBKEb3r/myugCCaumqqqqqqqqqqqqqqqqqqqqvj44D0AB
+   eJztwzENAAAMBKGb37/gyugCCaumqqqqqqqqqqqqqqqqqqqqvj6sHqAB
   </data>
  </layer>
  <objectgroup id="4" name="objects">
