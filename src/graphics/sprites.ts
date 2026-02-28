@@ -59,4 +59,11 @@ export function initSprites() {
     SPRITES.set("croc-dead", new Sprite([
         getTexture("sprites/croc/croc_002"),
     ]));
+    SPRITES.set("spider", new Sprite([
+        getTexture("sprites/spider/spider_000"),
+        getTexture("sprites/spider/spider_001"),
+    ]));
+    SPRITES.set("spider-dead", new Sprite([
+        getTexture("sprites/spider/spider_000"),
+    ]));
 }

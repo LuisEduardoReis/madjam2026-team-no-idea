@@ -17,6 +17,7 @@ import {Wolf} from "@src/world/entities/enemies/wolf";
 import {Croc} from "@src/world/entities/enemies/croc";
 import {Grass} from "@src/world/entities/decoration/grass";
 import {SawGrass} from "@src/world/entities/decoration/saw-grass";
+import {Spider} from "@src/world/entities/enemies/spider";
 
 export function buildWorld(name: string): World {
 
@@ -173,6 +174,10 @@ function processObjects(world: World, objectGroup: p5.XML, mapXml: p5.XML) {
            }
            case "croc": {
                world.addEntity(new Croc({ x, y }));
+               break;
+           }
+           case "spider": {
+               world.addEntity(new Spider({ x, y }));
                break;
            }
        }
