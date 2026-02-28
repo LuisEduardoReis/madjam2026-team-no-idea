@@ -11,18 +11,24 @@ import {Bunny} from "@src/world/entities/bunny";
 import {EnemyWithPath} from "@src/world/entities/enemies/enemy-with-path";
 import {LevelDoor} from "@src/world/entities/level-door";
 import {ChasingEnemy} from "@src/world/entities/enemies/chasing-enemy";
+import {Tree} from "@src/world/entities/decoration/tree";
+import type {WorldScreen} from "@src/screens/world-screen";
 
 export function buildWorld(name: string): World {
 
+    const tilesetXml = TILED_FILES.get("tileset");
     const mapXml = TILED_FILES.get(name);
 
+    if (!tilesetXml) {
+        throw new Error(`Tileset XML not found`);
+    }
     if (!mapXml) {
         throw new Error(`Map file "${name}" not found`);
     }
 
     const mapW = mapXml.getNum("width");
     const mapH = mapXml.getNum("height");
-    const tilesetXml = mapXml.getChildren("tileset")
+    const mapTilesetXml = mapXml.getChildren("tileset")
             .find(tileset => tileset.getString("source") == "tileset.tsx")
         ?? mapXml.getChild("tileset");
 
@@ -33,7 +39,7 @@ export function buildWorld(name: string): World {
 
     const world = new World({ w: mapW, h: mapH, name });
 
-    loadTiles(world, layersByName, tilesetXml);
+    loadTiles(world, layersByName, mapTilesetXml, tilesetXml);
     processObjects(world, mapXml.getChildren("objectgroup")[0], mapXml);
 
     return world;
@@ -45,16 +51,36 @@ function decodeLayer(floor: p5.XML | undefined): number[] {
     return decodeBase64Zlib(floor.getChild("data").getContent());
 }
 
-function loadTiles(world: World, layersByName: Map<string, p5.XML>, tilesetXml: p5.XML) {
-    const firstGid = tilesetXml.getNum("firstgid");
+function loadTiles(world: World, layersByName: Map<string, p5.XML>, mapTilesetXml: p5.XML, tilesetXml: p5.XML) {
+    const firstGid = mapTilesetXml.getNum("firstgid");
     const floorData = decodeLayer(layersByName.get("floor"));
     const wallsData = decodeLayer(layersByName.get("walls"));
     const ceilingData = decodeLayer(layersByName.get("ceiling"));
+    const tileEntityIds = new Map<number, string>();
+
+    tilesetXml.getChildren("tile").forEach(tileXml => {
+        const id = tileXml.getString("id");
+       tileXml.getChild("properties").getChildren("property").forEach(tileProperty => {
+           const name = tileProperty.getString("name");
+           const value = tileProperty.getString("value");
+           if (name === "tile-entity") tileEntityIds.set(Number(id), value);
+       });
+    });
 
     for(let i = 0; i < world.tiles.length; i++) {
+        const x = i % world.w;
+        const y = Math.floor(i / world.w);
+        const wallId = wallsData[i] - firstGid;
+        const tileEntityId = tileEntityIds.get(wallId);
+        const wallType = !tileEntityId ? getTileTypeById(wallId) : undefined;
+
+        if (tileEntityId === "tree") {
+            world.addEntity(new Tree({ x: x + 0.5, y: y + 0.5 }));
+        }
+
         world.tiles[i] = new Tile({
             ceilingType: getTileTypeById(ceilingData[i] - firstGid),
-            wallType: getTileTypeById(wallsData[i] - firstGid),
+            wallType,
             floorType: getTileTypeById(floorData[i] - firstGid),
         });
     }
@@ -108,7 +134,9 @@ function processObjects(world: World, objectGroup: p5.XML, mapXml: p5.XML) {
                break;
            }
            case "level-spawn": {
-               world.addEntity(new WorldConnector({ x: Math.floor(x) + 0.5, y: Math.floor(y) + 0.5, name }));
+               const spawn = new WorldConnector({ x: Math.floor(x) + 0.5, y: Math.floor(y) + 0.5, name });
+               spawn.direction = object.getNum("rotation") * DEG_TO_RAD;
+               world.addEntity(spawn);
                break;
            }
            case "ladder": {
@@ -133,23 +161,22 @@ function processObjects(world: World, objectGroup: p5.XML, mapXml: p5.XML) {
     });
 }
 
-export function connectWorlds(worlds: World[]) {
+export function connectWorlds(screen: WorldScreen, worlds: World[]) {
     const connectors: WorldConnector[] = [];
-    const connectorsByName = new Map<string, WorldConnector>();
 
     worlds.forEach(world => {
         world.entities
             .filter(t => t instanceof WorldConnector)
             .forEach(connector => {
                 connectors.push(connector);
-                connectorsByName.set(connector.name, connector);
+                screen.connectorsByName.set(connector.name, connector);
             });
     });
 
     connectors.forEach(connector => {
         if (!connector.targetName) return;
 
-        const target = connectorsByName.get(connector.targetName);
+        const target = screen.connectorsByName.get(connector.targetName);
 
         if (!target) {
             console.warn(`Connector "${connector.name} has invalid target "${connector.targetName}"`);

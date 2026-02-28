@@ -2,12 +2,14 @@ import { AbstractScreen } from "@src/screens/abstract-screen";
 import type { World } from "@src/world/world";
 import { buildWorld, connectWorlds } from "@src/tiled/world-builder";
 import { doLevelCollisions } from "@src/world/level-collisions";
-import { type Point, randomRange } from "@src/util";
+import {point, type Point, randomRange } from "@src/util";
 import { TestEntity } from "@src/world/entities/test-entity";
 import { doSoftCollisions } from "@src/world/soft-collisions";
 import { drawWorld } from "@src/graphics/world-renderer";
 import { drawEntities } from "@src/graphics/sprites-renderer";
 import { MAP_FILENAMES } from "@src/tiled/tiled";
+import {p} from "@src/index";
+import {WorldConnector} from "@src/world/entities/world-connector";
 
 
 export class WorldScreen extends AbstractScreen {
@@ -16,6 +18,7 @@ export class WorldScreen extends AbstractScreen {
 
     public worlds: Map<string, World> = new Map<string, World>();
     public currentWorld?: World;
+    public connectorsByName = new Map<string, WorldConnector>();
 
     constructor() {
         super(WorldScreen.ID);
@@ -23,7 +26,14 @@ export class WorldScreen extends AbstractScreen {
         for (const mapName of MAP_FILENAMES) this.addWorld(buildWorld(mapName));
         const worlds = Array.from(this.worlds.values());
         this.currentWorld = worlds.find(world => !!world.player);
-        connectWorlds(worlds);
+        connectWorlds(this, worlds);
+        
+        // @ts-expect-error Hardcoded type
+        const debugSpawn = p.getURLParams().debugSpawn as string;
+        const debugSpawnConnector = this.connectorsByName.get(debugSpawn);
+        if (debugSpawnConnector) {
+            this.changeWorld(debugSpawnConnector?.world?.name ?? "", point(debugSpawnConnector.x, debugSpawnConnector.y), debugSpawnConnector.direction);
+        }
     }
 
     update(delta: number) {
