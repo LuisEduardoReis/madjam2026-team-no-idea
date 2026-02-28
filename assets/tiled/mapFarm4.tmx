@@ -42,7 +42,7 @@
   <object id="18" type="hare" x="2748" y="2414.67">
    <ellipse/>
   </object>
-  <object id="19" type="hare" x="2514.67" y="2312">
+  <object id="19" type="croc" x="2514.67" y="2312">
    <ellipse/>
   </object>
   <object id="20" type="hare" x="2348" y="2022.67">
@@ -51,19 +51,19 @@
   <object id="21" type="hare" x="2466.67" y="1742.67">
    <ellipse/>
   </object>
-  <object id="22" type="hare" x="2552" y="1400">
+  <object id="22" type="croc" x="2552" y="1400">
    <ellipse/>
   </object>
   <object id="23" type="hare" x="2676" y="1454">
    <ellipse/>
   </object>
-  <object id="24" type="hare" x="1845.45" y="1048.48">
+  <object id="24" type="croc" x="1845.45" y="1048.48">
    <ellipse/>
   </object>
   <object id="25" type="hare" x="1815.15" y="1496.97">
    <ellipse/>
   </object>
-  <object id="26" type="hare" x="1475.76" y="1842.42">
+  <object id="26" type="croc" x="1475.76" y="1842.42">
    <ellipse/>
   </object>
   <object id="27" type="hare" x="1409.09" y="2112.12">
@@ -75,13 +75,13 @@
   <object id="29" type="hare" x="572.727" y="1842.42">
    <ellipse/>
   </object>
-  <object id="30" type="hare" x="778.788" y="2436.36">
+  <object id="30" type="croc" x="778.788" y="2436.36">
    <ellipse/>
   </object>
   <object id="31" type="hare" x="927.273" y="2772.73">
    <ellipse/>
   </object>
-  <object id="32" type="hare" x="596.97" y="3178.79">
+  <object id="32" type="croc" x="596.97" y="3178.79">
    <ellipse/>
   </object>
   <object id="33" type="hare" x="996.97" y="3275.76">
@@ -90,28 +90,28 @@
   <object id="34" type="hare" x="721.212" y="3569.7">
    <ellipse/>
   </object>
-  <object id="35" type="hare" x="2709.09" y="2618.18">
+  <object id="35" type="croc" x="2709.09" y="2618.18">
    <ellipse/>
   </object>
   <object id="36" type="hare" x="2572.73" y="2751.52">
    <ellipse/>
   </object>
-  <object id="37" type="hare" x="2206.06" y="2987.88">
+  <object id="37" type="croc" x="2206.06" y="2987.88">
    <ellipse/>
   </object>
   <object id="38" type="hare" x="1990.91" y="2833.33">
    <ellipse/>
   </object>
-  <object id="39" type="hare" x="2100" y="3281.82">
+  <object id="39" type="croc" x="2100" y="3281.82">
    <ellipse/>
   </object>
   <object id="40" type="hare" x="1793.94" y="3330.3">
    <ellipse/>
   </object>
-  <object id="41" type="hare" x="1412.12" y="3315.15">
+  <object id="41" type="croc" x="1412.12" y="3315.15">
    <ellipse/>
   </object>
-  <object id="42" type="hare" x="1115.15" y="3181.82">
+  <object id="42" type="croc" x="1115.15" y="3181.82">
    <ellipse/>
   </object>
   <object id="43" type="hare" x="1663.64" y="3224.24">
@@ -120,13 +120,13 @@
   <object id="44" type="hare" x="2078.79" y="3066.67">
    <ellipse/>
   </object>
-  <object id="45" type="hare" x="1154.55" y="2145.45">
+  <object id="45" type="croc" x="1154.55" y="2145.45">
    <ellipse/>
   </object>
   <object id="46" type="hare" x="851.515" y="1515.15">
    <ellipse/>
   </object>
-  <object id="47" type="hare" x="763.636" y="1730.3">
+  <object id="47" type="croc" x="763.636" y="1730.3">
    <ellipse/>
   </object>
   <object id="48" type="hare" x="657.576" y="1593.94">
@@ -135,7 +135,7 @@
   <object id="49" type="hare" x="1924.24" y="1639.39">
    <ellipse/>
   </object>
-  <object id="50" type="hare" x="1824.24" y="1963.64">
+  <object id="50" type="croc" x="1824.24" y="1963.64">
    <ellipse/>
   </object>
   <object id="51" type="hare" x="2148.48" y="1657.58">
@@ -144,7 +144,7 @@
   <object id="52" type="hare" x="3008" y="1240">
    <ellipse/>
   </object>
-  <object id="53" type="hare" x="3064" y="906">
+  <object id="53" type="croc" x="3064" y="906">
    <ellipse/>
   </object>
   <object id="54" type="hare" x="3228" y="600">
@@ -156,7 +156,7 @@
   <object id="56" type="hare" x="3518" y="1162">
    <ellipse/>
   </object>
-  <object id="57" type="hare" x="3228" y="1174">
+  <object id="57" type="croc" x="3228" y="1174">
    <ellipse/>
   </object>
  </objectgroup>

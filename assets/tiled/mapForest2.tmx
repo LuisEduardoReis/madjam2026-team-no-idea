@@ -39,7 +39,7 @@
   <object id="10" type="hare" x="1080" y="1680">
    <ellipse/>
   </object>
-  <object id="11" type="hare" x="956" y="1747">
+  <object id="11" type="croc" x="956" y="1747">
    <ellipse/>
   </object>
   <object id="12" type="hare" x="881" y="1649">
@@ -51,7 +51,7 @@
   <object id="15" type="hare" x="770" y="1459">
    <ellipse/>
   </object>
-  <object id="16" type="hare" x="880" y="1447">
+  <object id="16" type="croc" x="880" y="1447">
    <ellipse/>
   </object>
   <object id="17" type="hare" x="1022.67" y="1168">
@@ -60,31 +60,31 @@
   <object id="18" type="hare" x="1260" y="1036">
    <ellipse/>
   </object>
-  <object id="19" type="hare" x="978.667" y="982.667">
+  <object id="19" type="croc" x="978.667" y="982.667">
    <ellipse/>
   </object>
   <object id="20" type="hare" x="1264" y="756">
    <ellipse/>
   </object>
-  <object id="21" type="hare" x="1078" y="510">
+  <object id="21" type="croc" x="1078" y="510">
    <ellipse/>
   </object>
   <object id="22" type="hare" x="754" y="444">
    <ellipse/>
   </object>
-  <object id="23" type="hare" x="1462" y="778">
+  <object id="23" type="croc" x="1462" y="778">
    <ellipse/>
   </object>
   <object id="24" type="hare" x="1516" y="950">
    <ellipse/>
   </object>
-  <object id="25" type="hare" x="2046" y="736">
+  <object id="25" type="croc" x="2046" y="736">
    <ellipse/>
   </object>
   <object id="26" type="hare" x="1940" y="476">
    <ellipse/>
   </object>
-  <object id="27" type="hare" x="1736" y="1018">
+  <object id="27" type="croc" x="1736" y="1018">
    <ellipse/>
   </object>
   <object id="28" type="hare" x="2390" y="818">
@@ -93,10 +93,10 @@
   <object id="29" type="hare" x="2405.33" y="1390.67">
    <ellipse/>
   </object>
-  <object id="30" type="hare" x="2310.67" y="1730.67">
+  <object id="30" type="croc" x="2310.67" y="1730.67">
    <ellipse/>
   </object>
-  <object id="31" type="hare" x="2165.33" y="1856">
+  <object id="31" type="croc" x="2165.33" y="1856">
    <ellipse/>
   </object>
   <object id="32" type="hare" x="2074.67" y="2072">
