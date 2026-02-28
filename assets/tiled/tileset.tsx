@@ -21,4 +21,14 @@
    <property name="tile-entity" value="saw-grass"/>
   </properties>
  </tile>
+ <tile id="34">
+  <properties>
+   <property name="tile-entity" value="rock1"/>
+  </properties>
+ </tile>
+ <tile id="42">
+  <properties>
+   <property name="tile-entity" value="rock2"/>
+  </properties>
+ </tile>
 </tileset>

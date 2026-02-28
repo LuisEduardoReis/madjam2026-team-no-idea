@@ -18,6 +18,8 @@ import {Croc} from "@src/world/entities/enemies/croc";
 import {Grass} from "@src/world/entities/decoration/grass";
 import {SawGrass} from "@src/world/entities/decoration/saw-grass";
 import {Spider} from "@src/world/entities/enemies/spider";
+import {Rock1} from "@src/world/entities/decoration/rock1";
+import {Rock2} from "@src/world/entities/decoration/rock2";
 
 export function buildWorld(name: string): World {
 
@@ -79,15 +81,11 @@ function loadTiles(world: World, layersByName: Map<string, p5.XML>, mapTilesetXm
         const tileEntityId = tileEntityIds.get(wallId);
         const wallType = !tileEntityId ? getTileTypeById(wallId) : undefined;
 
-        if (tileEntityId === "tree") {
-            world.addEntity(new Tree({ x: x + 0.5, y: y + 0.5 }));
-        }
-        if (tileEntityId === "grass") {
-            world.addEntity(new Grass({ x: x + 0.5, y: y + 0.5 }));
-        }
-        if (tileEntityId === "saw-grass") {
-            world.addEntity(new SawGrass({ x: x + 0.5, y: y + 0.5 }));
-        }
+        if (tileEntityId === "tree") world.addEntity(new Tree({ x: x + 0.5, y: y + 0.5 }));
+        if (tileEntityId === "grass") world.addEntity(new Grass({ x: x + 0.5, y: y + 0.5 }));
+        if (tileEntityId === "saw-grass") world.addEntity(new SawGrass({ x: x + 0.5, y: y + 0.5 }));
+        if (tileEntityId === "rock1") world.addEntity(new Rock1({ x: x + 0.5, y: y + 0.5 }));
+        if (tileEntityId === "rock2") world.addEntity(new Rock2({ x: x + 0.5, y: y + 0.5 }));
 
         world.tiles[i] = new Tile({
             ceilingType: getTileTypeById(ceilingData[i] - firstGid),
