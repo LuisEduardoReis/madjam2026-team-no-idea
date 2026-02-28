@@ -13,6 +13,7 @@ import {LevelDoor} from "@src/world/entities/level-door";
 import {ChasingEnemy} from "@src/world/entities/enemies/chasing-enemy";
 import {Tree} from "@src/world/entities/decoration/tree";
 import type {WorldScreen} from "@src/screens/world-screen";
+import {Wolf} from "@src/world/entities/enemies/wolf";
 
 export function buildWorld(name: string): World {
 
@@ -157,7 +158,7 @@ function processObjects(world: World, objectGroup: p5.XML, mapXml: p5.XML) {
                break;
            }
            case "hare": {
-               world.addEntity(new ChasingEnemy({ x, y }));
+               world.addEntity(new Wolf({ x, y }));
            }
        }
     });
