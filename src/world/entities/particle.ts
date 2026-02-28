@@ -21,7 +21,7 @@ export class Particle extends WorldEntity {
     public w: number;
     public h: number;
 
-    public g: number = 3;
+    public g: number = 5;
     public vx: number;
     public vy: number;
     public vz: number;

@@ -8,6 +8,7 @@ export enum ControlKey {
     LOOK_LEFT = "Look Left",
     LOOK_RIGHT = "Look Right",
     INTERACT = "Interact",
+    FIRE = "Fire",
     EXIT = "Exit/Pause"
 }
 
@@ -19,6 +20,7 @@ export const DEFAULT_KEYS: Record<ControlKey, string> = {
     [ControlKey.LOOK_LEFT]: "ArrowLeft",
     [ControlKey.LOOK_RIGHT]: "ArrowRight",
     [ControlKey.INTERACT]: "KeyE",
+    [ControlKey.FIRE]: "Space",
     [ControlKey.EXIT]: "Escape",
 };
 

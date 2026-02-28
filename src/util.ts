@@ -1,3 +1,4 @@
+import type { WorldEntity } from "@src/world/entities/world-entity";
 
 
 export const DEG_TO_RAD = Math.PI / 180;
@@ -161,5 +162,76 @@ export function angleDifference(a: number, b: number) {
 
 export function pointAngle(x1: number, y1: number, x2: number, y2: number) {
     return Math.atan2(-(y2 - y1), x2 - x1);
+}
+
+export function crossProduct(x1: number, y1: number, x2: number, y2: number) {
+    return x1 * y2 - y1 * x2;
+}
+
+export function lineSegmentToLineSegment(p1x: number, p1y: number,p2x: number,p2y: number, q1x: number,q1y: number,q2x: number,q2y: number): Point | null {
+    const rx = p2x - p1x;
+    const ry = p2y - p1y;
+    const sx = q2x - q1x;
+    const sy = q2y - q1y;
+    const rsCross = crossProduct(rx,ry, sx,sy);
+    const qMinusPCrossR = crossProduct(q1x - p1x, q1y - p1y, rx, ry);
+
+    if (rsCross === 0 && qMinusPCrossR === 0) return null;
+    if (rsCross === 0 && qMinusPCrossR !== 0) return null;
+
+    const t = crossProduct(q1x - p1x, q1y - p1y, sx, sy) / rsCross;
+    const u = qMinusPCrossR / rsCross;
+
+    if (between(t, 0,1) && between(u, 0,1)) {
+        return point(p1x + t*rx, p1y + t*ry);
+    }
+
+    return null;
+}
+
+
+export type HitScanHit = {
+    entity: WorldEntity;
+    x: number;
+    y: number;
+    distance: number;
+}
+
+export function hitScanEntities(entities: WorldEntity[] | undefined, x1: number, y1: number, x2: number, y2: number): HitScanHit | null {
+    if (!entities) return null;
+    let entityHit: WorldEntity | null = null;
+    let entityHitDistanceSquare = 1e30;
+    let entityHitPoint: Point = point(0,0);
+
+    const rayLength = pointDistance(x1,y1, x2,y2);
+    const dirX = (x2 - x1) / rayLength;
+    const dirY = (y2 - y1) / rayLength;
+
+    entities.forEach(e => {
+        if (!e.hitScanable) return;
+        const intersection = lineSegmentToLineSegment(
+            x1, y1, x2,y2,
+            e.x + dirY * e.radius * 0.5, e.y - dirX * e.radius * 0.5,
+            e.x - dirY * e.radius * 0.5, e.y + dirX * e.radius * 0.5,
+        );
+        if (!intersection) return;
+
+        const distSquare = pointDistanceSquare(x1,y1, intersection.x, intersection.y);
+        if (!entityHit || distSquare < entityHitDistanceSquare) {
+            entityHit = e;
+            entityHitDistanceSquare = distSquare;
+            entityHitPoint = intersection;
+        }
+    });
+    if (entityHit && entityHitPoint) {
+        return {
+            entity: entityHit,
+            x: entityHitPoint.x,
+            y: entityHitPoint.y,
+            distance: Math.sqrt(entityHitDistanceSquare)
+        };
+    } else {
+        return null;
+    }
 }
 

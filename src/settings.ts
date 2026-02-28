@@ -40,9 +40,15 @@ export function loadSettings() {
     const settingsJson = localStorage.getItem(LOCAL_STORAGE_KEY);
     if (settingsJson) {
         try {
-            const settings: Settings = JSON.parse(settingsJson);
-            Object.assign(SETTINGS, settings);
-            console.log("Loaded settings:", settings);
+            const loadedSettings: Settings = JSON.parse(settingsJson);
+            SETTINGS.DEBUG = loadedSettings.DEBUG;
+            SETTINGS.CURRENT_PIXELS_RESOLUTION = loadedSettings.CURRENT_PIXELS_RESOLUTION;
+            SETTINGS.VIEW_BOBBING = loadedSettings.VIEW_BOBBING;
+            SETTINGS.FOV = loadedSettings.FOV;
+            SETTINGS.VIEW_TURN_RATE = loadedSettings.VIEW_TURN_RATE;
+            Object.assign(SETTINGS.CONTROLS, loadedSettings.CONTROLS);
+
+            console.log("Loaded settings:", loadedSettings);
         } catch (exception) {
             console.log("Could not load settings", exception, settingsJson);
         }

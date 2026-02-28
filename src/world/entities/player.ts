@@ -1,12 +1,25 @@
 import { WorldEntity, type WorldEntityProps } from "@src/world/entities/world-entity";
 import { KEY_DOWN, KEY_PRESSED } from "@src/input/input";
 import { SETTINGS } from "@src/settings";
-import { angleDifference, between, pointAngle, pointDistance, randomRange, stepTo } from "@src/util";
+import {
+    angleDifference,
+    between,
+    hitScanEntities,
+    point,
+    pointAngle,
+    pointDistance,
+    randomRange,
+    stepTo
+} from "@src/util";
 import { getGraphics } from "@src/graphics/graphics";
 import type { Interactable } from "@src/world/entities/interactable";
 import { setupOverlayFont } from "@src/graphics/font";
 import { ControlKey } from "@src/input/controls";
-import { playSound } from "@src/audio/audio";
+import {getTexture} from "@src/graphics/textures";
+import type {Texture} from "@src/graphics/texture";
+import {castRay} from "@src/graphics/raycaster";
+import {Enemy} from "@src/world/entities/enemies/enemy";
+import {bloodSplatter} from "@src/world/entities/particles/effects";
 
 export const PLAYER_CAMERA_BOBBING_SPEED = 15;
 export const PLAYER_CAMERA_BOBBING_AMOUNT = 0.02;
@@ -23,10 +36,14 @@ export class Player extends WorldEntity {
     public cameraHeight: number = 0.5;
     public viewBobbingPhase: number = 0;
 
+    public gunTexture: Texture;
+
     constructor(props: WorldEntityProps) {
         super(props);
 
         this.radius = 0.35;
+
+        this.gunTexture = getTexture("gun");
     }
 
     update(delta: number) {
@@ -34,6 +51,7 @@ export class Player extends WorldEntity {
 
         this.movementUpdate(delta);
         this.cameraMovement(delta);
+        this.gunUpdate(delta);
         this.interactablesUpdate();
     }
 
@@ -45,6 +63,11 @@ export class Player extends WorldEntity {
             og.text(this.currentInteractable.getHoverMessage(), og.width * 0.5, og.height * 0.2);
             og.noStroke();
         }
+
+        const gw = og.width / 8;
+        const gx = og.width * 0.5 - gw/2 + Math.sin(this.viewBobbingPhase / 2) * gw/3;
+        const gy = og.height - gw*0.75 + Math.sin(this.viewBobbingPhase) * gw/6;
+        og.image(this.gunTexture.raw, gx, gy, gw,gw);
     }
 
     private movementUpdate(delta: number) {
@@ -123,6 +146,25 @@ export class Player extends WorldEntity {
 
         if (this.currentInteractable && KEY_PRESSED.get(SETTINGS.CONTROLS[ControlKey.INTERACT])) {
             this.currentInteractable.interact();
+        }
+    }
+
+    private gunUpdate(delta: number) {
+        if (KEY_PRESSED.get(SETTINGS.CONTROLS[ControlKey.FIRE])) {
+            const dirX = Math.cos(this.dir);
+            const dirY = -Math.sin(this.dir);
+            const raycast = castRay(this.world, point(this.x, this.y), point(dirX, dirY));
+            const hitscan = hitScanEntities(this.world?.entities, this.x, this.y, raycast.hit.x, raycast.hit.y);
+
+            if (hitscan && hitscan.entity instanceof Enemy) {
+                const enemy = hitscan.entity;
+                const knockback = 10;
+
+                enemy.ex = dirX * knockback;
+                enemy.ey = dirY * knockback;
+
+                bloodSplatter(this.world, enemy.x, enemy.y, enemy.z);
+            }
         }
     }
 }

@@ -8,8 +8,9 @@ import {Door} from "@src/world/entities/door";
 import {WorldConnector} from "@src/world/entities/world-connector";
 import {Ladder} from "@src/world/entities/ladder";
 import {Bunny} from "@src/world/entities/bunny";
-import {EnemyWithPath} from "@src/world/entities/enemy-with-path";
+import {EnemyWithPath} from "@src/world/entities/enemies/enemy-with-path";
 import {LevelDoor} from "@src/world/entities/level-door";
+import {ChasingEnemy} from "@src/world/entities/enemies/chasing-enemy";
 
 export function buildWorld(name: string): World {
 
@@ -124,6 +125,9 @@ function processObjects(world: World, objectGroup: p5.XML, mapXml: p5.XML) {
            case "bat": {
                world.addEntity(new EnemyWithPath({ path: parsePath(object, x, y, tileWidth) }));
                break;
+           }
+           case "hare": {
+               world.addEntity(new ChasingEnemy({ x, y }));
            }
        }
     });

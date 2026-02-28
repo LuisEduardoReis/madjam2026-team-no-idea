@@ -2,12 +2,13 @@ import { WorldEntity, type WorldEntityProps } from "@src/world/entities/world-en
 import { SpriteState } from "@src/graphics/sprite";
 import { getSprite } from "@src/graphics/sprites";
 import { type Point, pointDistance} from "@src/util";
+import {Enemy} from "@src/world/entities/enemies/enemy";
 
 export type EnemyWithPathProps = WorldEntityProps & {
     path: Point[];
 };
 
-export class EnemyWithPath extends WorldEntity {
+export class EnemyWithPath extends Enemy {
     public spriteState: SpriteState;
     public wobble: number;
 
@@ -25,6 +26,7 @@ export class EnemyWithPath extends WorldEntity {
         this.y = this.path[0].y;
 
         this.collidesWithOthers = true;
+        this.hitScanable = true;
         this.immovable = false;
         this.radius = 0.25;
 
@@ -36,6 +38,8 @@ export class EnemyWithPath extends WorldEntity {
     }
 
     update(delta: number) {
+        super.update(delta);
+
         this.spriteState.update(delta);
         this.wobble += delta;
         this.spriteState.z = 0.6 + 0.125 * Math.sin(2*Math.PI * this.wobble);
