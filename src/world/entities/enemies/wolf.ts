@@ -8,9 +8,9 @@ export class Wolf extends ChasingEnemy {
     constructor(props: WorldEntityProps) {
         super(props);
 
-        this.spriteState.w = 0.75;
-        this.spriteState.h = 0.75;
-        this.spriteState.z = 0.75 / 2;
+        this.spriteState.w = 0.6;
+        this.spriteState.h = 0.6;
+        this.spriteState.z = 0.3;
         this.spriteState.animationDelay = 0.125;
         this.spriteState.setSprite(getSprite("wolf"));
     }
