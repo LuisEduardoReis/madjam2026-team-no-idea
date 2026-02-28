@@ -13,6 +13,8 @@ export class Croc extends ChasingEnemy {
         this.spriteState.z = 0.75 / 2;
         this.spriteState.animationDelay = 0.125;
         this.spriteState.setSprite(getSprite("croc"));
+
+        this.health = 2;
     }
 
     kill() {
