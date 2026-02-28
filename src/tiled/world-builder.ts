@@ -134,7 +134,7 @@ function processObjects(world: World, objectGroup: p5.XML, mapXml: p5.XML) {
                break;
            }
            case "level-spawn": {
-               const spawn = new WorldConnector({ x: Math.floor(x) + 0.5, y: Math.floor(y) + 0.5, name });
+               const spawn = new WorldConnector({ x: Math.floor(x) + 0.5, y: Math.floor(y) + 0.5, name, interactable: false });
                spawn.direction = object.getNum("rotation") * DEG_TO_RAD;
                world.addEntity(spawn);
                break;

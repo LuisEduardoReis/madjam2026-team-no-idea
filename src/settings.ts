@@ -23,18 +23,20 @@ export type Settings = {
     FOV: number;
     VIEW_TURN_RATE: number;
     CONTROLS: Record<ControlKey, string>;
+    MUSIC: boolean;
 };
 
 export const SETTINGS: Settings = {
     DEBUG: false,
-    CURRENT_PIXELS_RESOLUTION: 2,
+    CURRENT_PIXELS_RESOLUTION: 4,
     VIEW_BOBBING: true,
     FOV: 90,
     VIEW_TURN_RATE: (MIN_VIEW_TURN_RATE + MAX_VIEW_TURN_RATE) / 2,
     CONTROLS: Object.assign({}, DEFAULT_KEYS),
+    MUSIC: true,
 };
 
-const LOCAL_STORAGE_KEY = "Settings";
+const LOCAL_STORAGE_KEY = "MJ-TNI-settings";
 
 export function loadSettings() {
     const settingsJson = localStorage.getItem(LOCAL_STORAGE_KEY);
@@ -46,6 +48,7 @@ export function loadSettings() {
             SETTINGS.VIEW_BOBBING = loadedSettings.VIEW_BOBBING;
             SETTINGS.FOV = loadedSettings.FOV;
             SETTINGS.VIEW_TURN_RATE = loadedSettings.VIEW_TURN_RATE;
+            SETTINGS.MUSIC = loadedSettings.MUSIC;
             Object.assign(SETTINGS.CONTROLS, loadedSettings.CONTROLS);
 
             console.log("Loaded settings:", loadedSettings);
