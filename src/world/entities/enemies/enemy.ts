@@ -1,11 +1,33 @@
 import {WorldEntity, type WorldEntityProps} from "@src/world/entities/world-entity";
+import {pointDistance, stepTo} from "@src/util";
+import {Player} from "@src/world/entities/player";
 
 
 export class Enemy extends WorldEntity {
 
-
+    public attackTimer = 0;
+    public attackDelay = 0.5;
+    public attackDamage = 25;
 
     constructor(props: WorldEntityProps) {
         super(props);
+    }
+
+    update(delta: number) {
+        super.update(delta);
+
+        this.attackTimer = stepTo(this.attackTimer, 0, delta);
+    }
+
+    collideWith(other: WorldEntity) {
+        super.collideWith(other);
+
+        if (other instanceof Player && this.attackTimer == 0) {
+            this.attackTimer = this.attackDelay;
+            const dist = pointDistance(this.x, this.y, other.x, other.y);
+            other.ex += (other.x - this.x) / dist * 2;
+            other.ey += (other.y - this.y) / dist * 2;
+            other.dealDamage(this.attackDamage);
+        }
     }
 }

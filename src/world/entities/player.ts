@@ -5,7 +5,7 @@ import {
     angleDifference,
     between,
     DEG_TO_RAD,
-    hitScanEntities,
+    hitScanEntities, map,
     point,
     pointAngle,
     pointDistance,
@@ -39,6 +39,11 @@ export class Player extends WorldEntity {
 
     public gunTexture: Texture;
 
+    public maxHealth = 100;
+    public health = this.maxHealth;
+    public hurtTimer = 0;
+    public hurtDelay = 0.5;
+
     constructor(props: WorldEntityProps) {
         super(props);
 
@@ -54,10 +59,18 @@ export class Player extends WorldEntity {
         this.cameraMovement(delta);
         this.gunUpdate(delta);
         this.interactablesUpdate();
+
+        this.hurtTimer = stepTo(this.hurtTimer, 0, delta);
     }
 
     draw() {
         const og = getGraphics().OVERLAY;
+
+        if (this.hurtTimer > 0) {
+            const alpha = map(this.hurtTimer, 0, this.hurtDelay, 0, 0.75);
+            og.fill(128, 0, 0, 255*alpha);
+            og.rect(0, 0, og.width, og.height);
+        }
 
         if (this.currentInteractable) {
             setupOverlayFont(og);
@@ -69,6 +82,11 @@ export class Player extends WorldEntity {
         const gx = og.width * 0.5 - gw/2 + Math.sin(this.viewBobbingPhase / 2) * gw/3;
         const gy = og.height - gw*0.75 + Math.sin(this.viewBobbingPhase) * gw/6;
         og.image(this.gunTexture.raw, gx, gy, gw,gw);
+
+        const hbw = og.width / 6 * (this.health / this.maxHealth);
+        const hbh = og.height / 24;
+        og.fill(192, 0,0);
+        og.rect(10, og.height - hbh - 10, hbw, hbh);
     }
 
     private movementUpdate(delta: number) {
@@ -174,5 +192,11 @@ export class Player extends WorldEntity {
                 }
             });
         }
+    }
+
+    dealDamage(damage: number) {
+        this.hurtTimer = this.hurtDelay;
+        this.cameraShake = this.hurtDelay;
+        this.health = stepTo(this.health, 0, damage);
     }
 }
