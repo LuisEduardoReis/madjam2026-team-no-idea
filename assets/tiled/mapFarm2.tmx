@@ -3,7 +3,7 @@
  <tileset firstgid="1" source="tileset.tsx"/>
  <layer id="3" name="floor" width="64" height="64">
   <data encoding="base64" compression="zlib">
-   eJztw8EJAAAMA6GD7L9zx+hHwVVTVVVVVVVVVVVVVVVVVVVVXx/6ADAB
+   eJzt1EEKwCAMBEDBL/j/t/YDlha0ZC1zGBA8GNfE3lrrAAAwMQJqAPL4G6BG4uwl1uR+7gpJnmZrtm8e1zKFBDv69OteN0uw17hZn6Sy7oqzT30nMuknTqJf1/KS37uc+A9vKzf5AAAAAECdC8pIMbs=
   </data>
  </layer>
  <layer id="1" name="walls" width="64" height="64">
