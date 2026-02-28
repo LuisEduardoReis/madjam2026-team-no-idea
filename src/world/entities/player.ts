@@ -214,11 +214,12 @@ export class Player extends WorldEntity {
                 if (hitscan && hitscan.entity instanceof Enemy) {
                     hit = true;
                     const enemy = hitscan.entity;
-                    const knockback = 7;
+                    const knockback = 1;
 
                     enemy.ex = dirX * knockback;
                     enemy.ey = dirY * knockback;
-                    enemy.kill();
+                    enemy.damage();
+
                     bloodSplatter(this.world, enemy.x, enemy.y, enemy.z);
                 }
             });

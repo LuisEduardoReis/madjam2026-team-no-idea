@@ -13,6 +13,8 @@ export class Enemy extends WorldEntity {
     public deathTimer = 0;
     public deathDelay = 1;
 
+    public health: number = 1;
+
     constructor(props: WorldEntityProps) {
         super(props);
     }
@@ -45,5 +47,12 @@ export class Enemy extends WorldEntity {
     kill() {
         this.dead = true;
         this.deathTimer = this.deathDelay;
+    }
+
+    damage() {
+        this.health--;
+        if (this.health <= 0) {
+            this.kill();
+        }
     }
 }

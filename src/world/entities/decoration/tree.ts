@@ -22,6 +22,6 @@ export class Tree extends WorldEntity {
     }
 
     draw() {
-        drawSprite(this.world, this.texture, this.x,this.y, this.z, 1.2,1.2);
+        drawSprite(this.world, this.texture, this.x,this.y, 0.6, 1.2,1.2);
     }
 }
