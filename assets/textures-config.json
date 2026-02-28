@@ -10,11 +10,19 @@
 },
 {
 	"filename": "sky.png",
-	"frame": {"x":224,"y":0,"w":754,"h":60},
+	"frame": {"x":256,"y":0,"w":754,"h":60},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":754,"h":60},
 	"sourceSize": {"w":754,"h":60}
+},
+{
+	"filename": "sprites/arrow.png",
+	"frame": {"x":128,"y":0,"w":32,"h":32},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":32},
+	"sourceSize": {"w":32,"h":32}
 },
 {
 	"filename": "sprites/bunny/Bunny_001.png",
@@ -258,14 +266,6 @@
 },
 {
 	"filename": "tiles/diffuse-test.png",
-	"frame": {"x":128,"y":0,"w":32,"h":32},
-	"rotated": false,
-	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":32},
-	"sourceSize": {"w":32,"h":32}
-},
-{
-	"filename": "tiles/heightmap-test.png",
 	"frame": {"x":160,"y":0,"w":32,"h":32},
 	"rotated": false,
 	"trimmed": false,
@@ -273,8 +273,16 @@
 	"sourceSize": {"w":32,"h":32}
 },
 {
-	"filename": "tiles/heightmap-test_specular.png",
+	"filename": "tiles/heightmap-test.png",
 	"frame": {"x":192,"y":0,"w":32,"h":32},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":32},
+	"sourceSize": {"w":32,"h":32}
+},
+{
+	"filename": "tiles/heightmap-test_specular.png",
+	"frame": {"x":224,"y":0,"w":32,"h":32},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":32},
@@ -295,6 +303,6 @@
 	"format": "RGBA8888",
 	"size": {"w":1024,"h":636},
 	"scale": "1",
-	"smartupdate": "$TexturePacker:SmartUpdate:0ba1f810683f19df98e2c80a6f2420f5:fbc59bca0a1e8f258d33c5ce8ce2705f:22da60613f953ca41f0071181764da7a$"
+	"smartupdate": "$TexturePacker:SmartUpdate:38845f4ec05bc6c27a3b85a79604530b:4e3dc047b68b47e2fb6898ffc126b633:22da60613f953ca41f0071181764da7a$"
 }
 }
