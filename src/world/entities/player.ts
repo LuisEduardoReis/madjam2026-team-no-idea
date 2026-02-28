@@ -8,7 +8,7 @@ import {
     hitScanEntities, map,
     point,
     pointAngle,
-    pointDistance,
+    pointDistance, RAD_TO_DEG,
     randomRange,
     stepTo
 } from "@src/util";
@@ -23,6 +23,7 @@ import {Enemy} from "@src/world/entities/enemies/enemy";
 import {bloodSplatter} from "@src/world/entities/particles/effects";
 import {SpriteState} from "@src/graphics/sprite";
 import {getSprite} from "@src/graphics/sprites";
+import {GAME} from "@src/index";
 
 export const PLAYER_CAMERA_BOBBING_SPEED = 15;
 export const PLAYER_CAMERA_BOBBING_AMOUNT = 0.02;
@@ -52,6 +53,8 @@ export class Player extends WorldEntity {
     public hurtTimer = 0;
     public hurtDelay = 0.5;
 
+    public arrowTexture: Texture;
+
     constructor(props: WorldEntityProps) {
         super(props);
 
@@ -62,6 +65,8 @@ export class Player extends WorldEntity {
         const gunReloadSprite = getSprite("gun-reload");
         this.gunReloadSpriteState = new SpriteState().setSprite(gunReloadSprite);
         this.gunReloadSpriteState.animationDelay = this.gunReloadDelay / gunReloadSprite.frames.length;
+
+        this.arrowTexture = getTexture("sprites/arrow");
     }
 
     update(delta: number) {
@@ -109,6 +114,27 @@ export class Player extends WorldEntity {
             setupOverlayFont(og);
             og.text(this.currentInteractable.getHoverMessage(), og.width * 0.5, og.height * 0.2);
             og.noStroke();
+        }
+
+        // Bunny pointer
+        const bunny = this.world?.bunny;
+        if (bunny) {
+            const dirToBunny = pointAngle(this.x, this.y, bunny.x, bunny.y);
+            const diff = RAD_TO_DEG * angleDifference(dirToBunny, this.dir);
+            const aw = 64;
+            if (diff < -SETTINGS.FOV/2) {
+                og.push();
+                og.translate(aw/2, og.height/2 + aw/2 + Math.sin(10*GAME.time) * aw/2);
+                og.scale(-1, 1);
+                og.image(this.arrowTexture.raw, -aw/2, -aw/2, aw,aw);
+                og.pop();
+            }
+            if (diff > SETTINGS.FOV/2) {
+                og.push();
+                og.translate(og.width - aw/2, og.height/2 + aw/2 + Math.sin(10*GAME.time) * aw/2);
+                og.image(this.arrowTexture.raw, -aw/2, -aw/2, aw,aw);
+                og.pop();
+            }
         }
     }
 
