@@ -9,6 +9,10 @@ export class Enemy extends WorldEntity {
     public attackDelay = 0.5;
     public attackDamage = 25;
 
+    public dead: boolean = false;
+    public deathTimer = 0;
+    public deathDelay = 1;
+
     constructor(props: WorldEntityProps) {
         super(props);
     }
@@ -17,6 +21,13 @@ export class Enemy extends WorldEntity {
         super.update(delta);
 
         this.attackTimer = stepTo(this.attackTimer, 0, delta);
+
+        if (this.dead) {
+            this.deathTimer = stepTo(this.deathTimer, 0, delta);
+            if (this.deathTimer == 0) {
+                this.remove = true;
+            }
+        }
     }
 
     collideWith(other: WorldEntity) {

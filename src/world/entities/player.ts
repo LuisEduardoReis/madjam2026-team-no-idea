@@ -218,6 +218,8 @@ export class Player extends WorldEntity {
 
                     enemy.ex = dirX * knockback;
                     enemy.ey = dirY * knockback;
+                    enemy.deathTimer = enemy.deathDelay;
+                    enemy.dead = true;
 
                     bloodSplatter(this.world, enemy.x, enemy.y, enemy.z);
                 }
