@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="64" height="64" tilewidth="64" tileheight="64" infinite="0" nextlayerid="5" nextobjectid="55">
+<map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="64" height="64" tilewidth="64" tileheight="64" infinite="0" nextlayerid="5" nextobjectid="59">
  <tileset firstgid="1" source="tileset.tsx"/>
  <layer id="3" name="floor" width="64" height="64">
   <data encoding="base64" compression="zlib">
@@ -34,15 +34,6 @@
     <property name="target" value="underground3-spawn"/>
     <property name="type" type="int" value="11"/>
    </properties>
-   <ellipse/>
-  </object>
-  <object id="6" type="spider" x="869.333" y="1301.33">
-   <ellipse/>
-  </object>
-  <object id="7" type="croc" x="628" y="1140">
-   <ellipse/>
-  </object>
-  <object id="8" type="spider" x="925.333" y="1129.33">
    <ellipse/>
   </object>
   <object id="9" type="croc" x="1100" y="972">
@@ -181,6 +172,18 @@
    <ellipse/>
   </object>
   <object id="54" type="spider" x="1745.45" y="3272.73">
+   <ellipse/>
+  </object>
+  <object id="55" type="croc" x="1066.67" y="453.333">
+   <ellipse/>
+  </object>
+  <object id="56" type="croc" x="1469.7" y="1987.88">
+   <ellipse/>
+  </object>
+  <object id="57" type="spider" x="2284.85" y="1869.7">
+   <ellipse/>
+  </object>
+  <object id="58" type="spider" x="1518.18" y="2975.76">
    <ellipse/>
   </object>
  </objectgroup>
