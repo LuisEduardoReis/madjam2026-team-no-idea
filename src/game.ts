@@ -10,6 +10,7 @@ import { getGraphics } from "@src/graphics/graphics";
 import { KEY_DOWN } from "@src/input/input";
 import { updateSounds } from "@src/audio/audio";
 import {PrefaceScreen} from "@src/screens/preface-screen";
+import {EndgameScreen} from "@src/screens/endgame-screen";
 
 export const FADE_IN_DELAY = 0.35;
 export const FADE_OUT_DELAY = 0.35;
@@ -47,6 +48,7 @@ export class Game {
         this.addScreen(new SettingsScreen());
         this.addScreen(new ControlsScreen());
         this.addScreen(new PrefaceScreen());
+        this.addScreen(new EndgameScreen());
     }
 
     addScreen(screen: AbstractScreen): AbstractScreen {

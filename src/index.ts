@@ -23,6 +23,7 @@ import { PerformanceMonitor } from "@src/performance";
 import {WorldScreen} from "@src/screens/world-screen";
 import {TitleScreen} from "@src/screens/title-screen";
 import {PrefaceScreen} from "@src/screens/preface-screen";
+import {EndgameScreen} from "@src/screens/endgame-screen";
 
 p5.disableFriendlyErrors = true;
 
@@ -60,7 +61,9 @@ const sketchBuilder = (s: p5) => {
         buildGraphics();
 
         GAME = new Game();
-        GAME.changeScreen(TitleScreen.ID, { fadeOut: false });
+        // @ts-expect-error Hardcoded type
+        const isDebug = !!(p.getURLParams().debugSpawn as string);
+        GAME.changeScreen(isDebug ? WorldScreen.ID : TitleScreen.ID, { fadeOut: false });
 
         window.GAME = GAME;
         window.SETTINGS = SETTINGS;
