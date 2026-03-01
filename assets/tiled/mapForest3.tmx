@@ -3,12 +3,12 @@
  <tileset firstgid="1" source="tileset.tsx"/>
  <layer id="3" name="floor" width="64" height="64">
   <data encoding="base64" compression="zlib">
-   eJztmLsWwzAIQzN27P9/bdeensRGIECkGRja5qErMMZ9HcfxeuKJJ0ri/RXdWjrZp/rgYVhdO8WDFeuKweKTugdojhF2dQ9QXZE1ruhBtR61vpilY/VcNf6dHrZWFXbUB+Z7unkZPqAc6uzZWqew7/Re7YGWPjLJg+g8iHrXzeupAfS+SbURqWcPj4IHu5pEzneTPIisw50Hlu+Q37PYM56hXAPo2c1TQ5GaquDPuJexr6nln/1OtM9W1YB3rUb+A1HwANVvDYvnK18q+K+4Ij7t8mqpgc5Z6MwL5mxg5e+eB1leWvmVaoBZR5bvu/tgFfuuBqbzW/dEK+sUfmSeQXKtym/d75HaYJ2hsjk9miz9APGlkp3hneXaLB2Zuhmad7mv4me+B52VGc/J1oz0AjT/2flA8o/2u7NrovzdfZ9RP5G+N439LGeRvjaR/6oGPGfbu/D/5poxDygHc/+c5EGG3in8WbmaUAMMjUqzP8pdNZd380a4s8/Olcxe7l0+1eaBSL5WOfPOPlX8jBnFO/Mp5J/xHnb+FNZ/RO9qLSjlPuLJ6vM/5f5Md2T/6+r7TO+857+uvLNmu+j+2cHu1Y/shdm+Z/rAqmPv85Ri5YsluvXfPT5Eoo+h
+   eJztmLsWwkAIRFNa+v9fa+vxJDwHGGIKCjWPuQPLsr6O43g98cQTLfH+imktk+xbfYgwSNdu8UBilRgsPrF74M2xh53dA6+uzBpn9KBbD1tfrNIhPZeNX9OD1srC7vUB+Z5pXoQPXg529mqtW9g1vVd7oKWPbPIgOw96vZvmjdSA975NtZGp5wgPgwdaTXrOd5s8yKxDzQPLd57fq9grnsFcA96zW6SGMjXVwV9xL2JfY8s/+p3ePttVA9G1mvkPhMEDr35rWDyXfOngv+LK+KTl1VIDk7PQmRfI2cDKPz0Pory08jPVALKOLN9P98Eudq0GtvNnZ5+t/FXzDCu/db/31AbqDFXNWXGu8/rSyY7wznJtlY5K3QjNWu67+Kf6tmefrOa31gXyvKDlvpM/0u/OrsnyT/d9RP1k+t429rOcZfraRv6rGoicbe/C/5trxDzAHMj9c5MHFXq38FflakMNIDQyzf5e7q65fJo3w119du5kjnJr+WSbBzL5knIWnX26+BEzSnTmY8g/4j3o/DGs/4xeaS0w5T7jifT5n3J/pjuz/031faR30fPfVN5Rs112/5xgj+r37IXVvlf6gKrj6POYQvLFEtP67x4fddePeQ==
   </data>
  </layer>
  <layer id="1" name="walls" width="64" height="64">
   <data encoding="base64" compression="zlib">
-   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
+   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
   </data>
  </layer>
  <layer id="2" name="ceiling" width="64" height="64" visible="0" opacity="0.5">
@@ -18,7 +18,7 @@
  </layer>
  <objectgroup id="4" name="objects">
   <object id="6" type="bunny-path" x="1186" y="1754">
-   <polyline points="0,0 -290,-218 30,-538 -226,-986 -226,-1178 -34,-1178 158,-986 478,-986 734,-1242 1054,-1050 798,-794 1118,-538 1374,-474 1694,-154 1822,358 1630,1062 1886,1638 1566,2022 1438,1510 1246,1190 862,1126 798,1062 670,1446 670,1958 350,2086 94,1830 -162,1894 -224,1862 -900,1854"/>
+   <polyline points="0,0 -4,-175 319,-193 664.886,-138.172 910.213,-132.166 1072.06,-259.72 1619.33,-264.387 1755.33,212.667 1753.08,364.9 1198.58,363.437 1036.02,313.891 886,407.333 734,506 771.333,1056.67 724.667,1562 472.667,1774 347.333,1996.67 92.6667,1842 -162,1886 -224,1862 -900,1854"/>
   </object>
   <object id="7" name="closed-door" type="closed-door" x="1184" y="1896">
    <properties>
@@ -66,10 +66,10 @@
   <object id="21" type="croc" x="2050" y="762">
    <ellipse/>
   </object>
-  <object id="22" type="hare" x="2178" y="994">
+  <object id="22" type="hare" x="2156" y="1522">
    <ellipse/>
   </object>
-  <object id="23" type="hare" x="2222" y="1238">
+  <object id="23" type="hare" x="2868" y="1505">
    <ellipse/>
   </object>
   <object id="24" type="hare" x="2598" y="1188">
@@ -150,7 +150,7 @@
   <object id="49" type="croc" x="1509.09" y="2372.73">
    <ellipse/>
   </object>
-  <object id="50" type="hare" x="2842.42" y="2512.12">
+  <object id="50" type="hare" x="2341.42" y="3155.12">
    <ellipse/>
   </object>
   <object id="51" type="hare" x="2963.64" y="1696.97">
