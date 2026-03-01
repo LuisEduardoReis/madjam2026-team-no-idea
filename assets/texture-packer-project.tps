@@ -4,7 +4,7 @@
         <key>fileFormatVersion</key>
         <int>6</int>
         <key>texturePackerVersion</key>
-        <string>7.11.0</string>
+        <string>7.12.0</string>
         <key>autoSDSettings</key>
         <array>
             <struct type="AutoSDSettings">
@@ -174,6 +174,7 @@
         <key>individualSpriteSettings</key>
         <map type="IndividualSpriteSettingsMap">
             <key type="filename">textures/not_available.png</key>
+            <key type="filename">textures/sprites/arrow.png</key>
             <key type="filename">textures/tiles/diffuse-test.png</key>
             <key type="filename">textures/tiles/heightmap-test.png</key>
             <key type="filename">textures/tiles/heightmap-test_specular.png</key>
@@ -188,6 +189,62 @@
                 <rect>8,8,16,16</rect>
                 <key>scale9Paddings</key>
                 <rect>8,8,16,16</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">textures/sky.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>spriteScale</key>
+                <double>1</double>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>189,15,377,30</rect>
+                <key>scale9Paddings</key>
+                <rect>189,15,377,30</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">textures/sprites/bunny/Bunny_001.png</key>
+            <key type="filename">textures/sprites/bunny/Bunny_002.png</key>
+            <key type="filename">textures/sprites/bunny/Bunny_002_01.png</key>
+            <key type="filename">textures/sprites/bunny/Bunny_002_02.png</key>
+            <key type="filename">textures/sprites/bunny/Bunny_003.png</key>
+            <key type="filename">textures/sprites/bunny/Bunny_004.png</key>
+            <key type="filename">textures/sprites/croc/croc_000.png</key>
+            <key type="filename">textures/sprites/croc/croc_001.png</key>
+            <key type="filename">textures/sprites/croc/croc_002.png</key>
+            <key type="filename">textures/sprites/environment/tree.png</key>
+            <key type="filename">textures/sprites/grass/grass_000.png</key>
+            <key type="filename">textures/sprites/grass/grass_001.png</key>
+            <key type="filename">textures/sprites/gun/shotgun_000.png</key>
+            <key type="filename">textures/sprites/gun/shotgun_001.png</key>
+            <key type="filename">textures/sprites/gun/shotgun_002.png</key>
+            <key type="filename">textures/sprites/gun/shotgun_003.png</key>
+            <key type="filename">textures/sprites/gun/shotgun_004.png</key>
+            <key type="filename">textures/sprites/gun/shotgun_005.png</key>
+            <key type="filename">textures/sprites/gun/shotgun_006.png</key>
+            <key type="filename">textures/sprites/rock/rock_000.png</key>
+            <key type="filename">textures/sprites/rock/rock_001.png</key>
+            <key type="filename">textures/sprites/spider/spider_000.png</key>
+            <key type="filename">textures/sprites/spider/spider_001.png</key>
+            <key type="filename">textures/sprites/spider/spider_002.png</key>
+            <key type="filename">textures/sprites/wolf/wolf_000.png</key>
+            <key type="filename">textures/sprites/wolf/wolf_001.png</key>
+            <key type="filename">textures/sprites/wolf/wolf_002.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>spriteScale</key>
+                <double>1</double>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>16,16,32,32</rect>
+                <key>scale9Paddings</key>
+                <rect>16,16,32,32</rect>
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
