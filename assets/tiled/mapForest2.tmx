@@ -3,12 +3,12 @@
  <tileset firstgid="1" source="tileset.tsx"/>
  <layer id="3" name="floor" width="64" height="64">
   <data encoding="base64" compression="zlib">
-   eJztl0sOwyAMBbPMMvc/bbcVCsYYJ360sxipSgnxM/5xHsdxAoCLq0O1XW/qHvlkZS9VvLaOdH3/v4sfZm0cxclu8RCx6+6MvXGhRsS2yJnu4IOefTN1zxs7ikRzNdIfqrVm2fgruRCZe1Zqu6L+zDjZrSf0end0L08sqenPsqfd5+p8R0l/pg/u9Lczk6L+kQ+suO79bp+p67fst+La8/4O+q17jOfZzFoV/dE6vaJfpf958332PY/+au2jM7R0r867avpH8bky61o+rM6DSK9bPT+rd6rof2oPtVxY7ccZdbC6Fni/f5cT0fufinZLV7ROeWcoBe1P+TJr3e5Y9yWVHlihv11TbWe1f6rteOq8s2oqAAAAAAAAAAAAAAAAAAD8Lx9EzIgp
+   eJztl8ESgzAIRD169P+/ttdOxhBCUDbtO7yZjo26SwjgeRzHCQAurg7Vut70PYrJyrNU8Wod+fr+f5c4zGoc5clu+RDRdbfH3rxQI6Itsqc7xKCnb6bueXNHkehZjfSHaq9ZGn/lLETmnpXarug/M0926wm92TcL9RzI3I/2OVfnPUr+M2Nw57+dmRT9j2Jg5XXvd3tN3b+l38prz/07+Le+YzzXZtaq+I/W6RX/Kv3Pe95n7/P4r/Y+2kPLt2e2sWYANf+j/FyZdT3xqfY/q3FFs9U7Vfyv7udM3aj2v9KPM+pgdS3wvn/222b0XAXvlq9onfLOUAren4pl1rrd6eWPUg+s8N+uqdZZHZ9qHU/td1ZNBQAAAAAAAAAAAAAAAACA/+UDFRWJAQ==
   </data>
  </layer>
  <layer id="1" name="walls" width="64" height="64">
   <data encoding="base64" compression="zlib">
-   eJztmMFqw0AMRH3P0bf22P//x+LDghhGspxCV4H3QCQErdmRVtI6xwEAAAAAAACRr822m2sPL7Fv+XSmPueNr9rrmKd/EfeZkfksXcuifo3dFP0uBl00Dk6/nqVJ+i+yGJzhuzvXF7EOlp/W+KfoX3tV1r6dX5b/+Oyp+l2eMv3O1+H0T+z/qvlOz1/0Z3Nht/473e7cu3U/su4uVtFnFzqb4hy7013NiSzX6rO7DrQvVfqzu8w7TKmDTv5d/ly8nqDPm6S/o8nNu86ZP5Lfd+t3NXBmi4SsT1T3iGz9f+Pu51X+qxm29p/Nh06P3UE1m6OGKs+dO1TWYyfMwM79rOOn2t07r/aM3TOw4p1YxPy6/w6qnjlNf0Y3V5V+9ZmY/4wn+c/O/2JCD3xKp/6f2Cdpz+j2x6rHAgAAAAAAAAAAAAAAAACA5xcSqidp
+   eJzt18FqAzEMRVHvs8yuXfb//7HMwiDEk0ZOSaTCPWAIwRP8LI/trAUAAAAAsL6aW7drDI83t2/RHmte/s2OMxL12bl2s/ntfEzKr+agys+Dym8zT8t/iebgaT6rdX3ZWaL8dg1Mz7/H6u1xq35R/e1vT82v6hTlV30VlX/i/u8z3+X5S/7oXOjOf5dbrXv13I977m6ubJ8u/myy59hd7uyciGrt+3S/B35fyvJHd5lXTHkPKvVX9VPzdcL/3qT8lUzqvKus+RV8351fvQPP6CEn2ieye0T0/Kep+3lW/+wM2+OPzofKHtuh8t9vrbzOlTtUtMdOOAMr97NKP59d/ef1e0b3GZh5ZS5sfe193+4zS3zffRc8Ua1Vlt/3mVj/yEn9o/W/TdgDT1Xe/5P2n7JHqvtjtscCAAAAAAAAAAAAALRfGdgnIQ==
   </data>
  </layer>
  <layer id="2" name="ceiling" width="64" height="64" opacity="0.5">
