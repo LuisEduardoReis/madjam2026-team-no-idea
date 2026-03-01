@@ -75,9 +75,10 @@ export class TitleScreen extends MenuScreen {
         const button = this.addItem(new MenuButton({
             x: og.width/2 - BUTTON_WIDTH/2, y, w: BUTTON_WIDTH, h: BUTTON_HEIGHT,
             text: "Play",
-            textColor: 0x000000,
+            textColor: 0xffffff,
             alignVertical: 'center',
             alignHorizontal: 'center',
+            texture: getTexture("sprites/button/button_000"),
         }));
         button.onClickFunction = () => {
             if (GAME.hasStartedPlaying) {
@@ -94,9 +95,10 @@ export class TitleScreen extends MenuScreen {
         const button = this.addItem(new MenuButton({
             x: og.width/2 - BUTTON_WIDTH/2, y, w: BUTTON_WIDTH, h: BUTTON_HEIGHT,
             text: "Settings",
-            textColor: 0x000000,
+            textColor: 0xffffff,
             alignVertical: 'center',
             alignHorizontal: 'center',
+            texture: getTexture("sprites/button/button_000"),
         }));
         button.onClickFunction = () => GAME.changeScreen(SettingsScreen.ID);
     }
@@ -106,9 +108,10 @@ export class TitleScreen extends MenuScreen {
         const button = this.addItem(new MenuButton({
             x: og.width/2 - BUTTON_WIDTH/2, y, w: BUTTON_WIDTH, h: BUTTON_HEIGHT,
             text: "Controls",
-            textColor: 0x000000,
+            textColor: 0xffffff,
             alignVertical: 'center',
             alignHorizontal: 'center',
+            texture: getTexture("sprites/button/button_000"),
         }));
         button.onClickFunction = () => GAME.changeScreen(ControlsScreen.ID);
     }

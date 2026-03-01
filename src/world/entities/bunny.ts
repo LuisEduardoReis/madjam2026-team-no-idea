@@ -1,5 +1,5 @@
 import {WorldEntity, type WorldEntityProps} from "@src/world/entities/world-entity";
-import {clamp, map, type Point, pointDistance} from "@src/util";
+import {clamp, map, type Point, pointDistance, stepTo} from "@src/util";
 import {Sprite, SpriteState} from "@src/graphics/sprite";
 import {getSprite} from "@src/graphics/sprites";
 import type {Interactable} from "@src/world/entities/interactable";
@@ -29,11 +29,16 @@ export class Bunny extends WorldEntity implements Interactable {
 
     public endgame: boolean;
 
+    public vz: number = 0;
+    public g: number = 5;
+
+
     constructor(props: BunnyProps) {
         super(props);
 
         this.collidesWithLevel = false;
         this.collidesWithOthers = false;
+        this.hitScanable = true;
 
         this.frontSprite = getSprite("bunny-front");
         this.backSprite = getSprite("bunny-back");
@@ -49,11 +54,19 @@ export class Bunny extends WorldEntity implements Interactable {
         this.x = this.path[0].x;
         this.y = this.path[0].y;
 
-        this.spriteState.z = 0.25;
+        this.z = this.spriteState.z = 0.25;
     }
 
     update(delta: number) {
         this.spriteState.update(delta);
+
+        this.vz -= this.g * delta;
+        this.z += this.vz * delta;
+        if (this.z < 0.25) {
+            this.z = 0.25;
+            this.vz = 0;
+        }
+        this.spriteState.z = this.z;
 
         const player = this.world?.player;
         if (!player) return;
