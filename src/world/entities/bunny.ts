@@ -75,19 +75,16 @@ export class Bunny extends WorldEntity implements Interactable {
             }
         }
 
-        if (this.hasExitedLevel()) {
+        if (this.pathIndex >= this.path.length && this.endgame) {
             this.spriteState.setSprite(this.endgameSprite);
-        } else if (speed > 0.25) {
-            this.spriteState.setSprite(this.backSprite);
-        } else {
-            this.spriteState.setSprite(this.frontSprite);
-        }
-
-        if (this.hasExitedLevel() && this.endgame) {
             this.immovable = true;
             this.collidesWithOthers = true;
             this.interactable = true;
             this.radius = 0.9;
+        } else if (speed > 0.25) {
+            this.spriteState.setSprite(this.backSprite);
+        } else {
+            this.spriteState.setSprite(this.frontSprite);
         }
     }
 
@@ -96,7 +93,7 @@ export class Bunny extends WorldEntity implements Interactable {
     }
 
     hasExitedLevel() {
-        return this.pathIndex >= this.path.length;
+        return this.pathIndex >= this.path.length - 1;
     }
 
     getHoverMessage(): string {
