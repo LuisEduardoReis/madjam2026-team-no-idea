@@ -21,9 +21,10 @@ export class Pickup extends WorldEntity {
     }
 
     draw() {
-        const z = 0.125 + 0.05 * Math.sin(2*Math.PI*GAME.time * 0.5);
-        const w = 0.25*Math.abs(Math.sin(2*Math.PI*GAME.time));
-        drawSprite(this.world, this.texture, this.x, this.y, z, w,0.25);
+        const s = 0.35;
+        const z = s/2 + 0.05 * Math.sin(2*Math.PI*GAME.time * 0.25);
+        const w = s*Math.abs(Math.sin(2*Math.PI*GAME.time * 0.5));
+        drawSprite(this.world, this.texture, this.x, this.y, z, w,s);
     }
 
     collideWith(other: WorldEntity) {

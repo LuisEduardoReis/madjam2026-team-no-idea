@@ -20,6 +20,9 @@ import { initSprites } from "@src/graphics/sprites";
 import { loadFont } from "@src/graphics/font";
 import { loadAudio, updateSounds } from "@src/audio/audio";
 import { PerformanceMonitor } from "@src/performance";
+import {WorldScreen} from "@src/screens/world-screen";
+import {TitleScreen} from "@src/screens/title-screen";
+import {PrefaceScreen} from "@src/screens/preface-screen";
 
 p5.disableFriendlyErrors = true;
 
@@ -57,6 +60,7 @@ const sketchBuilder = (s: p5) => {
         buildGraphics();
 
         GAME = new Game();
+        GAME.changeScreen(TitleScreen.ID, { fadeOut: false });
 
         window.GAME = GAME;
         window.SETTINGS = SETTINGS;

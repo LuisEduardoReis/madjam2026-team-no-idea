@@ -33,6 +33,7 @@ export class MenuLabel extends MenuItem {
         const g = getGraphics();
 
         g.OVERLAY.fill(this.textColor);
+        g.OVERLAY.noStroke();
         g.OVERLAY.textSize(this.fontSize);
         g.OVERLAY.textAlign(this.alignHorizontal, this.alignVertical);
         let x = this.x;

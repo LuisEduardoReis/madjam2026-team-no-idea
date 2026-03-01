@@ -6,6 +6,7 @@ import { MenuScreen } from "@src/screens/menu-screen";
 import { SettingsScreen } from "@src/screens/settings-screen";
 import { MenuLabel } from "@src/ui/items/menu_label";
 import { ControlsScreen } from "@src/screens/controls-screen";
+import {PrefaceScreen} from "@src/screens/preface-screen";
 
 const BUTTON_WIDTH = 300;
 const BUTTON_HEIGHT = 80;
@@ -14,14 +15,24 @@ export class TitleScreen extends MenuScreen {
 
     public static readonly ID = 'TITLE_SCREEN';
 
+    public playButton: MenuButton;
+
     constructor() {
         super(TitleScreen.ID);
 
         const og = getGraphics().OVERLAY;
         this.createGameTitle(300);
-        this.createPlayButton(og.height - 350);
+        this.playButton = this.createPlayButton(og.height - 350);
         this.createSettingsButton(og.height - 250);
         this.createControlsButton(og.height - 150);
+    }
+
+    show() {
+        if (GAME.hasStartedPlaying) {
+            this.playButton.text = "Continue";
+        } else {
+            this.playButton.text = "Play";
+        }
     }
 
     createGameTitle(y: number) {
@@ -46,7 +57,14 @@ export class TitleScreen extends MenuScreen {
             alignVertical: 'center',
             alignHorizontal: 'center',
         }));
-        button.onClickFunction = () => GAME.changeScreen(WorldScreen.ID);
+        button.onClickFunction = () => {
+            if (GAME.hasStartedPlaying) {
+                GAME.changeScreen(WorldScreen.ID);
+            } else {
+                GAME.changeScreen(PrefaceScreen.ID, { fadeInDelay: 3 });
+            }
+        };
+        return button;
     }
 
     createSettingsButton(y: number) {
