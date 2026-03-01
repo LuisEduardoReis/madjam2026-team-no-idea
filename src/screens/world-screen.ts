@@ -27,7 +27,7 @@ export class WorldScreen extends AbstractScreen {
     public messages: string[] = [];
     public currentMessage: string | undefined;
     public messageTimer: number = 0;
-    public messageDelay: number = 3;
+    public messageDelay: number = 2;
 
     constructor() {
         super(WorldScreen.ID);
@@ -92,7 +92,7 @@ export class WorldScreen extends AbstractScreen {
         if (this.currentMessage) {
             const og = getGraphics().OVERLAY;
             let messageAlpha = 1;
-            const fadeTime = 1;
+            const fadeTime = 0.5;
             if (this.messageTimer < fadeTime) { messageAlpha = map(this.messageTimer, 0,fadeTime, 0,1); }
             if (this.messageTimer > this.messageDelay - fadeTime) { messageAlpha = map(this.messageTimer, this.messageDelay -fadeTime,this.messageDelay, 1,0); }
             setupOverlayFont(og, 60, messageAlpha);

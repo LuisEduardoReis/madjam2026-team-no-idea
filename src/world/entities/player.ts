@@ -110,6 +110,7 @@ export class Player extends WorldEntity {
         }
 
         // Hurt overlay
+        og.noStroke();
         if (this.hurtTimer > 0) {
             const alpha = map(this.hurtTimer, 0, this.hurtDelay, 0, 0.75);
             og.fill(128, 0, 0, 255*alpha);
@@ -125,6 +126,7 @@ export class Player extends WorldEntity {
         const hbh = og.height / 24;
         const hbx = 10;
         const hby = og.height - hbh - 10 + (this.healthCritical() && GAME.time % 0.5 < 0.25 ? -hbh/2 : 0 );
+        og.noStroke();
         og.fill(192, 0,0);
         og.rect(hbx, hby, hbw, hbh);
 
