@@ -20,6 +20,7 @@ import {SawGrass} from "@src/world/entities/decoration/saw-grass";
 import {Spider} from "@src/world/entities/enemies/spider";
 import {Rock1} from "@src/world/entities/decoration/rock1";
 import {Rock2} from "@src/world/entities/decoration/rock2";
+import {Bat} from "@src/world/entities/enemies/bat";
 
 export function buildWorld(name: string): World {
 
@@ -164,10 +165,6 @@ function processObjects(world: World, objectGroup: p5.XML, mapXml: p5.XML) {
                world.addEntity(bunny);
                break;
            }
-           case "bat": {
-               world.addEntity(new EnemyWithPath({ path: parsePath(object, x, y, tileWidth) }));
-               break;
-           }
            case "hare":
            case "wolf": {
                world.addEntity(new Wolf({ x, y }));
@@ -179,6 +176,10 @@ function processObjects(world: World, objectGroup: p5.XML, mapXml: p5.XML) {
            }
            case "spider": {
                world.addEntity(new Spider({ x, y }));
+               break;
+           }
+           case "bat": {
+               world.addEntity(new Bat({ x, y }));
                break;
            }
        }

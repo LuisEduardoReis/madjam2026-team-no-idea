@@ -69,4 +69,11 @@ export function initSprites() {
     SPRITES.set("spider-dead", new Sprite([
         getTexture("sprites/spider/spider_002"),
     ]));
+    SPRITES.set("bat", new Sprite([
+        getTexture("sprites/bat/bat_000"),
+        getTexture("sprites/bat/bat_001"),
+    ]));
+    SPRITES.set("bat-dead", new Sprite([
+        getTexture("sprites/bat/bat_001"),
+    ]));
 }
