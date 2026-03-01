@@ -8,7 +8,7 @@
  </layer>
  <layer id="1" name="walls" width="64" height="64">
   <data encoding="base64" compression="zlib">
-   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
+   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
   </data>
  </layer>
  <layer id="2" name="ceiling" width="64" height="64" visible="0" opacity="0.5">
@@ -18,7 +18,7 @@
  </layer>
  <objectgroup id="4" name="objects">
   <object id="7" type="bunny-path" x="862" y="530">
-   <polyline points="0,0 -222,174 240,24 34,430 34,686 738,494 738,686 290,878 -222,942 -222,1390 226,1838 418,2286 930,2286 1314,2030 2082,1966 2082,1390 1570,1390 1598.61,1091.21 1589.52,642.727"/>
+   <polyline points="0,0 -222,174 240,24 34,430 34,686 564,582 584,822 218,926 -222,942 -222,1390 226,1838 418,2286 930,2286 1314,2030 2082,1966 2082,1390 1570,1390 1598.61,1091.21 1589.52,642.727"/>
   </object>
   <object id="8" name="closed-door" type="closed-door" x="861" y="325">
    <properties>

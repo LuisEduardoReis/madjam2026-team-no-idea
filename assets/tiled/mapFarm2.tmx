@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="64" height="64" tilewidth="64" tileheight="64" infinite="0" nextlayerid="6" nextobjectid="50">
+<map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="64" height="64" tilewidth="64" tileheight="64" infinite="0" nextlayerid="6" nextobjectid="51">
  <tileset firstgid="1" source="tileset.tsx"/>
  <layer id="3" name="floor" width="64" height="64">
   <data encoding="base64" compression="zlib">
@@ -8,7 +8,7 @@
  </layer>
  <layer id="1" name="walls" width="64" height="64">
   <data encoding="base64" compression="zlib">
-   eJztmttugzAMhrmtdlV2hfYIff/325BqzfvlYxKzdfInoUIbgk9xnJRta5qmaZqm+ea24HhluPwf7Mjc/8q2QP3fnp8PaPce7GvlUQ0+J+v/iE0ybbFNtT0qbZyxTYQKO2T6GskNyAHneG21J1baINrPmQt4bvA45d6/jvvzk84Pdn0I17vQXrIByT5rB34/xitea/7HdkfBcYL5mOSfsUHV+Oe+W3FYY++39Jdkolio0F8bezMxgPfxWLZs7uWDK/0v6RGF7pP6t2oh7Z5tqxv/UV0ycP3Rl9F8J0FyU/7n8wB9z7/j+f/ODtTfevas/lp8Wc+0ftP8lvk+4nuSYUb/EynGV+DZlv/+CNyjMat/BZG6SRt72dxTpX+0jtfaeb7Ucq+VeySbVfpfy8XW9cw6waPK/5IPcS7S6nle01tyekTrbs5oDXQL9s91y8zZkTXToZwTkdpvpv6JyJjRfwfZLdtiTEljTIv1Veu/yNyfqWd36EPK39TvSL139fo/G/f3xPOz+lfu/6CfeFyM1Ow8j0XyqrfeqdgDpP6wDtu2n3khozfGv4U2rlbN7x7a3jddj/g/E/+W/ivmdw9v7/uhyBfRPzKvavrTszVZVxEdUyPzX2RetfSXZK0gsgYcqX+8edW615NzJd4eAI9r3JfIzl/IX9Mf45XXKRzJv9Z+qMZf0T+6DjiR1qDWOt/ql+cMqf7l9qvcqxjpO+J/+t7Kg4dyvkLGKNb/QBaRmFmxBj6p/H98tD/0rbWHyH9Dm4z8V1xVC0ehMe/lPEk3a39P67f6/Ygr31/x/H9V/Y+gDWbeYZh5r+Wq+l9i9p0cr+1IDF8ZmxaaPUbHJd6D833VWF/FDT5n+qnObxW8kqxN0zRN0zRN0zTN/+cT8HJGlQ==
+   eJztmstuhDAMRbNFXQEr1E/g//+vjVRLnis7cULMhI6PFA1PxzcPxzCkFARBEARBEIxigfJpLLA9sjwBq597xzVPaA/NL4ve1npmbIcWfw7Yxv3S9T313YHkT/Z7+y3r3y9tH2z/EPY34Xpsg9n1Hw4lcyr1vRvJH953I8o3KzPrp5jnof8rza+f+NT+z3jNf62+d6PF/1wo/vN1gI7zYzz+r6yg/l2p74rvXnmqtHa3Hvde/+8YS3zuIjucPw33PEl/1sNjt4R0nh874fq79VvzeO26Ul9q57V7POa/BS0Wl/Y1vVfx1C/1Ia5FWj7Pc3qi1vcS6APaGK3f4iPX1rJm1+Z+Sq/tJcV7tOGhv+Zji/4NfC+1LY4paY69s/978vkNbGD85nYt+Z7k8ygstlrH/dpQf6v+0e9/uC3sJz4uenJ2HscscVV73uG+js5XyB7mYSm9xoUW3Tj+S2jzSopJHrkat4l19vZ/y/gv6Zf6fzSoH+s8Ff8s+i3rqqaf6tZ8HYV1TvWsf5Z1taRf8tWDUgwkevKf2rpaurfm50jIruYvH9f4XqJ1/UJm04/jlecpHKl/pfarPTvOot/6HJAhTfiMrs33kl0eM6T8l7ef57uKHtuW/qfjpTh4KNsjfLQivcO3YBkzI56BM57/j/faw77V1g88h23S81+xVy5sheZ8LeZJ2krv9zS73t9H3Pnfeq3/78r/EWyDK98wXPmu5a78X+LqNzm1a3vG8CzffWjt0Tsv8R5c773m+igW+L1ixzu+efAkX4MgCIIgCIIgCIL/zw/LOD9C
   </data>
  </layer>
  <layer id="2" name="ceiling" width="64" height="64" opacity="0.5">
@@ -17,9 +17,6 @@
   </data>
  </layer>
  <objectgroup id="4" name="objects">
-  <object id="11" type="bunny-path" x="1502" y="2920">
-   <polyline points="0,0 -670,-168 -670,-1448 98,-1448 98,-2138.67 1530,-2116.67 2018,-1640 1570,-1320 738,-1320 738,-232 1186,-232 1535,-196 1863,-196"/>
-  </object>
   <object id="12" name="closed-door" type="closed-door" x="1505.33" y="3072">
    <properties>
     <property name="type" type="int" value="11"/>
@@ -60,9 +57,6 @@
   <object id="23" type="croc" x="920" y="1688">
    <ellipse/>
   </object>
-  <object id="24" type="hare" x="704" y="1452">
-   <ellipse/>
-  </object>
   <object id="25" type="hare" x="1276" y="1544">
    <ellipse/>
   </object>
@@ -93,33 +87,6 @@
   <object id="34" type="hare" x="2715.15" y="2851.52">
    <ellipse/>
   </object>
-  <object id="35" type="hare" x="1198" y="1080">
-   <ellipse/>
-  </object>
-  <object id="36" type="croc" x="1038" y="978">
-   <ellipse/>
-  </object>
-  <object id="37" type="croc" x="1406" y="984">
-   <ellipse/>
-  </object>
-  <object id="38" type="hare" x="1164" y="1256">
-   <ellipse/>
-  </object>
-  <object id="39" type="hare" x="796.97" y="1151.52">
-   <ellipse/>
-  </object>
-  <object id="40" type="croc" x="687.879" y="860.606">
-   <ellipse/>
-  </object>
-  <object id="41" type="hare" x="987.879" y="742.424">
-   <ellipse/>
-  </object>
-  <object id="42" type="hare" x="875.758" y="906.061">
-   <ellipse/>
-  </object>
-  <object id="43" type="hare" x="1281.82" y="806.061">
-   <ellipse/>
-  </object>
   <object id="44" type="croc" x="2366.67" y="1500">
    <ellipse/>
   </object>
@@ -137,6 +104,9 @@
   </object>
   <object id="49" type="hare" x="2327.27" y="2169.7">
    <ellipse/>
+  </object>
+  <object id="50" type="bunny-path" x="1472" y="2880">
+   <polyline points="0,0 -576,-64 -640,-512 -704,-960 -576,-1408 256,-1408 768,-1152 768,-192 1152,-192 1152,64 1536,64 1598.67,-156 1880,-157"/>
   </object>
  </objectgroup>
 </map>
