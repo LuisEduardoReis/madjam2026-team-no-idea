@@ -31,4 +31,9 @@
    <property name="tile-entity" value="rock2"/>
   </properties>
  </tile>
+ <tile id="50">
+  <properties>
+   <property name="tile-entity" value="gold-coins"/>
+  </properties>
+ </tile>
 </tileset>

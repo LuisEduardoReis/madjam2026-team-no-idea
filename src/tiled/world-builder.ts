@@ -21,6 +21,7 @@ import {Spider} from "@src/world/entities/enemies/spider";
 import {Rock1} from "@src/world/entities/decoration/rock1";
 import {Rock2} from "@src/world/entities/decoration/rock2";
 import {Bat} from "@src/world/entities/enemies/bat";
+import {GoldCoins} from "@src/world/entities/decoration/gold-coins";
 
 export function buildWorld(name: string): World {
 
@@ -87,6 +88,7 @@ function loadTiles(world: World, layersByName: Map<string, p5.XML>, mapTilesetXm
         if (tileEntityId === "saw-grass") world.addEntity(new SawGrass({ x: x + 0.5, y: y + 0.5 }));
         if (tileEntityId === "rock1") world.addEntity(new Rock1({ x: x + 0.5, y: y + 0.5 }));
         if (tileEntityId === "rock2") world.addEntity(new Rock2({ x: x + 0.5, y: y + 0.5 }));
+        if (tileEntityId === "gold-coins") world.addEntity(new GoldCoins({ x: x + 0.5, y: y + 0.5 }));
 
         world.tiles[i] = new Tile({
             ceilingType: getTileTypeById(ceilingData[i] - firstGid),
