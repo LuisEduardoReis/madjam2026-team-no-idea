@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="64" height="64" tilewidth="64" tileheight="64" infinite="0" nextlayerid="6" nextobjectid="56">
+<map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="64" height="64" tilewidth="64" tileheight="64" infinite="0" nextlayerid="6" nextobjectid="57">
  <tileset firstgid="1" source="tileset.tsx"/>
  <layer id="3" name="floor" width="64" height="64">
   <data encoding="base64" compression="zlib">
@@ -8,7 +8,7 @@
  </layer>
  <layer id="1" name="walls" width="64" height="64">
   <data encoding="base64" compression="zlib">
-   eJztmNGKxCAMRX1d5mmYpzKf0P//v93ABkJI1FCht3IPSDtOW3MTjcHW1vOzoD2Zq/ZT/7Oh/vHa3nn9R/T070Ilt++4B4jNX9NGfP7akbQn63/9Xz/uf/9bQNG/omapxl8Qre+GoV+IYlTlLDx7mCuC/h4rfNMDUf9oPo98Unn/bv1+7xHbbD5rpn+EPhO9P2vPXdixZ/LZkdzPvm/zhfoNQb/acrY85jpf3y3O49rs9yyZfxD0z5DpjfRHZOvjbv2z9eis/izOtt/OD7T6z9ujtlb0j/Kg9QW6fuVK/H2f9dFu+iP8nECL/8r1H+Hjb/cbFP0jMr1+PxQq9TOK/mr9IvTqoQw/DpL+KG/b+jbav3pE9Z4fB0l/L/7V+j76Hur5l9qg8arUrxmRvxC0RkR2zejtPZPFHxFvl8wDHz87J6K1PJMTnqJfuBr/2XEQWHUmuuNZPyGEEEIIIYQQQgghhBBCCCGEEEIICr+lzh9F
+   eJztmd0KwjAMhXcrXolXw0fY+7+fBgyEkLSJG5KU80GZzs7mND+Lbtuu53bB6MxZ+6G/N9A/z+2V899ipH8VMrV9xXsA2fwSY8bzM3ZndNZ//x6f6nP9nuiiPxrbGf8TpPWx9dAf5UjM3cWxun4rfq+kun6L2Z7M8kFe30V/JA54jqyHv65XgZE9u/OaiNRDWS9437ro53h9bHYd50FYcePtTzf9s+Hh5cdq+j0/y/MyPqrrZ1sz+md1UO5Fdf3MGf/rc3KPVtNvoWOimv8jv0fP6pf+55w6Buv9k4gNnl59PyQy/XMV/dn+hRj1Qx56nUr6rbot+1vr/jXC6vf0OpX0j/yf7e+t76v6/xfbwP7K9K8e1n5V0Gph2RXRO5rj+b8i2i6KA+0/GRNWLkdqQhf9xFn/R9epwBXPcTPPBAAAAAAAAAAAAAAAAAAAAAAAAAAAQJ43M5cdWw==
   </data>
  </layer>
  <layer id="2" name="ceiling" width="64" height="64" opacity="0.5">
@@ -39,7 +39,7 @@
   <object id="24" type="hare" x="2370" y="1084">
    <ellipse/>
   </object>
-  <object id="41" type="croc" x="1487.88" y="769.697">
+  <object id="41" type="hare" x="1487.88" y="769.697">
    <ellipse/>
   </object>
   <object id="42" type="hare" x="1621.21" y="590.909">
@@ -48,19 +48,10 @@
   <object id="43" type="hare" x="1736.36" y="775.758">
    <ellipse/>
   </object>
-  <object id="44" type="croc" x="563.636" y="757.576">
-   <ellipse/>
-  </object>
-  <object id="45" type="hare" x="387.879" y="775.758">
-   <ellipse/>
-  </object>
-  <object id="46" type="hare" x="496.97" y="930.303">
-   <ellipse/>
-  </object>
   <object id="47" type="hare" x="936.364" y="1030.3">
    <ellipse/>
   </object>
-  <object id="48" type="croc" x="872.727" y="1166.67">
+  <object id="48" type="hare" x="872.727" y="1166.67">
    <ellipse/>
   </object>
   <object id="49" type="hare" x="721.212" y="1515.15">
@@ -75,8 +66,8 @@
   <object id="54" type="hare" x="2014.67" y="1198.67">
    <ellipse/>
   </object>
-  <object id="55" type="bunny-path" x="1664" y="1664">
-   <polyline points="0,0 192,-192 256,-384 256,-960 -192,-960 -384,-832 -704,-768 -832,-512 -832,0 -512,128 -320,0 64,-128 256,-256 192,-768 256,-1088 221.333,-1180 217.333,-1521.33"/>
+  <object id="56" type="bunny-path" x="1664" y="1664">
+   <polyline points="0,0 192,-192 256,-384 256,-768 128,-832 256,-1024 220,-1194 222,-1474"/>
   </object>
  </objectgroup>
 </map>
