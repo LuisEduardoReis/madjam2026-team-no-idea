@@ -38,7 +38,7 @@ export class Sound {
 
 export function loadAudio() {
     SOUNDS.set("test", new Sound("assets/audio/test.wav"));
-    SOUNDS.set("theme", new Sound("assets/audio/theme.wav", true));
+    SOUNDS.set("theme", new Sound("assets/audio/theme.mp3", true));
     SOUNDS.set("health-pickup", new Sound("assets/audio/health-pickup.wav"));
     SOUNDS.set("shotgun1", new Sound("assets/audio/shotgun1.wav"));
     SOUNDS.set("hurt", new Sound("assets/audio/hurt.wav"));
