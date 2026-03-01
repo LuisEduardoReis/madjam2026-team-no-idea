@@ -31,8 +31,8 @@
   </object>
   <object id="9" name="door-out-of-forest3" type="level-door" x="726.667" y="3613.33">
    <properties>
-    <property name="target" value="forest4-spawn"/>
-    <property name="type" type="int" value="11"/>
+    <property name="target" value="underground3-spawn"/>
+    <property name="type" type="int" value="12"/>
    </properties>
    <ellipse/>
   </object>
