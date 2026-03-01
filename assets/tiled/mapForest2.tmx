@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="64" height="64" tilewidth="64" tileheight="64" infinite="0" nextlayerid="5" nextobjectid="34">
  <tileset firstgid="1" source="tileset.tsx"/>
- <layer id="3" name="floor" width="64" height="64">
+ <layer id="3" name="floor" width="64" height="64" visible="0">
   <data encoding="base64" compression="zlib">
-   eJztl8ESgzAIRD169P+/ttdOxhBCUDbtO7yZjo26SwjgeRzHCQAurg7Vut70PYrJyrNU8Wod+fr+f5c4zGoc5clu+RDRdbfH3rxQI6Itsqc7xKCnb6bueXNHkehZjfSHaq9ZGn/lLETmnpXarug/M0926wm92TcL9RzI3I/2OVfnPUr+M2Nw57+dmRT9j2Jg5XXvd3tN3b+l38prz/07+Le+YzzXZtaq+I/W6RX/Kv3Pe95n7/P4r/Y+2kPLt2e2sWYANf+j/FyZdT3xqfY/q3FFs9U7Vfyv7udM3aj2v9KPM+pgdS3wvn/222b0XAXvlq9onfLOUAren4pl1rrd6eWPUg+s8N+uqdZZHZ9qHU/td1ZNBQAAAAAAAAAAAAAAAACA/+UDFRWJAQ==
+   eJztl8EOhCAMRD169P+/dq8bIqWUuh3cd3iJUcSZUlo8j+M4AcDF1aFa1y99j2KyMpcqXq0jX9/Pd4nDrMZRnuyWDxFdd2vszQs1Itoia7pDDHr6ZuqeN3cUie7VSH+o9pql8S17IXLuWantiv4z82S3ntA7+2ahngOZ69HOc3W+o+Q/MwZ3/tszk6L/UQysvO5dt/fU/Vv6rbz2vL+Df+s/xnNvZqyKf0+dXq3rVk1Q8J49p8d/tXdLR7SnW+8q+x/l58pZ1xOfav+zGlc0W71Txf/qelp9RGkvrPbjN/QB7/dne+BoXgXvlq9onfKeoRS8PxXLrHG708sfpR5Y4b8dU62zOj7VOp5a76yaCgAAAAAAAAAAAAAAAAAA/8sHc0CJIQ==
   </data>
  </layer>
  <layer id="1" name="walls" width="64" height="64">
   <data encoding="base64" compression="zlib">
-   eJzt18FqAzEMRVHvs8yuXXY5//9/ZaAGIZ5kOaWxCveAIQQ7+FkztjMGAAAAAMD6ONxOu+fw+OP2Kdpj9Mt//Xxn53kF42wfa+aazea369Epv12DXX4dVH6buVv+W7QGT/NZPde3mSXKb5+B7vnnXL05b9Uvqr/97a75VZ2i/KqvovJ33P995lWe3+SPzoXT+Ve51XOvxn25cau1sn1O8WeTPcdWubNzIqq173P6PfD7UpY/usu8ost7UKm/qp9arxV7h/K/1yn/KtMl+mb3Xi97F95N3c1mpmc0yIn2ieweEY1/N3U/z+qfnWFz/tH5UNljT6j89xsjr3PlDhXtsR3OwMr9rNLPZ1f/ef2ecfoMzLyyFra+9r5v95khvj99F9xRrVWW/3J9OtY/slP/6PmfOuyBuyrv/077T9kj1f0x22MBAAAAAAAAAAAAANo3DT0n+A==
+   eJztl8GKwzAMRHVdesxte9xj/v//SqCCYZCc5LC1C++BqXFl8FiypEQAAAAAAACA8jt5zOY4w+Ofx7MYj1hP//5e03Pm2mb71CbEJnXlUP16Hyvp1ztIXG+37ndV6VfNq+k/8LOmxk3mVVwfpJan2Pkb/xb9eVYnz13Z+TtxXSvrr/xUvYHOp12cuP4V879rdt2juFf7zfZ1/q/GbP2u+2Cz326ua39xHitaR9RmFl6btI6d1XK/jyt71b66o0/jeUl1dT6s7quKjdF/q7wD1b/HuQ+1N9J6p7kiZE3ZZe7xsIL+rpdz9sL2Tn6s8s1s/elb9+kVqr6gqo9q3+3/NFV//hzYj2pYnr/rI0ZvbGYduPLtFzH286iH0nyo8RUxX3vEWMfPe4TMz+xVe/XN6zljdg0coXeQ2qt1HVpDtd/X2hnF+uxe8A6pvyP1Z06t9HstXdH/HWf+T0bxn6yQA+9y5f3fGd+kveNKXVjxGxgAAAAAAAAAAAAAAAAA4Bt4AV/cKVg=
   </data>
  </layer>
  <layer id="2" name="ceiling" width="64" height="64" opacity="0.5">
@@ -23,10 +23,10 @@
    </properties>
    <ellipse/>
   </object>
-  <object id="8" name="forest2-spawn" type="level-spawn" x="1181" y="1815" rotation="-180">
+  <object id="8" name="forest2-spawn" type="level-spawn" x="1181" y="1815" rotation="90">
    <point/>
   </object>
-  <object id="9" name="door-out-of-forest2" type="level-door" x="1792" y="2014.5">
+  <object id="9" name="door-out-of-forest2" type="level-door" x="1762" y="2014.5">
    <properties>
     <property name="target" value="forest3-spawn"/>
     <property name="type" type="int" value="11"/>
@@ -70,7 +70,7 @@
    <ellipse/>
   </object>
   <object id="33" type="bunny-path" x="1152" y="1664">
-   <polyline points="0,0 -226,-51 -218,-321 0,-448 128,-640 448,-640 512,-320 512,-192 1088,0 812,350.667 430.667,353.333"/>
+   <polyline points="0,0 -226,-51 -218,-321 222,-283 440,-218 521,-359 712,-358 716.444,-106.326 972.6,-91.8 1088,0 812,350.667 430.667,353.333"/>
   </object>
  </objectgroup>
 </map>
