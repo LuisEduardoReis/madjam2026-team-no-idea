@@ -5,6 +5,8 @@ import {getSprite} from "@src/graphics/sprites";
 import type {Interactable} from "@src/world/entities/interactable";
 import {ControlKey, getKeyName} from "@src/input/controls";
 import {SETTINGS} from "@src/settings";
+import {EndgameScreen} from "@src/screens/endgame-screen";
+import {GAME} from "@src/index";
 
 const MAX_SPEED = 8;
 const MAX_DISTANCE_TO_PLAYER = 4;
@@ -101,6 +103,8 @@ export class Bunny extends WorldEntity implements Interactable {
         return `Press '${key}' to capture the rabbit`;
     }
     interact(): void {
-        console.log("You win");
+        if (this.endgame) {
+            GAME.changeScreen(EndgameScreen.ID, { fadeOutDelay: 2, fadeInDelay: 3 });
+        }
     }
 }
