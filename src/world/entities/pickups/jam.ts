@@ -3,13 +3,14 @@ import type {WorldEntityProps} from "@src/world/entities/world-entity";
 import {stepTo} from "@src/util";
 import type {Player} from "@src/world/entities/player";
 import {playSound} from "@src/audio/audio";
+import {getTexture} from "@src/graphics/textures";
 
 
 export class Jam extends Pickup {
     constructor(props: WorldEntityProps) {
         super(props);
 
-        // this.texture =
+        this.texture = getTexture("sprites/pickups/jam_000");
     }
 
     pickup(player: Player) {
