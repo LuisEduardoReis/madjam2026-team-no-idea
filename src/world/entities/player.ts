@@ -9,7 +9,7 @@ import {
     point,
     pointAngle,
     pointDistance, RAD_TO_DEG,
-    randomRange, randomRangeInt,
+    randomRange, randomRangeInt, shuffle,
     stepTo
 } from "@src/util";
 import { getGraphics } from "@src/graphics/graphics";
@@ -25,6 +25,7 @@ import {SpriteState} from "@src/graphics/sprite";
 import {getSprite} from "@src/graphics/sprites";
 import {GAME} from "@src/index";
 import {playSound} from "@src/audio/audio";
+import {Bunny} from "@src/world/entities/bunny";
 
 export const PLAYER_CAMERA_BOBBING_SPEED = 15;
 export const PLAYER_CAMERA_BOBBING_AMOUNT = 0.02;
@@ -299,6 +300,15 @@ export class Player extends WorldEntity {
                     enemy.damage();
 
                     bloodSplatter(this.world, enemy.x, enemy.y, enemy.z);
+                }
+                if (hitscan && hitscan.entity instanceof Bunny) {
+                    hitscan.entity.vz = 1.5;
+                    const messages = [
+                        "You can't shoot the rabbit",
+                        "The crown is protecting the rabbit",
+                        "The rabbit is protected by magic"
+                    ];
+                    this.world?.screen?.addMessage(messages[randomRangeInt(0, messages.length - 1)]);
                 }
             });
         }
