@@ -8,7 +8,7 @@
  </layer>
  <layer id="1" name="walls" width="64" height="64">
   <data encoding="base64" compression="zlib">
-   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
+   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
   </data>
  </layer>
  <layer id="2" name="ceiling" width="64" height="64" visible="0" opacity="0.5">
@@ -31,7 +31,7 @@
   </object>
   <object id="10" name="door-out-of-forest4" type="level-door" x="2459" y="1477">
    <properties>
-    <property name="target" value="underground-spawn"/>
+    <property name="target" value="underground3-spawn"/>
     <property name="type" type="int" value="12"/>
    </properties>
    <ellipse/>
