@@ -53,7 +53,7 @@ export class Enemy extends WorldEntity {
         this.deathTimer = this.deathDelay;
         this.hitScanable = false;
 
-        if (Math.random() < 0.1) {
+        if (Math.random() < 0.2) {
             this.world?.addEntity(new Jam({ x: this.x, y: this.y }));
         }
     }
