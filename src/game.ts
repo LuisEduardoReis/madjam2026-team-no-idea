@@ -9,6 +9,7 @@ import { ControlKey } from "@src/input/controls";
 import { getGraphics } from "@src/graphics/graphics";
 import { KEY_DOWN } from "@src/input/input";
 import { updateSounds } from "@src/audio/audio";
+import {PrefaceScreen} from "@src/screens/preface-screen";
 
 export const FADE_IN_DELAY = 0.35;
 export const FADE_OUT_DELAY = 0.35;
@@ -38,13 +39,14 @@ export class Game {
     public fadeOutTimer: number = 0;
     public fadeOutDelay: number = FADE_OUT_DELAY;
 
+    public hasStartedPlaying: boolean = false;
+
     constructor() {
         this.addScreen(new WorldScreen());
         this.addScreen(new TitleScreen());
         this.addScreen(new SettingsScreen());
         this.addScreen(new ControlsScreen());
-
-        this.changeScreen(WorldScreen.ID, { fadeOut: false });
+        this.addScreen(new PrefaceScreen());
     }
 
     addScreen(screen: AbstractScreen): AbstractScreen {

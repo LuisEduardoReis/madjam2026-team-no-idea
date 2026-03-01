@@ -8,7 +8,7 @@ import { doSoftCollisions } from "@src/world/soft-collisions";
 import { drawWorld } from "@src/graphics/world-renderer";
 import { drawEntities } from "@src/graphics/sprites-renderer";
 import { MAP_FILENAMES } from "@src/tiled/tiled";
-import {p} from "@src/index";
+import {GAME, p} from "@src/index";
 import {WorldConnector} from "@src/world/entities/world-connector";
 import {pauseSound, playSound, SOUNDS} from "@src/audio/audio";
 import {SETTINGS} from "@src/settings";
@@ -53,6 +53,7 @@ export class WorldScreen extends AbstractScreen {
             SOUNDS.get("theme")?.instance.stop();
             SOUNDS.get("theme")?.play(1);
         }
+        GAME.hasStartedPlaying = true;
     }
 
     hide() {
