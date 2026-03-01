@@ -9,7 +9,7 @@ import {
     point,
     pointAngle,
     pointDistance, RAD_TO_DEG,
-    randomRange,
+    randomRange, randomRangeInt,
     stepTo
 } from "@src/util";
 import { getGraphics } from "@src/graphics/graphics";
@@ -24,6 +24,7 @@ import {bloodSplatter} from "@src/world/entities/particles/effects";
 import {SpriteState} from "@src/graphics/sprite";
 import {getSprite} from "@src/graphics/sprites";
 import {GAME} from "@src/index";
+import {playSound} from "@src/audio/audio";
 
 export const PLAYER_CAMERA_BOBBING_SPEED = 15;
 export const PLAYER_CAMERA_BOBBING_AMOUNT = 0.02;
@@ -110,6 +111,7 @@ export class Player extends WorldEntity {
         }
 
         // Hurt overlay
+        og.noStroke();
         if (this.hurtTimer > 0) {
             const alpha = map(this.hurtTimer, 0, this.hurtDelay, 0, 0.75);
             og.fill(128, 0, 0, 255*alpha);
@@ -125,6 +127,7 @@ export class Player extends WorldEntity {
         const hbh = og.height / 24;
         const hbx = 10;
         const hby = og.height - hbh - 10 + (this.healthCritical() && GAME.time % 0.5 < 0.25 ? -hbh/2 : 0 );
+        og.noStroke();
         og.fill(192, 0,0);
         og.rect(hbx, hby, hbw, hbh);
 
@@ -273,6 +276,8 @@ export class Player extends WorldEntity {
             this.gunReloadTimer = this.gunReloadDelay;
             this.gunReloadSpriteState.resetAnimation();
 
+            playSound("shotgun1");
+
             const spread = 5 * DEG_TO_RAD;
             let hit = false;
             [0, -spread, spread].forEach(dirOffset => {
@@ -303,6 +308,7 @@ export class Player extends WorldEntity {
             this.hurtTimer = this.hurtDelay;
             this.cameraShake = this.hurtDelay;
             this.health = stepTo(this.health, 0, damage);
+            playSound("hurt");
         }
     }
 
