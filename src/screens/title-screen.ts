@@ -78,6 +78,7 @@ export class TitleScreen extends MenuScreen {
             textColor: 0x000000,
             alignVertical: 'center',
             alignHorizontal: 'center',
+            texture: getTexture("sprites/button/button_000"),
         }));
         button.onClickFunction = () => {
             if (GAME.hasStartedPlaying) {
@@ -97,6 +98,7 @@ export class TitleScreen extends MenuScreen {
             textColor: 0x000000,
             alignVertical: 'center',
             alignHorizontal: 'center',
+            texture: getTexture("sprites/button/button_000"),
         }));
         button.onClickFunction = () => GAME.changeScreen(SettingsScreen.ID);
     }
@@ -109,6 +111,7 @@ export class TitleScreen extends MenuScreen {
             textColor: 0x000000,
             alignVertical: 'center',
             alignHorizontal: 'center',
+            texture: getTexture("sprites/button/button_000"),
         }));
         button.onClickFunction = () => GAME.changeScreen(ControlsScreen.ID);
     }
