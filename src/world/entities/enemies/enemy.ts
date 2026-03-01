@@ -6,8 +6,8 @@ import {Player} from "@src/world/entities/player";
 export class Enemy extends WorldEntity {
 
     public attackTimer = 0;
-    public attackDelay = 1;
-    public attackDamage = 10;
+    public attackDelay = 1.5;
+    public attackDamage = Math.ceil(100 / 6);
 
     public dead: boolean = false;
     public deathTimer = 0;
