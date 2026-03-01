@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="64" height="64" tilewidth="64" tileheight="64" infinite="0" nextlayerid="5" nextobjectid="34">
  <tileset firstgid="1" source="tileset.tsx"/>
- <layer id="3" name="floor" width="64" height="64" visible="0">
+ <layer id="3" name="floor" width="64" height="64">
   <data encoding="base64" compression="zlib">
    eJztl8EOhCAMRD169P+/dq8bIqWUuh3cd3iJUcSZUlo8j+M4AcDF1aFa1y99j2KyMpcqXq0jX9/Pd4nDrMZRnuyWDxFdd2vszQs1Itoia7pDDHr6ZuqeN3cUie7VSH+o9pql8S17IXLuWantiv4z82S3ntA7+2ahngOZ69HOc3W+o+Q/MwZ3/tszk6L/UQysvO5dt/fU/Vv6rbz2vL+Df+s/xnNvZqyKf0+dXq3rVk1Q8J49p8d/tXdLR7SnW+8q+x/l58pZ1xOfav+zGlc0W71Txf/qelp9RGkvrPbjN/QB7/dne+BoXgXvlq9onfKeoRS8PxXLrHG708sfpR5Y4b8dU62zOj7VOp5a76yaCgAAAAAAAAAAAAAAAAAA/8sHc0CJIQ==
   </data>
  </layer>
  <layer id="1" name="walls" width="64" height="64">
   <data encoding="base64" compression="zlib">
-   eJztl8GKwzAMRHVdesxte9xj/v//SqCCYZCc5LC1C++BqXFl8FiypEQAAAAAAACA8jt5zOY4w+Ofx7MYj1hP//5e03Pm2mb71CbEJnXlUP16Hyvp1ztIXG+37ndV6VfNq+k/8LOmxk3mVVwfpJan2Pkb/xb9eVYnz13Z+TtxXSvrr/xUvYHOp12cuP4V879rdt2juFf7zfZ1/q/GbP2u+2Cz326ua39xHitaR9RmFl6btI6d1XK/jyt71b66o0/jeUl1dT6s7quKjdF/q7wD1b/HuQ+1N9J6p7kiZE3ZZe7xsIL+rpdz9sL2Tn6s8s1s/elb9+kVqr6gqo9q3+3/NFV//hzYj2pYnr/rI0ZvbGYduPLtFzH286iH0nyo8RUxX3vEWMfPe4TMz+xVe/XN6zljdg0coXeQ2qt1HVpDtd/X2hnF+uxe8A6pvyP1Z06t9HstXdH/HWf+T0bxn6yQA+9y5f3fGd+kveNKXVjxGxgAAAAAAAAAAAAAAAAA4Bt4AV/cKVg=
+   eJztl7FuwzAMRG8tPHprRo/+//8rDJjo9UIq9tCIAe4BQhyFCnQiRdKAMcYYY4wxxhjme/KYzbGH5Z/HIxkL+unfzzneZ8ytso5tQDahKwbr5/PopJ/PIAi9rO9xzuscn1WmnzV303+gew3tKz1ncX0QWir9HAPd9cdeD9jHsW+12/F8T1RXZ/2Zn7I7UPm0ihPV3zH/q2bVPYp7tl9lXeX/bMzWr7oPMp+qRp3b8DpWuI6wzSy0NmX3varleh5X1oZtViNnnIPmpdBV7S/rZYA8Nvi3jZ7jvzvcA9YfeRyDPXJvtIi99kb6fadnvXMd9Fe9XHxGjO+J7dX8uOJZe6yfqT98qz4FfnVmPgb+xu+oPrJ9tf7dZP255jZmVMNi/1UfoXcMxfp3c+XdDxj7edRDcRxxfAHztQNjHV/nAD2/smftEU8b6pwxuwaO4DMI7dk8D84V3O9z7UQyP7sXvEPor4iYj5ya6dda2tH/FXf8nw2mQw68y5X7f2d8kvaKK3Wh4zuwMcYYY4wxxhhjjDHGGGOMMcZ8Aj/AByug
   </data>
  </layer>
  <layer id="2" name="ceiling" width="64" height="64" opacity="0.5">
