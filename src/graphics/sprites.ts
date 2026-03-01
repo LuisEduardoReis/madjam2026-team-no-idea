@@ -74,6 +74,6 @@ export function initSprites() {
         getTexture("sprites/bat/bat_001"),
     ]));
     SPRITES.set("bat-dead", new Sprite([
-        getTexture("sprites/bat/bat_001"),
+        getTexture("sprites/bat/bat_002"),
     ]));
 }
