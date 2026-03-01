@@ -14,6 +14,7 @@ import type {World} from "@src/world/world";
 import {buildWorld} from "@src/tiled/world-builder";
 import {drawWorld} from "@src/graphics/world-renderer";
 import {drawEntities} from "@src/graphics/sprites-renderer";
+import {setupOverlayFont} from "@src/graphics/font";
 
 const BUTTON_WIDTH = 300;
 const BUTTON_HEIGHT = 80;
@@ -68,6 +69,14 @@ export class TitleScreen extends MenuScreen {
         const tx = og.width/2 - tw/2;
         const ty = map(this.timer, 0, 1, -th, og.height * 0.33 - th/2, true);
         og.image(this.titleTexture.raw, tx,ty, tw,th);
+
+        setupOverlayFont(og, 35);
+        og.textAlign("left");
+        let y = og.height - 150;
+        og.text("Made for MAD Game Jam 2026 by:", 10, y); y += 45;
+        og.text("Dário Pinto - Artist", 10, y); y += 35;
+        og.text("Luis Reis - Programmer", 10, y); y += 35;
+        og.text("Nuno Carvalho - Level Designer", 10, y);
     }
 
     createPlayButton(y: number) {
