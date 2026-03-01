@@ -3,15 +3,20 @@ import type { Point } from "@src/util";
 export class AbstractScreen {
 
     public readonly id: string;
+    public timer: number = 0;
 
     constructor(id: string) {
         this.id = id;
     }
 
-    show() {}
+    show() {
+        this.timer = 0;
+    }
     hide() {}
 
-    update(delta: number) {}
+    update(delta: number) {
+        this.timer += delta;
+    }
     draw() {}
 
     handleKeyPressed(keyCode: string) {}

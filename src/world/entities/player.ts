@@ -59,6 +59,7 @@ export class Player extends WorldEntity {
     public deathTimer = 0;
 
     public arrowTexture: Texture;
+    public drawOverlay: boolean = true;
 
     constructor(props: WorldEntityProps) {
         super(props);

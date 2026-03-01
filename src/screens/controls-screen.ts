@@ -60,8 +60,8 @@ export class ControlsScreen extends MenuScreen {
 
     createInputSelects() {
         const og = getGraphics().OVERLAY;
-        const propsLabels = { x: og.width / 2 - 25, y: 150, w:225, h: 50 };
-        const propsInputs = { x: og.width / 2 + 25, y: 150, w:300, h: 50 };
+        const propsLabels = { x: og.width / 2 - 25, y: 100, w:225, h: 50 };
+        const propsInputs = { x: og.width / 2 + 25, y: 100, w:300, h: 50 };
         const keys = Object.keys(ControlKey);
         const values = Object.values(ControlKey);
 

@@ -16,7 +16,7 @@ export function drawEntities(world: World) {
         .sort((b, a) => pointDistanceSquare(player.x,player.y, b.x,b.y) - pointDistanceSquare(player.x,player.y, a.x,a.y));
 
     entitiesToDraw.forEach(entity => entity.draw());
-    player.draw();
+    if (player.visible) player.draw();
 }
 
 export type DrawSpriteOptions = {

@@ -8,18 +8,20 @@ export class MenuScreen extends AbstractScreen {
 
     public items: MenuItem[] = [];
     public mousePos: Point = point(0,0);
+    public background: boolean = true;
 
     show() {
         this.items.forEach(i => i.show());
     }
 
     update(delta: number) {
+        super.update(delta);
         this.items.forEach(i => i.update(delta));
     }
 
     draw() {
         const g = getGraphics();
-        g.OVERLAY.background(0);
+        if (this.background) g.OVERLAY.background(0);
         this.items.forEach(i => i.draw());
 
         if (SETTINGS.DEBUG) this.items.forEach(i => i.drawDebug());

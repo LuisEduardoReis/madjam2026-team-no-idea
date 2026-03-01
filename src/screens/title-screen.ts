@@ -7,6 +7,13 @@ import { SettingsScreen } from "@src/screens/settings-screen";
 import { MenuLabel } from "@src/ui/items/menu_label";
 import { ControlsScreen } from "@src/screens/controls-screen";
 import {PrefaceScreen} from "@src/screens/preface-screen";
+import type {Texture} from "@src/graphics/texture";
+import {getTexture} from "@src/graphics/textures";
+import { map } from "@src/util";
+import type {World} from "@src/world/world";
+import {buildWorld} from "@src/tiled/world-builder";
+import {drawWorld} from "@src/graphics/world-renderer";
+import {drawEntities} from "@src/graphics/sprites-renderer";
 
 const BUTTON_WIDTH = 300;
 const BUTTON_HEIGHT = 80;
@@ -16,15 +23,21 @@ export class TitleScreen extends MenuScreen {
     public static readonly ID = 'TITLE_SCREEN';
 
     public playButton: MenuButton;
+    public titleTexture: Texture;
+    public titleWorld: World;
 
     constructor() {
         super(TitleScreen.ID);
 
         const og = getGraphics().OVERLAY;
-        this.createGameTitle(300);
         this.playButton = this.createPlayButton(og.height - 350);
         this.createSettingsButton(og.height - 250);
         this.createControlsButton(og.height - 150);
+
+        this.background = false;
+        this.titleTexture = getTexture("Title Screen");
+        this.titleWorld = buildWorld("map0");
+        if (this.titleWorld.player) this.titleWorld.player.visible = false;
     }
 
     show() {
@@ -35,17 +48,26 @@ export class TitleScreen extends MenuScreen {
         }
     }
 
-    createGameTitle(y: number) {
+    update(delta: number) {
+        super.update(delta);
+
+        if (this.titleWorld.player) {
+            this.titleWorld.player.dir = GAME.time / 6;
+        }
+    }
+
+    draw() {
+        super.draw();
+
+        drawWorld(this.titleWorld);
+        drawEntities(this.titleWorld);
+
         const og = getGraphics().OVERLAY;
-        const button = this.addItem(new MenuLabel({
-            x: og.width/2 - BUTTON_WIDTH/2, y, w: BUTTON_WIDTH, h: BUTTON_HEIGHT,
-            text: "Game Title",
-            fontSize: 150,
-            textColor: 0xffffff,
-            alignVertical: 'center',
-            alignHorizontal: 'center',
-        }));
-        button.onClickFunction = () => GAME.changeScreen(WorldScreen.ID);
+        const tw = this.titleTexture.width * 4;
+        const th = this.titleTexture.height * 4;
+        const tx = og.width/2 - tw/2;
+        const ty = map(this.timer, 0, 1, -th, og.height * 0.33 - th/2, true);
+        og.image(this.titleTexture.raw, tx,ty, tw,th);
     }
 
     createPlayButton(y: number) {

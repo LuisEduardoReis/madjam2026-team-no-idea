@@ -19,8 +19,6 @@ export class PrefaceScreen extends AbstractScreen {
     public bunnyWithCrownTexture: Texture;
     public bunnyWithoutCrownTexture: Texture;
 
-    public timer: number = 0;
-
     constructor() {
         super(PrefaceScreen.ID);
 
@@ -30,7 +28,7 @@ export class PrefaceScreen extends AbstractScreen {
     }
 
     update(delta: number) {
-        this.timer += delta;
+        super.update(delta);
 
         if (KEY_PRESSED.get(SETTINGS.CONTROLS[ControlKey.FIRE])) {
             GAME.changeScreen(WorldScreen.ID);
