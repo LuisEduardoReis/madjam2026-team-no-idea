@@ -9,7 +9,7 @@ import {
     point,
     pointAngle,
     pointDistance, RAD_TO_DEG,
-    randomRange,
+    randomRange, randomRangeInt,
     stepTo
 } from "@src/util";
 import { getGraphics } from "@src/graphics/graphics";
@@ -24,6 +24,7 @@ import {bloodSplatter} from "@src/world/entities/particles/effects";
 import {SpriteState} from "@src/graphics/sprite";
 import {getSprite} from "@src/graphics/sprites";
 import {GAME} from "@src/index";
+import {playSound} from "@src/audio/audio";
 
 export const PLAYER_CAMERA_BOBBING_SPEED = 15;
 export const PLAYER_CAMERA_BOBBING_AMOUNT = 0.02;
@@ -81,13 +82,15 @@ export class Player extends WorldEntity {
         this.hurtTimer = stepTo(this.hurtTimer, 0, delta);
         if (!this.dead) {
             if (this.health <= 0) this.die();
-            this.health = stepTo(this.health, this.maxHealth, this.healthRegenSpeed * delta);
+            //this.health = stepTo(this.health, this.maxHealth, this.healthRegenSpeed * delta);
 
             this.movementUpdate(delta);
             this.gunUpdate(delta);
             this.interactablesUpdate();
         } else {
             this.deathTimer += delta;
+            this.ex = 0;
+            this.ey = 0;
         }
     }
 
@@ -108,8 +111,13 @@ export class Player extends WorldEntity {
         }
 
         // Hurt overlay
+        og.noStroke();
         if (this.hurtTimer > 0) {
             const alpha = map(this.hurtTimer, 0, this.hurtDelay, 0, 0.75);
+            og.fill(128, 0, 0, 255*alpha);
+            og.rect(0, 0, og.width, og.height);
+        } else if (this.healthCritical() && !this.dead) {
+            const alpha = map(Math.sin(2*Math.PI*GAME.time), -1, 1, 0.25, 0.5);
             og.fill(128, 0, 0, 255*alpha);
             og.rect(0, 0, og.width, og.height);
         }
@@ -117,8 +125,11 @@ export class Player extends WorldEntity {
         // Healthbar
         const hbw = og.width / 6 * (this.health / this.maxHealth);
         const hbh = og.height / 24;
+        const hbx = 10;
+        const hby = og.height - hbh - 10 + (this.healthCritical() && GAME.time % 0.5 < 0.25 ? -hbh/2 : 0 );
+        og.noStroke();
         og.fill(192, 0,0);
-        og.rect(10, og.height - hbh - 10, hbw, hbh);
+        og.rect(hbx, hby, hbw, hbh);
 
         // Interactable message
         if (this.currentInteractable) {
@@ -153,10 +164,23 @@ export class Player extends WorldEntity {
             og.fill(192, 0,0, 128);
             og.rect(0, 0, og.width, og.height);
 
-            setupOverlayFont(og, 80, map(this.deathTimer, 2,4, 0,1, true));
-            og.textAlign("center");
-            og.text("You died", og.width/2, og.height/3);
+            const youDiedAlpha = map(this.deathTimer, 2,4, 0,1, true);
+            if (youDiedAlpha > 0) {
+                setupOverlayFont(og, 100, youDiedAlpha);
+                og.textAlign("center");
+                og.text("You died", og.width/2, og.height/3);
+            }
+
+            if (this.deathTimer > 4 && GAME.time % 1 < 0.5) {
+                setupOverlayFont(og, 60);
+                og.textAlign("center");
+                og.text("Refresh to play again", og.width/2, og.height*0.75);
+            }
         }
+    }
+
+    private healthCritical() {
+        return this.health / this.maxHealth < 0.35;
     }
 
     private movementUpdate(delta: number) {
@@ -252,6 +276,8 @@ export class Player extends WorldEntity {
             this.gunReloadTimer = this.gunReloadDelay;
             this.gunReloadSpriteState.resetAnimation();
 
+            playSound("shotgun1");
+
             const spread = 5 * DEG_TO_RAD;
             let hit = false;
             [0, -spread, spread].forEach(dirOffset => {
@@ -282,6 +308,7 @@ export class Player extends WorldEntity {
             this.hurtTimer = this.hurtDelay;
             this.cameraShake = this.hurtDelay;
             this.health = stepTo(this.health, 0, damage);
+            playSound("hurt");
         }
     }
 

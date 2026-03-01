@@ -31,6 +31,7 @@ export class WorldEntity {
     public immovable: boolean = false;
     public collidesWithLevel: boolean = true;
     public collidesWithOthers: boolean = true;
+    public bumpsOthers: boolean = true;
     public hitScanable: boolean = false;
 
     public interactable: boolean = false;

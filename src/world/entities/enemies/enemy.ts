@@ -1,13 +1,14 @@
 import {WorldEntity, type WorldEntityProps} from "@src/world/entities/world-entity";
 import {pointDistance, stepTo} from "@src/util";
 import {Player} from "@src/world/entities/player";
+import {Jam} from "@src/world/entities/pickups/jam";
 
 
 export class Enemy extends WorldEntity {
 
     public attackTimer = 0;
-    public attackDelay = 1;
-    public attackDamage = 10;
+    public attackDelay = 1.5;
+    public attackDamage = Math.ceil(100 / 6);
 
     public dead: boolean = false;
     public deathTimer = 0;
@@ -51,6 +52,10 @@ export class Enemy extends WorldEntity {
         this.dead = true;
         this.deathTimer = this.deathDelay;
         this.hitScanable = false;
+
+        if (Math.random() < 0.2) {
+            this.world?.addEntity(new Jam({ x: this.x, y: this.y }));
+        }
     }
 
     damage() {
