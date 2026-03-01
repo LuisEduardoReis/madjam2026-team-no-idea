@@ -73,7 +73,7 @@ export class TitleScreen extends MenuScreen {
         setupOverlayFont(og, 35);
         og.textAlign("left");
         let y = og.height - 150;
-        og.text("Made for MAD Game Jam 2026 by:", 10, y); y += 45;
+        og.text("Made in 48h for MAD Game Jam 2026 by:", 10, y); y += 45;
         og.text("Dário Pinto - Artist", 10, y); y += 35;
         og.text("Luis Reis - Programmer", 10, y); y += 35;
         og.text("Nuno Carvalho - Level Designer", 10, y);
